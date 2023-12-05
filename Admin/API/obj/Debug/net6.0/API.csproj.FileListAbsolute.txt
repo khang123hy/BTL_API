@@ -1,0 +1,154 @@
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\appsettings.json
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\API.exe
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\API.deps.json
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\API.runtimeconfig.json
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\API.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\API.pdb
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\BLL.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\DAL.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\DTO.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\BLL.pdb
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\DTO.pdb
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\bin\Debug\net6.0\DAL.pdb
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\API.csproj.AssemblyReference.cache
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\API.AssemblyInfoInputs.cache
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\API.AssemblyInfo.cs
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\API.csproj.CoreCompileInputs.cache
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\scopedcss\bundle\API.styles.css
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\API.csproj.CopyComplete
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\API.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\refint\API.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\API.pdb
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\API.genruntimeconfig.cache
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\API\obj\Debug\net6.0\ref\API.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\appsettings.Development.json
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\appsettings.json
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\API.exe
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\API.deps.json
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\API.runtimeconfig.json
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\API.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\API.pdb
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Humanizer.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\BLL.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\DAL.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\DTO.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\BLL.pdb
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\DTO.pdb
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\bin\Debug\net6.0\DAL.pdb
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\API.csproj.AssemblyReference.cache
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\API.AssemblyInfoInputs.cache
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\API.AssemblyInfo.cs
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\API.csproj.CoreCompileInputs.cache
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cs
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cache
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\staticwebassets.build.json
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\staticwebassets.development.json
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\scopedcss\bundle\API.styles.css
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\API.csproj.CopyComplete
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\API.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\refint\API.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\API.pdb
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\API.genruntimeconfig.cache
+D:\Tài liệu học\API\BTL\BackEnd\Admin\API\obj\Debug\net6.0\ref\API.dll

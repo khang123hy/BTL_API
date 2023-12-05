@@ -1,0 +1,35 @@
+﻿{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:28191"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/KhachHang-geteway/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": []
+      //},
+      "DownstreamPathTemplate": "/api/KhachHang/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 41624
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api-nguoidung/danhmuc/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "DownstreamPathTemplate": "/api/danhmuc/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 52554
+        }
+      ]
+    }
+  ]
+}
