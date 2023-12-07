@@ -2257,11 +2257,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\Admin\\DAL\\DAL.csproj",
+      "projectUniqueName": "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\Admin\\DAL\\DAL.csproj",
+      "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\duykh\\.nuget\\packages\\",
-      "outputPath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\Admin\\DAL\\obj\\",
+      "outputPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\duykh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2278,8 +2278,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Tài liệu học\\API\\BTL\\BackEnd\\Admin\\DTO\\DTO.csproj": {
-              "projectPath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\Admin\\DTO\\DTO.csproj"
+            "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\DTO\\DTO.csproj": {
+              "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\DTO\\DTO.csproj"
             }
           }
         }

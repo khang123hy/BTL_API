@@ -1,0 +1,100 @@
+﻿{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:57708"
+  },
+  "Routes": [
+
+    //Comment
+    {
+      "UpstreamPathTemplate": "/api/Comment/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamPathTemplate": "/api/API_Comment/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 42817
+        }
+      ]
+    },
+
+    //API_Like
+    {
+      "UpstreamPathTemplate": "/api/Like/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamPathTemplate": "/api/API_Like/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 42817
+        }
+      ]
+    },
+
+    //API_Post
+    {
+      "UpstreamPathTemplate": "/api/Post/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamPathTemplate": "/api/API_Post/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 42817
+        }
+      ]
+    },
+
+    //API_Topic
+    {
+      "UpstreamPathTemplate": "/api/Topic/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+
+      "DownstreamPathTemplate": "/api/API_Topic/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 42817
+        }
+      ]
+    },
+    //API_Users
+    {
+      "UpstreamPathTemplate": "/api/User/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamPathTemplate": "/api/API_Users/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 42817
+        }
+      ]
+    }
+
+
+  ]
+}

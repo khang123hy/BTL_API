@@ -27,13 +27,18 @@ builder.Services.AddTransient<ITF_DAL_Comment, DAL_Comment>();
 builder.Services.AddTransient<ITF_BLL_Comment, BLL_Comment>();
 builder.Services.AddTransient<ITF_DAL_Like, DAL_Like>();
 builder.Services.AddTransient<ITF_BLL_Like, BLL_Like>();
+builder.Services.AddTransient<ITF_DAL_Account, DAL_Account>();
+builder.Services.AddTransient<ITF_BLL_Account, BLL_Account>();
+builder.Services.AddTransient<ITF_DAL_Notification, DAL_Notification>();
+builder.Services.AddTransient<ITF_BLL_Notification, BLL_Notification>();
 
 
 // configure strongly typed settings objects
 IConfiguration configuration = builder.Configuration;
-var appSettingsSection = configuration.GetSection("AppSettings");
-builder.Services.Configure<AppSettings>(appSettingsSection);
 
+// configure strongly typed settings objects
+var appSettingsSection = builder.Configuration.GetSection("AppSettings");
+builder.Services.Configure<AppSettings>(appSettingsSection);
 // configure jwt authentication
 var appSettings = appSettingsSection.Get<AppSettings>();
 var key = Encoding.ASCII.GetBytes(appSettings.Secret);
@@ -54,6 +59,7 @@ builder.Services.AddAuthentication(x =>
         ValidateAudience = false
     };
 });
+
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -77,7 +83,12 @@ app.UseCors(x => x
     .AllowAnyOrigin()
     .AllowAnyMethod()
     .AllowAnyHeader());
+
+
 app.UseAuthentication();
 app.UseAuthorization();
+
+
+
 app.MapControllers();
 app.Run();

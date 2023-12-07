@@ -16,5 +16,19 @@ namespace BLL
         {
             return _DAL_Comment.getComment_byid(id);
         }
+        public Comment Delete_Comment(int id)
+        {
+            return _DAL_Comment.Delete_Comment(id);
+        }
+
+        public bool Create_Comment(Comment model)
+        {
+            return _DAL_Comment.Create_Comment(model);
+        }
+
+        public bool Update_Comment(Comment model)
+        {
+            return _DAL_Comment.Update_Comment(model);
+        }
     }
 }

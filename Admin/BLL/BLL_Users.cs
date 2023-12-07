@@ -17,6 +17,19 @@ namespace BLL
             return _DAL_Users.GetUser_byID(id);
         }
 
+        public User Delete_User(int id)
+        {
+            return _DAL_Users.Delete_User(id);
+        }
+
+        public bool Update_User(User model)
+        {
+            return _DAL_Users.Update_User(model);
+        }
+        public bool Create_User(User model)
+        {
+            return _DAL_Users.Create_User(model);
+        }
 
     }
 }

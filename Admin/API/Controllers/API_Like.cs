@@ -14,12 +14,33 @@ namespace API.Controllers
             _BLL_Like = bLL_Like;
         }
 
-        [Route("get-like-byid/{id}")]
+        [Route("get-like-posts")]
         [HttpGet]
-
-        public Like GetlikebyID(int id)
+        public Like Getlikeby_Posts(int id_post)
         {
-            return _BLL_Like.GetlikebyID(id);
+            return _BLL_Like.Getlikeby_Posts(id_post);
         }
+
+        [Route("get-like-user")]
+        [HttpGet]
+        public Like Getlikeby_User(int id_user)
+        {
+            return _BLL_Like.Getlikeby_User(id_user);
+        }
+
+        [Route("Delete-like")]
+        [HttpDelete]
+        public bool Delete_Like(Like model)
+        {
+            return _BLL_Like.Delete_Like(model);
+        }
+
+        [Route("Create-like")]
+        [HttpPost]
+        public bool Create_Like(Like model)
+        {
+            return _BLL_Like.Create_Like(model);
+        }
+
     }
 }

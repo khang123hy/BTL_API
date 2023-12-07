@@ -34,7 +34,7 @@ namespace DAL
             string msgError = "";
             try
             {
-                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "Post_create",
+                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_posts_create",
                 "@ID_User", model.ID_User,
                 "@ID_Topic", model.ID_Topic,
                 "@Title", model.Title,

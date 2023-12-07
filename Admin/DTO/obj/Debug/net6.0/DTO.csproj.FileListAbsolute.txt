@@ -26,3 +26,17 @@ D:\Tài liệu học\API\BTL\BackEnd\Admin\DTO\obj\Debug\net6.0\refint\DTO.dll
 D:\Tài liệu học\API\BTL\BackEnd\Admin\DTO\obj\Debug\net6.0\DTO.pdb
 D:\Tài liệu học\API\BTL\BackEnd\Admin\DTO\obj\Debug\net6.0\DTO.genruntimeconfig.cache
 D:\Tài liệu học\API\BTL\BackEnd\Admin\DTO\obj\Debug\net6.0\ref\DTO.dll
+D:\Tài liệu học\API\Bài tập lớn\Admin\DTO\bin\Debug\net6.0\DTO.deps.json
+D:\Tài liệu học\API\Bài tập lớn\Admin\DTO\bin\Debug\net6.0\DTO.runtimeconfig.json
+D:\Tài liệu học\API\Bài tập lớn\Admin\DTO\bin\Debug\net6.0\DTO.dll
+D:\Tài liệu học\API\Bài tập lớn\Admin\DTO\bin\Debug\net6.0\DTO.pdb
+D:\Tài liệu học\API\Bài tập lớn\Admin\DTO\obj\Debug\net6.0\DTO.csproj.AssemblyReference.cache
+D:\Tài liệu học\API\Bài tập lớn\Admin\DTO\obj\Debug\net6.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tài liệu học\API\Bài tập lớn\Admin\DTO\obj\Debug\net6.0\DTO.AssemblyInfoInputs.cache
+D:\Tài liệu học\API\Bài tập lớn\Admin\DTO\obj\Debug\net6.0\DTO.AssemblyInfo.cs
+D:\Tài liệu học\API\Bài tập lớn\Admin\DTO\obj\Debug\net6.0\DTO.csproj.CoreCompileInputs.cache
+D:\Tài liệu học\API\Bài tập lớn\Admin\DTO\obj\Debug\net6.0\DTO.dll
+D:\Tài liệu học\API\Bài tập lớn\Admin\DTO\obj\Debug\net6.0\refint\DTO.dll
+D:\Tài liệu học\API\Bài tập lớn\Admin\DTO\obj\Debug\net6.0\DTO.pdb
+D:\Tài liệu học\API\Bài tập lớn\Admin\DTO\obj\Debug\net6.0\DTO.genruntimeconfig.cache
+D:\Tài liệu học\API\Bài tập lớn\Admin\DTO\obj\Debug\net6.0\ref\DTO.dll

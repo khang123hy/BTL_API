@@ -1,4 +1,4 @@
-﻿namespace DTO
+﻿namespace Models
 {
     public partial class Account
     {

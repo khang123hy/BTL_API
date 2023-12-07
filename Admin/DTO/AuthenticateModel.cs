@@ -10,10 +10,8 @@ namespace DTO
         [Required]
         public string Password { get; set; }
     }
-
     public class AppSettings
     {
         public string Secret { get; set; }
-
     }
 }

@@ -16,14 +16,17 @@ namespace BLL
         {
             return _DAL_Topic.GetTopicbyID(id);
         }
-
-        public bool Create_Topic(Topic model)
+        public Topic Delete(int id)
         {
-            return _DAL_Topic.Create_Topic(model);
+            return _DAL_Topic.Delete(id);
         }
-        public bool Update_Topic(Topic model)
+        public bool Create(Topic model)
         {
-            return _DAL_Topic.Update_Topic(model);
+            return _DAL_Topic.Create(model);
+        }
+        public bool Update(Topic model)
+        {
+            return _DAL_Topic.Update(model);
         }
     }
 }

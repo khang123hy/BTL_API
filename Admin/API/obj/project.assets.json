@@ -15,7 +15,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.24": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.22": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.10.0"
@@ -1029,10 +1029,10 @@
         "logo.png"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.24": {
-      "sha512": "HBcytF2k0cM3Yk+Z8Srk7F+jPWZ/ucHN/VCNHhlDwTpzrZCgYlHMf9PDnVMBqHadnBfDCdO4SiKSnc91knLjxw==",
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.22": {
+      "sha512": "+iuPmRkxfJ2vHoXifWqPJK8jppS8+iH3m1B8VMdgVWiC2U4q3JPBXx/kb7348HfClMPG+OcHpTUtmJkfUByvgg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.24",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1040,7 +1040,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
         "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
-        "microsoft.aspnetcore.authentication.jwtbearer.6.0.24.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.6.0.22.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
@@ -2582,7 +2582,7 @@
     "net6.0": [
       "BLL >= 1.0.0",
       "DTO >= 1.0.0",
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.24",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.22",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.24",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.24",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.24",
@@ -2595,11 +2595,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\Admin\\API\\API.csproj",
+      "projectUniqueName": "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\Admin\\API\\API.csproj",
+      "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\API\\API.csproj",
       "packagesPath": "C:\\Users\\duykh\\.nuget\\packages\\",
-      "outputPath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\Admin\\API\\obj\\",
+      "outputPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\duykh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2616,11 +2616,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Tài liệu học\\API\\BTL\\BackEnd\\Admin\\BLL\\BLL.csproj": {
-              "projectPath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\Admin\\BLL\\BLL.csproj"
+            "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\BLL\\BLL.csproj": {
+              "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\BLL\\BLL.csproj"
             },
-            "D:\\Tài liệu học\\API\\BTL\\BackEnd\\Admin\\DTO\\DTO.csproj": {
-              "projectPath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\Admin\\DTO\\DTO.csproj"
+            "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\DTO\\DTO.csproj": {
+              "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\DTO\\DTO.csproj"
             }
           }
         }
@@ -2637,7 +2637,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
-            "version": "[6.0.24, )"
+            "version": "[6.0.22, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

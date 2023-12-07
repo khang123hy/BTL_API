@@ -28,13 +28,28 @@ namespace DAL
                 throw ex;
             }
         }
-
-        public bool Create_Topic(Topic model)
+        public Topic Delete(int id)
         {
             string msgError = "";
             try
             {
-                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "Topic_create",
+                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_topic_delete", "@ID_Topic", id);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<Topic>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool Create(Topic model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_topic_create",
                 "@Title", model.Title,
                 "@Description", model.Description);
 
@@ -50,15 +65,16 @@ namespace DAL
             }
         }
 
-        public bool Update_Topic(Topic model)
+        public bool Update(Topic model)
         {
             string msgError = "";
             try
             {
-                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "Topic_update",
+                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_topic_update",
                 "@ID_Topic", model.ID_Topic,
-                 "@Title", model.Title,
+                "@Title", model.Title,
                 "@Description", model.Description);
+
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);

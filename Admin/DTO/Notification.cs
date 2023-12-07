@@ -4,8 +4,8 @@
     {
 
 
-        public int IdNotification { get; set; }
-        public int? IdUser { get; set; }
+        public int ID_Notification { get; set; }
+        public int? ID_User { get; set; }
         public string Content { get; set; } = null!;
         public DateTime? NotificationDate { get; set; }
 
@@ -15,8 +15,8 @@
         }
         public Notification(int idNotification, int? idUser, string content, DateTime? notificationDate)
         {
-            IdNotification = idNotification;
-            IdUser = idUser;
+            ID_Notification = idNotification;
+            ID_User = idUser;
             Content = content;
             NotificationDate = notificationDate;
         }

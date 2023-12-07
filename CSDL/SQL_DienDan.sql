@@ -4,17 +4,17 @@ GO
 CREATE TABLE Accounts(
         ID_Account int PRIMARY KEY IDENTITY(1,1),
         ID_User int FOREIGN KEY (ID_User) REFERENCES USERS(ID_User),
-        AccountName CHAR(20) not null UNIQUE,
-        Password CHAR(20) not null,
-        Email CHAR(50) not null UNIQUE,
-        Role int CHECK(Role = 0 or Role = 1), --admin = 1; user = 0
-        
+        AccountName varchar(50) not null UNIQUE,
+        Password varchar(50) not null,
+        Email varchar(50) not null UNIQUE,
+        Role varchar(20) CHECK(Role = 'ADMIN' or Role = 'USER') --admin = 0; user = 1
 )
 
 CREATE TABLE Users(
     ID_User INT PRIMARY KEY IDENTITY(1,1),
     FullName NVARCHAR(255) NOT NULL,
     Address NVARCHAR(255) not null,
+	Sex Nvarchar(20) not null,
     DateOfBirth date,
     PhoneNumber char(10),
 )
@@ -32,7 +32,7 @@ CREATE TABLE Posts (
     ID_User INT,
     ID_Topic INT,
     Title NVARCHAR(150) NOT NULL,
-    Content TEXT not null,
+    Content nvarchar(max) not null,
     Image VARBINARY(MAX),
     CreatedDate DATETIME DEFAULT(GETDATE()),
     FOREIGN KEY (ID_User) REFERENCES Users(ID_User),
@@ -44,26 +44,27 @@ CREATE TABLE Comments (
     ID_Comment INT PRIMARY KEY IDENTITY(1,1),
     ID_Post INT,
     ID_User INT,
-    Content TEXT,
+    Content nvarchar(max),
     CreatedDate DATETIME DEFAULT(GETDATE()),
     FOREIGN KEY (ID_Post) REFERENCES Posts(ID_Post),
     FOREIGN KEY (ID_User) REFERENCES USERS(ID_User)
 );
 -- Tạo bảng Thích (Likes)
 CREATE TABLE Likes (
-    ID_Like INT PRIMARY KEY IDENTITY(1,1),
     ID_Post INT,
     ID_User INT,
+	PRIMARY KEY(ID_Post,ID_User),
     FOREIGN KEY (ID_Post) REFERENCES Posts(ID_Post),
     FOREIGN KEY (ID_User) REFERENCES USERS(ID_User)
 );
+
 
 -- Tạo bảng Thông báo (Notifications)
 CREATE TABLE Notifications (
     ID_Notification INT PRIMARY KEY IDENTITY(1,1),
     ID_User INT,
-    Content TEXT NOT NULL,
-    NotificationDate DATETIME,
+    Content nvarchar(max) NOT NULL,
+    NotificationDate DATETIME default(getdate()),
     FOREIGN KEY (ID_User) REFERENCES USERS(ID_User)
 );
 
@@ -77,17 +78,17 @@ DROP TABLE ACCOUNTS
 ---------------------------------------------------------------------
 --THÊM DỮ LIỆU VÀO CÁC BẢNG
 -- Thêm dữ liệu vào bảng USERS
-INSERT INTO USERS (FullName, Address, DateOfBirth, PhoneNumber)
+INSERT INTO USERS (FullName,Sex, Address, DateOfBirth, PhoneNumber)
 VALUES 
-    ('Nguyen Van A', '123 Main Street', '1990-01-01', '1234567890'),
-    ('Tran Thi B', '456 Oak Street', '1985-05-15', '0987654321');
+    ('Nguyen Van A','Nam', '123 Main Street', '1990-01-01', '1234567890'),
+    ('Tran Thi B',N'Nữ', '456 Oak Street', '1985-05-15', '0987654321');
 
 -- Thêm dữ liệu vào bảng ACCOUNTS
 INSERT INTO ACCOUNTS (ID_USER, AccountName, PASSWORD, Email, Role)
 VALUES 
-    (1, 'user1', 'password1', 'user1@email.com', 0), -- User
-    (2, 'admin', 'adminpass', 'admin@email.com', 1); -- Admin
-
+    (1, 'user', '1', 'user1@email.com', 'USER'), -- User
+    (2, 'admin', '1', 'admin@email.com', 'ADMIN'); -- Admin
+	select*from ACCOUNTS
 -- Thêm dữ liệu vào bảng Topics
 INSERT INTO Topics (Title, Description, CreatedDate)
 VALUES 

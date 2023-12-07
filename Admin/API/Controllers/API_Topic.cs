@@ -24,18 +24,25 @@ namespace API.Controllers
 
         [Route("create-Topic")]
         [HttpPost]
-        public Topic CreateTopic([FromBody] Topic model)
+        public bool Create(Topic model)
         {
-            _topic.Create_Topic(model);
-            return model;
+            return _topic.Create(model);
         }
+
 
         [Route("update-Topic")]
         [HttpPost]
-        public Topic UpdateTopic([FromBody] Topic model)
+        public bool Update(Topic model)
         {
-            _topic.Update_Topic(model);
-            return model;
+            return _topic.Update(model);
+        }
+
+
+        [Route("Topic-Delete/{id}")]
+        [HttpDelete]
+        public Topic Delete(int id)
+        {
+            return _topic.Delete(id);
         }
     }
 }

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "tpDTVTKUib/6MLV6+4fchNg76Jn/2N815nwSS10RyLo76vgUK4CxALbeeGQCj/fsUc2OLh3K2Yj1HckL4Kq8ZQ==",
+  "dgSpecHash": "CNPmJ1sFYCVoO3OS/VaUa9pM65Mw/dTuzKtaK88Ck6eCmqM8xII5qktpkUsIjeGkg860/fqxsclxBDbxBY/cEA==",
   "success": true,
-  "projectFilePath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\Admin\\API\\API.csproj",
+  "projectFilePath": "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duykh\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\duykh\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.24\\microsoft.aspnetcore.authentication.jwtbearer.6.0.24.nupkg.sha512",
+    "C:\\Users\\duykh\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.22\\microsoft.aspnetcore.authentication.jwtbearer.6.0.22.nupkg.sha512",
     "C:\\Users\\duykh\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\duykh\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\duykh\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

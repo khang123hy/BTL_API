@@ -9,17 +9,6 @@
         public string? Description { get; set; }
         public DateTime? CreatedDate { get; set; }
 
-        public Topic()
-        {
-
-        }
-        public Topic(int iD_Topic, string title, string? description, DateTime? createdDate)
-        {
-            ID_Topic = iD_Topic;
-            Title = title;
-            Description = description;
-            CreatedDate = createdDate;
-        }
 
     }
 }

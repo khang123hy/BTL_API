@@ -13,13 +13,33 @@ namespace API.Controllers
         {
             _Comment = comment;
         }
+
         [Route("get-comment-byid")]
         [HttpGet]
-
-
         public Comment getComment_byid(int id)
         {
             return _Comment.getComment_byid(id);
+        }
+
+        [Route("Delete-Comment")]
+        [HttpDelete]
+        public Comment Delete_Comment(int id)
+        {
+            return _Comment.Delete_Comment(id);
+        }
+
+        [Route("Update-Comment")]
+        [HttpPost]
+        public bool Update_Comment(Comment model)
+        {
+            return _Comment.Update_Comment(model);
+        }
+
+        [Route("Create-Comment")]
+        [HttpPost]
+        public bool Create_Comment(Comment model)
+        {
+            return _Comment.Create_Comment(model);
         }
     }
 }

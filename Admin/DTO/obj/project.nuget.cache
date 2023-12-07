@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/hRAdED8JzZn9JW26ymiuHB40rSngOl3tXuUekQSt84TJcv7+86YbswYpOLXJ4l8J4Z0SuTSKTiMX13/Gx6qsw==",
+  "dgSpecHash": "QtvLnWbQCFdckfeRb310t+J0KHx/WtwmsqjDK/EA/p3d1mTQzB7hKniYBAJTOQce1faYoYQxRFmiM/grmJXZpw==",
   "success": true,
-  "projectFilePath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\Admin\\DTO\\DTO.csproj",
+  "projectFilePath": "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\DTO\\DTO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duykh\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\duykh\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
