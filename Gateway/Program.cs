@@ -1,6 +1,9 @@
-using GateWay.Helpers;
+using DAL.Helper;
+using DAL.Helper.Interfaces;
+using Gateway;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Models;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using System.Text;
@@ -11,6 +14,9 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 });
+
+builder.Services.AddTransient<IDatabaseHelper, DatabaseHelper>();
+
 
 // configure strongly typed settings objects
 var appSettingsSection = builder.Configuration.GetSection("AppSettings");
@@ -64,7 +70,8 @@ app.UseCors(x => x
     .AllowAnyMethod()
     .AllowAnyHeader());
 
-//app.UseMiddleware<JwtMiddleware>(configuration);
+
+app.UseMiddleware<MiddlemanLogin>(configuration);
 
 await app.UseOcelot();
 

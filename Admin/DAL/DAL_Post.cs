@@ -2,6 +2,7 @@
 using DAL.Helper.Interfaces;
 using DAL.Interfaces;
 using DTO;
+using static DTO.Post;
 
 namespace DAL
 {
@@ -64,6 +65,41 @@ namespace DAL
                 "@Title", model.Title,
                 "@Content", model.Content,
                 "@Image", model.Image);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Post Delete_Post(int id)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_posts_delete", "@ID_Post", id);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<Post>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool Deletes_Post(LIST_Post model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_post_deletes",
+                "@list_post", model.list_post != null ? MessageConvert.SerializeObject(model.list_post) : null);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);

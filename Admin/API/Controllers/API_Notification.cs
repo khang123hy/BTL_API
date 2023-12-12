@@ -1,6 +1,7 @@
 ﻿using BLL.Interfaces;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
+using static DTO.Notification;
 
 namespace API.Controllers
 {
@@ -33,6 +34,21 @@ namespace API.Controllers
         public bool Update(Notification model)
         {
             return _notification.Update(model);
+        }
+
+
+        [Route("Delete-Notification")]
+        [HttpDelete]
+        public Notification Delete(int id)
+        {
+            return _notification.Delete(id);
+        }
+
+        [Route("Deletes-Notification")]
+        [HttpDelete]
+        public bool Deletes_Notification(LIST_Notification model)
+        {
+            return _notification.Deletes_Notification(model);
         }
     }
 }

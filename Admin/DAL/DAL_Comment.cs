@@ -87,5 +87,25 @@ namespace DAL
                 throw ex;
             }
         }
+
+        public bool Deletes_Notification(LIST_Comment model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _idbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_comment_deletes",
+                "@list_comment", model.list_comment != null ? MessageConvert.SerializeObject(model.list_comment) : null);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

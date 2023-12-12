@@ -11,5 +11,8 @@ namespace DAL.Interfaces
 
         bool Create_Comment(Comment model);
 
+        bool Deletes_Notification(LIST_Comment model);
+
+
     }
 }

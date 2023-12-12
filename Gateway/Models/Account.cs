@@ -1,5 +1,6 @@
 ﻿namespace Models
 {
+
     public partial class Account
     {
 
@@ -10,18 +11,14 @@
         public string Email { get; set; } = null!;
         public int? Role { get; set; }
 
-        public Account(int iD_Acount, int iD_User, string accountName, string password, string email, int? role)
-        {
-            ID_Acount = iD_Acount;
-            ID_User = iD_User;
-            AccountName = accountName;
-            Password = password;
-            Email = email;
-            Role = role;
-        }
-
-
-
-
     }
+
+
+
+    public class AppSettings
+    {
+        public string Secret { get; set; }
+    }
+
+
 }

@@ -1,3 +1,6 @@
+create database DienDan_Vinfast
+go
+
 use DienDan_Vinfast
 GO
 
@@ -6,8 +9,7 @@ CREATE TABLE Accounts(
         ID_User int FOREIGN KEY (ID_User) REFERENCES USERS(ID_User),
         AccountName varchar(50) not null UNIQUE,
         Password varchar(50) not null,
-        Email varchar(50) not null UNIQUE,
-        Role varchar(20) CHECK(Role = 'ADMIN' or Role = 'USER') --admin = 0; user = 1
+        Role varchar(20) CHECK(Role = 'ADMIN' or Role = 'USER')
 )
 
 CREATE TABLE Users(
@@ -17,6 +19,7 @@ CREATE TABLE Users(
 	Sex Nvarchar(20) not null,
     DateOfBirth date,
     PhoneNumber char(10),
+	 Email varchar(50) not null UNIQUE,
 )
 -- Tạo bảng Chủ đề (Topics)
 CREATE TABLE Topics (
@@ -78,16 +81,34 @@ DROP TABLE ACCOUNTS
 ---------------------------------------------------------------------
 --THÊM DỮ LIỆU VÀO CÁC BẢNG
 -- Thêm dữ liệu vào bảng USERS
-INSERT INTO USERS (FullName,Sex, Address, DateOfBirth, PhoneNumber)
+INSERT INTO USERS (FullName,Sex, Address, DateOfBirth, PhoneNumber,Email)
 VALUES 
-    ('Nguyen Van A','Nam', '123 Main Street', '1990-01-01', '1234567890'),
-    ('Tran Thi B',N'Nữ', '456 Oak Street', '1985-05-15', '0987654321');
+    ('Nguyen Van A','Nam', '123 Main Street', '1990-01-01', '1234567890','user1@email.com'),
+    ('Tran Thi B',N'Nữ', '456 Oak Street', '1985-05-15', '0987654321', 'admin@email.com');
+-- Chèn dữ liệu cho bảng Users
+select * from Users
+INSERT INTO Users (FullName, Address, Sex, DateOfBirth, PhoneNumber, Email)
+VALUES 
+    ('John Doe', '123 Main St', 'Male', '1990-01-01', '1234567890', 'john.doe@example.com'),
+    ('Jane Smith', '456 Oak St', 'Female', '1985-05-15', '9876543210', 'jane.smith@example.com'),
+    ('Bob Johnson', '789 Pine St', 'Male', '1982-09-20', '5551112222', 'bob.johnson@example.com'),
+    ('Alice Brown', '101 Elm St', 'Female', '1995-03-12', '9998887777', 'alice.brown@example.com'),
+    ('Charlie Wilson', '202 Cedar St', 'Male', '1988-11-28', '4443332222', 'charlie.wilson@example.com');
+
+-- Chèn dữ liệu cho bảng Accounts
+INSERT INTO Accounts (ID_User, AccountName, Password, Role)
+VALUES 
+    (4, 'john_doe_account', 'password123', 'USER'),
+    (5, 'jane_smith_account', 'pass456', 'ADMIN'),
+    (6, 'bob_johnson_account', 'secure789', 'USER'),
+    (7, 'alice_brown_account', 'pass123', 'USER'),
+    (8, 'charlie_wilson_account', 'password456', 'ADMIN');
 
 -- Thêm dữ liệu vào bảng ACCOUNTS
-INSERT INTO ACCOUNTS (ID_USER, AccountName, PASSWORD, Email, Role)
+INSERT INTO ACCOUNTS (ID_USER, AccountName, PASSWORD , Role)
 VALUES 
-    (1, 'user', '1', 'user1@email.com', 'USER'), -- User
-    (2, 'admin', '1', 'admin@email.com', 'ADMIN'); -- Admin
+    (1, 'user', '1',  'USER'), -- User
+    (2, 'admin', '1', 'ADMIN'); -- Admin
 	select*from ACCOUNTS
 -- Thêm dữ liệu vào bảng Topics
 INSERT INTO Topics (Title, Description, CreatedDate)
@@ -119,4 +140,6 @@ VALUES
     (1, 'You have a new like on your post!', GETDATE()),
     (2, 'Someone commented on your post.', GETDATE());
 
-SELECT * from Notifications
+SELECT * from Accounts
+select*from Posts
+select*from Notifications

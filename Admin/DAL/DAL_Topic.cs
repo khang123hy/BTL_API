@@ -86,5 +86,24 @@ namespace DAL
                 throw ex;
             }
         }
+
+        public bool Deletes_Topic(LIST_Topic model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_topic_deletes",
+                "@list_topic", model.list_topic != null ? MessageConvert.SerializeObject(model.list_topic) : null);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

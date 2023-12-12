@@ -37,9 +37,41 @@ namespace API.Controllers
 
         [Route("Create-User")]
         [HttpPost]
-        public bool Create_User(User model)
+        public bool Create_User(User2 model)
         {
             return _BLL_Users.Create_User(model);
         }
+
+        [Route("Deletes-User")]
+        [HttpPost]
+        public List_User Deletes_User([FromBody] List_User model)
+        {
+            _BLL_Users.Deletes_User(model);
+            return model;
+        }
+
+        ////Account
+        [Route("Update-Account")]
+        [HttpPost]
+        public bool Update_Account(Account model)
+        {
+            return _BLL_Users.Update_Account(model);
+        }
+
+        [Route("Deletes-Account")]
+        [HttpDelete]
+        public List_User Deletes_Account([FromBody] List_User model)
+        {
+            _BLL_Users.Deletes_Account(model);
+            return model;
+        }
+
+        [Route("Delete-Account")]
+        [HttpDelete]
+        public Account Delete_Account(int id)
+        {
+            return _BLL_Users.Delete_Account(id);
+        }
+
     }
 }

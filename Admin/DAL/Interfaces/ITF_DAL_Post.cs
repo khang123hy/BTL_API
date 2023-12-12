@@ -1,4 +1,5 @@
 ﻿using DTO;
+using static DTO.Post;
 
 namespace DAL.Interfaces
 {
@@ -7,5 +8,11 @@ namespace DAL.Interfaces
         Post getpost(int id);
         bool Create_Post(Post model);
         bool Update_Post(Post model);
+        Post Delete_Post(int id);
+
+        bool Deletes_Post(LIST_Post model);
+
+
+
     }
 }

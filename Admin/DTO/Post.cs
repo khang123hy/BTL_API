@@ -3,7 +3,6 @@
     public partial class Post
     {
 
-
         public int ID_Post { get; set; }
         public int? ID_User { get; set; }
         public int? ID_Topic { get; set; }
@@ -12,19 +11,15 @@
         public byte[]? Image { get; set; }
         public DateTime? CreatedDate { get; set; }
 
-        public Post()
+        public partial class LIST_Post
         {
-
+            public List<CT_Post> list_post { get; set; }
         }
-        public Post(int iD_Post, int? iD_User, int? iD_Topic, string title, string content, byte[]? image, DateTime? createdDate)
+
+        public partial class CT_Post
         {
-            ID_Post = iD_Post;
-            ID_User = iD_User;
-            ID_Topic = iD_Topic;
-            Title = title;
-            Content = content;
-            Image = image;
-            CreatedDate = createdDate;
+            public int ID_Post { get; set; }
+
         }
     }
 }

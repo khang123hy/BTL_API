@@ -10,19 +10,17 @@
         public string? Content { get; set; }
         public DateTime? CreatedDate { get; set; }
 
-        public Comment()
-        {
 
-        }
-        public Comment(int iD_Comment, int? iD_Post, int? iD_User, string? content, DateTime? createdDate)
-        {
-            ID_Comment = iD_Comment;
-            ID_Post = iD_Post;
-            ID_User = iD_User;
-            Content = content;
-            CreatedDate = createdDate;
-        }
     }
 
+    public partial class LIST_Comment
+    {
+        public List<CT_Comment> list_comment { get; set; }
+    }
 
+    public partial class CT_Comment
+    {
+        public int ID_Comment { get; set; }
+
+    }
 }

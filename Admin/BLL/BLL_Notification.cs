@@ -1,6 +1,7 @@
 ﻿using BLL.Interfaces;
 using DAL.Interfaces;
 using DTO;
+using static DTO.Notification;
 
 namespace BLL
 {
@@ -25,6 +26,16 @@ namespace BLL
         public bool Update(Notification model)
         {
             return _dal_notification.Update(model);
+        }
+
+        public Notification Delete(int id)
+        {
+            return _dal_notification.Delete(id);
+        }
+
+        public bool Deletes_Notification(LIST_Notification model)
+        {
+            return _dal_notification.Deletes_Notification(model);
         }
     }
 }

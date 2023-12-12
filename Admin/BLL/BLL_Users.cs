@@ -26,10 +26,28 @@ namespace BLL
         {
             return _DAL_Users.Update_User(model);
         }
-        public bool Create_User(User model)
+        public bool Create_User(User2 model)
         {
             return _DAL_Users.Create_User(model);
         }
+        public bool Deletes_User(List_User model)
+        {
+            return _DAL_Users.Deletes_User(model);
+        }
 
+
+        //Account
+        public bool Update_Account(Account model)
+        {
+            return _DAL_Users.Update_Account(model);
+        }
+        public bool Deletes_Account(List_User model)
+        {
+            return _DAL_Users.Deletes_Account(model);
+        }
+        public Account Delete_Account(int id)
+        {
+            return _DAL_Users.Delete_Account(id);
+        }
     }
 }

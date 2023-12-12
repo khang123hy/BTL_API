@@ -3,10 +3,18 @@ go
 
 SELECT*FROM Topics
 
+select*from Topics
+
+create proc get_topic
+(@id int)
+as
+	begin
+		select*from Topics where ID_Topic = @id;
+	end
 go
 create PROCEDURE Topic_create(
     @Title VARCHAR(255) ,
-    @Description TEXT
+    @Description nvarchar(max)
 )
 AS
     BEGIN
@@ -14,6 +22,7 @@ AS
 	   values(@Title,@Description);
     END;
 GO
+
 
 create PROCEDURE sp_topic_create(
     @Title nvarchar(255) ,
@@ -48,4 +57,29 @@ AS
 GO
 select*from Topics
 
-drop PROCEDURE sp_topic_update
+
+----------------------------------deletes 
+CREATE PROCEDURE sp_topic_deletes
+(
+    @list_topic NVARCHAR(MAX)
+)
+AS
+BEGIN
+    IF (@list_topic IS NOT NULL) 
+    BEGIN
+        -- Chèn dữ liệu vào bảng tạm 
+        SELECT
+            JSON_VALUE(p.value, '$.iD_Topic') AS iD_Topic
+        INTO #Results 
+        FROM OPENJSON(@list_topic) AS p;
+
+        -- Thực hiện xóa tài khoản dựa trên trường note và iduser
+        DELETE A 
+        FROM Topics A
+        INNER JOIN #Results R ON A.ID_Topic = R.iD_Topic;
+        
+        DROP TABLE #Results;
+    END;
+END;
+
+select*from Topics

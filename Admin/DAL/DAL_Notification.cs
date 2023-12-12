@@ -2,6 +2,7 @@
 using DAL.Helper.Interfaces;
 using DAL.Interfaces;
 using DTO;
+using static DTO.Notification;
 
 namespace DAL
 {
@@ -70,5 +71,42 @@ namespace DAL
                 throw ex;
             }
         }
+
+        public Notification Delete(int id)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_notification_delete",
+                     "@id", id);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<Notification>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool Deletes_Notification(LIST_Notification model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_notification_deletes",
+                "@list_notification", model.list_notification != null ? MessageConvert.SerializeObject(model.list_notification) : null);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

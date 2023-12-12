@@ -8,5 +8,6 @@ namespace BLL.Interfaces
         Topic Delete(int id);
         bool Create(Topic model);
         bool Update(Topic model);
+        bool Deletes_Topic(LIST_Topic model);
     }
 }

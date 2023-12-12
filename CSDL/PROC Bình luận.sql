@@ -34,3 +34,29 @@ begin
 delete from Comments where ID_Comment = @ID_Comment
 end
 go
+
+------------------------------------------deletes
+CREATE PROCEDURE sp_comment_deletes
+(
+    @list_comment NVARCHAR(MAX)
+)
+AS
+BEGIN
+    IF (@list_comment IS NOT NULL) 
+    BEGIN
+        -- Chèn dữ liệu vào bảng tạm 
+        SELECT
+            JSON_VALUE(p.value, '$.iD_Comment') AS iD_Comment
+        INTO #Results 
+        FROM OPENJSON(@list_comment) AS p;
+
+        -- Thực hiện xóa tài khoản dựa trên trường note và iduser
+        DELETE A 
+        FROM Comments A
+        INNER JOIN #Results R ON A.ID_Comment = R.iD_Comment;
+        
+        DROP TABLE #Results;
+    END;
+END;
+
+

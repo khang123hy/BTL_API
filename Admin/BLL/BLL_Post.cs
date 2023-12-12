@@ -1,6 +1,7 @@
 ﻿using BLL.Interfaces;
 using DAL.Interfaces;
 using DTO;
+using static DTO.Post;
 
 namespace BLL
 {
@@ -23,5 +24,16 @@ namespace BLL
         {
             return _DAL_Post.Create_Post(model);
         }
+
+        public Post Delete_Post(int id)
+        {
+            return _DAL_Post.Delete_Post(id);
+        }
+
+        public bool Deletes_Post(LIST_Post model)
+        {
+            return _DAL_Post.Deletes_Post(model);
+        }
+
     }
 }

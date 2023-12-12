@@ -22,7 +22,7 @@ namespace API.Controllers
             var user = _BLL_Account.Login(model.Username, model.Password);
             if (user == null)
                 return BadRequest(new { message = "Tài khoản hoặc mật khẩu không đúng!" });
-            return Ok(new { ID_User = user.ID_User, FullName = user.FullName, AccountName = user.AccountName, Password = user.Password, Email = user.Email, Token = user.Token });
+            return Ok(new { ID_User = user.ID_User, FullName = user.FullName, AccountName = user.AccountName, Password = user.Password, Email = user.Email, Phone = user.PhoneNumber, Token = user.Token });
         }
 
 

@@ -38,11 +38,20 @@ namespace API.Controllers
         }
 
 
-        [Route("Topic-Delete/{id}")]
+        [Route("Delete-Topic{id}")]
         [HttpDelete]
         public Topic Delete(int id)
         {
             return _topic.Delete(id);
+        }
+
+
+        [Route("Deletes-Topic")]
+        [HttpDelete]
+        public LIST_Topic Deletes_Topic([FromBody] LIST_Topic model)
+        {
+            _topic.Deletes_Topic(model);
+            return model;
         }
     }
 }

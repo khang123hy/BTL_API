@@ -10,5 +10,8 @@ namespace BLL.Interfaces
         public bool Update_Comment(Comment model);
 
         public bool Create_Comment(Comment model);
+
+        bool Deletes_Notification(LIST_Comment model);
+
     }
 }

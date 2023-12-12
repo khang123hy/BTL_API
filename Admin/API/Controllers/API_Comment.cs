@@ -41,5 +41,12 @@ namespace API.Controllers
         {
             return _Comment.Create_Comment(model);
         }
+
+        [Route("Deletes-Comment")]
+        [HttpDelete]
+        public bool Deletes_Notification(LIST_Comment model)
+        {
+            return _Comment.Deletes_Notification(model);
+        }
     }
 }

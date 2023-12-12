@@ -1,6 +1,7 @@
 ﻿using BLL.Interfaces;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
+using static DTO.Post;
 
 namespace API.Controllers
 {
@@ -15,7 +16,7 @@ namespace API.Controllers
             _Post = post;
         }
 
-        [Route("get-post")]
+        [Route("Get-post")]
         [HttpGet]
         public Post getpost(int id)
         {
@@ -23,7 +24,7 @@ namespace API.Controllers
         }
 
 
-        [Route("create-Post")]
+        [Route("Create-Post")]
         [HttpPost]
         public Post CreatePost([FromBody] Post model)
         {
@@ -31,11 +32,26 @@ namespace API.Controllers
             return model;
         }
 
-        [Route("update-Post")]
+        [Route("Update-Post")]
         [HttpPost]
         public Post UpdatePost([FromBody] Post model)
         {
             _Post.Update_Post(model);
+            return model;
+        }
+
+        [Route("Delete-Post")]
+        [HttpDelete]
+        public Post Delete_Post(int id)
+        {
+            return _Post.Delete_Post(id);
+        }
+
+        [Route("Deletes-Post")]
+        [HttpDelete]
+        public LIST_Post Deletes_Post([FromBody] LIST_Post model)
+        {
+            _Post.Deletes_Post(model);
             return model;
         }
     }

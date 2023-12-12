@@ -9,16 +9,15 @@
         public string Content { get; set; } = null!;
         public DateTime? NotificationDate { get; set; }
 
-        public Notification()
+        public partial class LIST_Notification
         {
-
+            public List<CT_Notification> list_notification { get; set; }
         }
-        public Notification(int idNotification, int? idUser, string content, DateTime? notificationDate)
+
+        public partial class CT_Notification
         {
-            ID_Notification = idNotification;
-            ID_User = idUser;
-            Content = content;
-            NotificationDate = notificationDate;
+            public int ID_Notification { get; set; }
+
         }
 
     }

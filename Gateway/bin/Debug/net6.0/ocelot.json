@@ -67,7 +67,6 @@
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
       },
-
       "DownstreamPathTemplate": "/api/API_Topic/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -77,6 +76,7 @@
         }
       ]
     },
+
     //API_Users
     {
       "UpstreamPathTemplate": "/api/User/{everything}",
