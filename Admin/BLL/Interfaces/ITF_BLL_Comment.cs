@@ -12,6 +12,7 @@ namespace BLL.Interfaces
         public bool Create_Comment(Comment model);
 
         bool Deletes_Notification(LIST_Comment model);
+        List<Comment> Search_Comment(int pageIndex, int pageSize, out long total, string Keywords);
 
     }
 }

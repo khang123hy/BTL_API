@@ -50,27 +50,32 @@ namespace API.Controllers
             return model;
         }
 
-        ////Account
-        [Route("Update-Account")]
+        [Route("Search-User")]
         [HttpPost]
-        public bool Update_Account(Account model)
+        public IActionResult Search_User([FromBody] Dictionary<string, object> formData)
         {
-            return _BLL_Users.Update_Account(model);
-        }
-
-        [Route("Deletes-Account")]
-        [HttpDelete]
-        public List_User Deletes_Account([FromBody] List_User model)
-        {
-            _BLL_Users.Deletes_Account(model);
-            return model;
-        }
-
-        [Route("Delete-Account")]
-        [HttpDelete]
-        public Account Delete_Account(int id)
-        {
-            return _BLL_Users.Delete_Account(id);
+            try
+            {
+                var page = int.Parse(formData["page"].ToString());
+                var pageSize = int.Parse(formData["pageSize"].ToString());
+                string Keywords = "";
+                if (formData.Keys.Contains("Keywords") && !string.IsNullOrEmpty(Convert.ToString(formData["Keywords"]))) { Keywords = Convert.ToString(formData["Keywords"]); }
+                long total = 0;
+                var data = _BLL_Users.Search_User(page, pageSize, out total, Keywords);
+                return Ok(
+                            new
+                            {
+                                TotalItems = total,
+                                Data = data,
+                                Page = page,
+                                PageSize = pageSize
+                            }
+                        );
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
     }

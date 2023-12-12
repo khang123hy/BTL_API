@@ -3,6 +3,7 @@ go
 
 select*from Users
 select*from Accounts
+select*from Notifications
 go
 
 ------------------------------------ LOGIN
@@ -75,7 +76,7 @@ END;
 select*from Accounts
 select*from Users
 
-
+drop PROCEDURE CheckLogin
 CREATE PROCEDURE CheckLogin
     @AccountName NVARCHAR(50),
     @Password NVARCHAR(255)
@@ -93,9 +94,90 @@ BEGIN
         u.Email,
         a.AccountName,
         a.Role,
-        a.Password AS MatKhau
+        a.Password 
     FROM Users u
     INNER JOIN Accounts a ON u.ID_User = a.ID_User
     WHERE a.AccountName = @AccountName AND a.Password = @Password;
 END
+
+-------------------------------------------------------------SEARCH
+select*from Accounts
+CREATE PROCEDURE sp_Account_search 
+    @page_index INT, 
+    @page_size INT,
+    @Keywords NVARCHAR(255)
+AS
+BEGIN
+    DECLARE @RecordCount BIGINT;
+
+    IF (@page_size <> 0)
+    BEGIN
+        SET NOCOUNT ON;
+
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY Role ASC) AS RowNumber, 
+            k.ID_Account,
+            k.ID_User,
+            k.AccountName,
+            k.Password,
+			k.Role
+        INTO #Results1
+        FROM Accounts AS k
+        WHERE (
+                    @Keywords = '' 
+                    OR k.ID_Account LIKE N'%' + @Keywords + '%' 
+                    OR k.ID_User LIKE N'%' + @Keywords + '%'
+					OR k.AccountName LIKE N'%' + @Keywords + '%'
+					OR k.Password LIKE N'%' + @Keywords + '%'
+					OR k.Role LIKE N'%' + @Keywords + '%'
+
+                );                   
+
+        SELECT @RecordCount = COUNT(*)
+        FROM #Results1;
+
+        SELECT 
+            *, 
+            @RecordCount AS RecordCount
+        FROM #Results1
+        WHERE 
+            RowNumber BETWEEN (@page_index - 1) * @page_size + 1 AND (((@page_index - 1) * @page_size + 1) + @page_size) - 1
+            OR @page_index = -1;
+
+        DROP TABLE #Results1; 
+    END
+    ELSE
+    BEGIN
+        SET NOCOUNT ON;
+
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY Role ASC) AS RowNumber, 
+            k.ID_Account,
+            k.ID_User,
+            k.AccountName,
+            k.Password,
+			k.Role
+        INTO #Results2
+        FROM Accounts AS k
+        WHERE  (
+                    @Keywords = '' 
+                    OR k.ID_Account LIKE N'%' + @Keywords + '%' 
+                    OR k.ID_User LIKE N'%' + @Keywords + '%'
+					OR k.AccountName LIKE N'%' + @Keywords + '%'
+					OR k.Password LIKE N'%' + @Keywords + '%'
+					OR k.Role LIKE N'%' + @Keywords + '%'
+                );                   
+
+        SELECT @RecordCount = COUNT(*)
+        FROM #Results2;
+
+        SELECT 
+            *, 
+            @RecordCount AS RecordCount
+        FROM #Results2;                        
+
+        DROP TABLE #Results1; 
+    END;
+END;
+GO
 

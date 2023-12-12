@@ -48,5 +48,33 @@ namespace API.Controllers
         {
             return _Comment.Deletes_Notification(model);
         }
+
+        [Route("Search-Comment")]
+        [HttpPost]
+        public IActionResult Search_Comment([FromBody] Dictionary<string, object> formData)
+        {
+            try
+            {
+                var page = int.Parse(formData["page"].ToString());
+                var pageSize = int.Parse(formData["pageSize"].ToString());
+                string Keywords = "";
+                if (formData.Keys.Contains("Keywords") && !string.IsNullOrEmpty(Convert.ToString(formData["Keywords"]))) { Keywords = Convert.ToString(formData["Keywords"]); }
+                long total = 0;
+                var data = _Comment.Search_Comment(page, pageSize, out total, Keywords);
+                return Ok(
+                            new
+                            {
+                                TotalItems = total,
+                                Data = data,
+                                Page = page,
+                                PageSize = pageSize
+                            }
+                        );
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

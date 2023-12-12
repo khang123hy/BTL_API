@@ -37,5 +37,10 @@ namespace BLL
         {
             return _dal_notification.Deletes_Notification(model);
         }
+
+        public List<Notification> Search_Notification(int pageIndex, int pageSize, out long total, string Keywords)
+        {
+            return _dal_notification.Search_Notification(pageIndex, pageSize, out total, Keywords);
+        }
     }
 }

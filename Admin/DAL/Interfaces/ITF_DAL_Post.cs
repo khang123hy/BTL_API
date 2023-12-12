@@ -12,7 +12,7 @@ namespace DAL.Interfaces
 
         bool Deletes_Post(LIST_Post model);
 
-
+        List<Post> Search_Posts(int pageIndex, int pageSize, out long total, string Keywords);
 
     }
 }

@@ -108,5 +108,26 @@ namespace DAL
             }
         }
 
+        public List<Notification> Search_Notification(int pageIndex, int pageSize, out long total, string Keywords)
+        {
+            string msgError = "";
+            total = 0;
+            try
+            {
+                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_Notification_search",
+                    "@page_index", pageIndex,
+                    "@page_size", pageSize,
+                    "@Keywords", Keywords);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                return dt.ConvertTo<Notification>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

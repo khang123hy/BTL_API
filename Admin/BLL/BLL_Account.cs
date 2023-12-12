@@ -2,10 +2,6 @@
 using DAL.Interfaces;
 using DTO;
 using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
 
 namespace BLL
 {
@@ -20,38 +16,56 @@ namespace BLL
             _appSettings = appSettingsn.Value;
         }
 
-        public LoginResult Login(string taikhoan, string matkhau)
+        //public LoginResult Login(string taikhoan, string matkhau)
+        //{
+        //    var account = _DAL_Account.Login(taikhoan, matkhau);
+        //    if (account == null)
+        //        return null;
+
+        //    var tokenHandler = new JwtSecurityTokenHandler();
+        //    var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+
+        //    // Kiểm tra giá trị trước khi gán Token
+        //    if (account != null)
+        //    {
+        //        var tokenDescriptor = new SecurityTokenDescriptor
+        //        {
+        //            Subject = new ClaimsIdentity(new Claim[]
+        //            {
+        //        new Claim(ClaimTypes.Name, account.FullName),
+        //        new Claim(ClaimTypes.Role, account.Role),
+        //        new Claim(ClaimTypes.DenyOnlyWindowsDeviceGroup, account.Password)
+        //            }),
+
+        //            Expires = DateTime.UtcNow.AddDays(7),
+        //            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+        //        };
+        //        var token = tokenHandler.CreateToken(tokenDescriptor);
+        //        account.Token = tokenHandler.WriteToken(token);
+        //    }
+
+        //    return account;
+        //}
+
+
+        //Account
+
+        public bool Update_Account(Account model)
         {
-            var account = _DAL_Account.Login(taikhoan, matkhau);
-            if (account == null)
-                return null;
-
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
-
-            // Kiểm tra giá trị trước khi gán Token
-            if (account != null)
-            {
-                var tokenDescriptor = new SecurityTokenDescriptor
-                {
-                    Subject = new ClaimsIdentity(new Claim[]
-                    {
-                new Claim(ClaimTypes.Name, account.FullName),
-                new Claim(ClaimTypes.Role, account.Role),
-                new Claim(ClaimTypes.DenyOnlyWindowsDeviceGroup, account.Password)
-                    }),
-
-                    Expires = DateTime.UtcNow.AddDays(7),
-                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-                };
-                var token = tokenHandler.CreateToken(tokenDescriptor);
-                account.Token = tokenHandler.WriteToken(token);
-            }
-
-            return account;
+            return _DAL_Account.Update_Account(model);
+        }
+        public bool Deletes_Account(List_User model)
+        {
+            return _DAL_Account.Deletes_Account(model);
+        }
+        public Account Delete_Account(int id)
+        {
+            return _DAL_Account.Delete_Account(id);
         }
 
-
-
+        public List<Account> Search_Account(int pageIndex, int pageSize, out long total, string Keywords)
+        {
+            return _DAL_Account.Search_Account(pageIndex, pageSize, out total, Keywords);
+        }
     }
 }

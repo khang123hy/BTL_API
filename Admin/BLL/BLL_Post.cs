@@ -35,5 +35,9 @@ namespace BLL
             return _DAL_Post.Deletes_Post(model);
         }
 
+        public List<Post> Search_Posts(int pageIndex, int pageSize, out long total, string Keywords)
+        {
+            return _DAL_Post.Search_Posts(pageIndex, pageSize, out total, Keywords);
+        }
     }
 }

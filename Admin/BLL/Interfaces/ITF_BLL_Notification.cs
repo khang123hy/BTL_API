@@ -11,5 +11,7 @@ namespace BLL.Interfaces
         Notification Delete(int id);
 
         bool Deletes_Notification(LIST_Notification model);
+
+        List<Notification> Search_Notification(int pageIndex, int pageSize, out long total, string Keywords);
     }
 }

@@ -35,6 +35,9 @@ namespace BLL
         {
             return _DAL_Comment.Deletes_Notification(model);
         }
-
+        public List<Comment> Search_Comment(int pageIndex, int pageSize, out long total, string Keywords)
+        {
+            return _DAL_Comment.Search_Comment(pageIndex, pageSize, out total, Keywords);
+        }
     }
 }

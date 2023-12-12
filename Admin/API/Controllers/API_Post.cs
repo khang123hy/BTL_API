@@ -16,7 +16,7 @@ namespace API.Controllers
             _Post = post;
         }
 
-        [Route("Get-post")]
+        [Route("Get-posts")]
         [HttpGet]
         public Post getpost(int id)
         {
@@ -24,7 +24,7 @@ namespace API.Controllers
         }
 
 
-        [Route("Create-Post")]
+        [Route("Create-Posts")]
         [HttpPost]
         public Post CreatePost([FromBody] Post model)
         {
@@ -32,7 +32,7 @@ namespace API.Controllers
             return model;
         }
 
-        [Route("Update-Post")]
+        [Route("Update-Posts")]
         [HttpPost]
         public Post UpdatePost([FromBody] Post model)
         {
@@ -40,19 +40,49 @@ namespace API.Controllers
             return model;
         }
 
-        [Route("Delete-Post")]
+        [Route("Delete-Posts")]
         [HttpDelete]
         public Post Delete_Post(int id)
         {
             return _Post.Delete_Post(id);
         }
 
-        [Route("Deletes-Post")]
+        [Route("Deletes-Posts")]
         [HttpDelete]
         public LIST_Post Deletes_Post([FromBody] LIST_Post model)
         {
             _Post.Deletes_Post(model);
             return model;
         }
+
+        [Route("Search-Posts")]
+        [HttpPost]
+        public IActionResult Search_Posts([FromBody] Dictionary<string, object> formData)
+        {
+            try
+            {
+                var page = int.Parse(formData["page"].ToString());
+                var pageSize = int.Parse(formData["pageSize"].ToString());
+                string Keywords = "";
+                if (formData.Keys.Contains("Keywords") && !string.IsNullOrEmpty(Convert.ToString(formData["Keywords"]))) { Keywords = Convert.ToString(formData["Keywords"]); }
+                long total = 0;
+                var data = _Post.Search_Posts(page, pageSize, out total, Keywords);
+                return Ok(
+                            new
+                            {
+                                TotalItems = total,
+                                Data = data,
+                                Page = page,
+                                PageSize = pageSize
+                            }
+                        );
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
     }
 }

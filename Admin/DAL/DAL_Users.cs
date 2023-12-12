@@ -125,72 +125,30 @@ namespace DAL
                 throw ex;
             }
         }
-        #endregion
 
-
-        #region Account
-        public bool Update_Account(Account model)
+        public List<User> Search_User(int pageIndex, int pageSize, out long total, string Keywords)
         {
             string msgError = "";
+            total = 0;
             try
             {
-                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_account_update",
-                "@ID_User", model.ID_User,
-                "@AccountName", model.AccountName,
-                "@Password", model.Password,
-                "@Role", model.Role
-                );
-
-                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
-                {
-                    throw new Exception(Convert.ToString(result) + msgError);
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public Account Delete_Account(int id)
-        {
-            string msgError = "";
-            try
-            {
-                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_account_delete", "@ID_User", id);
+                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_user_search",
+                    "@page_index", pageIndex,
+                    "@page_size", pageSize,
+                    "@Keywords", Keywords);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
-                return dt.ConvertTo<Account>().FirstOrDefault();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-
-        }
-
-        public bool Deletes_Account(List_User model)
-        {
-            string msgError = "";
-            try
-            {
-                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_account_deletes",
-                "@list_json_ID_User", model.list_json_ID_User != null ? MessageConvert.SerializeObject(model.list_json_ID_User) : null);
-                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
-                {
-                    throw new Exception(Convert.ToString(result) + msgError);
-                }
-                return true;
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                return dt.ConvertTo<User>().ToList();
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-
         #endregion
+
+
 
     }
 }

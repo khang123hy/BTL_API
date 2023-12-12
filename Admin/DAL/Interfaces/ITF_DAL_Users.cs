@@ -14,10 +14,7 @@ namespace DAL.Interfaces
         bool Create_User(User2 model);
         bool Deletes_User(List_User model);
 
+        List<User> Search_User(int pageIndex, int pageSize, out long total, string Keywords);
 
-        //Account
-        bool Update_Account(Account model);
-        bool Deletes_Account(List_User model);
-        Account Delete_Account(int id);
     }
 }

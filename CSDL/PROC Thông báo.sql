@@ -68,3 +68,81 @@ BEGIN
         DROP TABLE #Results;
     END;
 END;
+
+
+-------------------------------------------------search
+select*from Notifications
+
+CREATE PROCEDURE sp_Notification_search 
+    @page_index INT, 
+    @page_size INT,
+    @Keywords NVARCHAR(255)
+AS
+BEGIN
+    DECLARE @RecordCount BIGINT;
+
+    IF (@page_size <> 0)
+    BEGIN
+        SET NOCOUNT ON;
+
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY Content ASC) AS RowNumber, 
+            k.ID_Notification,
+            k.ID_User,
+            k.Content,
+            k.NotificationDate
+        INTO #Results1
+        FROM Notifications AS k
+        WHERE  (
+                    @Keywords = '' 
+                    OR k.ID_Notification LIKE N'%' + @Keywords + '%' 
+                    OR k.ID_User LIKE N'%' + @Keywords + '%'
+					OR k.Content LIKE N'%' + @Keywords + '%'
+					OR k.NotificationDate LIKE N'%' + @Keywords + '%'
+                );                   
+
+        SELECT @RecordCount = COUNT(*)
+        FROM #Results1;
+
+        SELECT 
+            *, 
+            @RecordCount AS RecordCount
+        FROM #Results1
+        WHERE 
+            RowNumber BETWEEN (@page_index - 1) * @page_size + 1 AND (((@page_index - 1) * @page_size + 1) + @page_size) - 1
+            OR @page_index = -1;
+
+        DROP TABLE #Results1; 
+    END
+    ELSE
+    BEGIN
+        SET NOCOUNT ON;
+
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY Content ASC) AS RowNumber, 
+            k.ID_Notification,
+            k.ID_User,
+            k.Content,
+            k.NotificationDate
+        INTO #Results2
+        FROM Notifications AS k
+        WHERE  (
+                    @Keywords = '' 
+                    OR k.ID_Notification LIKE N'%' + @Keywords + '%' 
+                    OR k.ID_User LIKE N'%' + @Keywords + '%'
+					OR k.Content LIKE N'%' + @Keywords + '%'
+					OR k.NotificationDate LIKE N'%' + @Keywords + '%'
+                );                   
+
+        SELECT @RecordCount = COUNT(*)
+        FROM #Results2;
+
+        SELECT 
+            *, 
+            @RecordCount AS RecordCount
+        FROM #Results2;                        
+
+        DROP TABLE #Results1; 
+    END;
+END;
+GO

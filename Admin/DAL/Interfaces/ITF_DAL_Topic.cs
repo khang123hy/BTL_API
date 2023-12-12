@@ -10,5 +10,8 @@ namespace DAL.Interfaces
         bool Update(Topic model);
 
         bool Deletes_Topic(LIST_Topic model);
+
+        List<Topic> Search_Topic(int pageIndex, int pageSize, out long total, string Keywords);
+
     }
 }

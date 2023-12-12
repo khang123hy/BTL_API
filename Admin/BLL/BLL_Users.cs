@@ -36,18 +36,9 @@ namespace BLL
         }
 
 
-        //Account
-        public bool Update_Account(Account model)
+        public List<User> Search_User(int pageIndex, int pageSize, out long total, string Keywords)
         {
-            return _DAL_Users.Update_Account(model);
-        }
-        public bool Deletes_Account(List_User model)
-        {
-            return _DAL_Users.Deletes_Account(model);
-        }
-        public Account Delete_Account(int id)
-        {
-            return _DAL_Users.Delete_Account(id);
+            return _DAL_Users.Search_User(pageIndex, pageSize, out total, Keywords);
         }
     }
 }

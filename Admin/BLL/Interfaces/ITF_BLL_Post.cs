@@ -11,5 +11,7 @@ namespace BLL.Interfaces
         Post Delete_Post(int id);
 
         bool Deletes_Post(LIST_Post model);
+
+        List<Post> Search_Posts(int pageIndex, int pageSize, out long total, string Keywords);
     }
 }

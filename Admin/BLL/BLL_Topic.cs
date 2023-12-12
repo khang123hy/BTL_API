@@ -36,5 +36,10 @@ namespace BLL
         {
             return _DAL_Topic.Deletes_Topic(model);
         }
+
+        public List<Topic> Search_Topic(int pageIndex, int pageSize, out long total, string Keywords)
+        {
+            return _DAL_Topic.Search_Topic(pageIndex, pageSize, out total, Keywords);
+        }
     }
 }
