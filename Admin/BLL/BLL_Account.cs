@@ -50,22 +50,10 @@ namespace BLL
 
         //Account
 
-        public bool Update_Account(Account model)
+        public bool Create_Account(Account model)
         {
-            return _DAL_Account.Update_Account(model);
-        }
-        public bool Deletes_Account(List_User model)
-        {
-            return _DAL_Account.Deletes_Account(model);
-        }
-        public Account Delete_Account(int id)
-        {
-            return _DAL_Account.Delete_Account(id);
+            return _DAL_Account.Create_Account(model);
         }
 
-        public List<Account> Search_Account(int pageIndex, int pageSize, out long total, string Keywords)
-        {
-            return _DAL_Account.Search_Account(pageIndex, pageSize, out total, Keywords);
-        }
     }
 }

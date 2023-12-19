@@ -9,39 +9,25 @@ select*from Users where ID_User = @id
 end
 
 go
+
 create proc sp_user_create(
+    @AccountName VARCHAR(50),
+    @Password VARCHAR(50),
     @FullName NVARCHAR(255),
     @Address NVARCHAR(255),
     @Sex NVARCHAR(20),
     @DateOfBirth DATE,
     @PhoneNumber CHAR(10),
-    @AccountName VARCHAR(50),
-    @Password VARCHAR(50),
     @Email VARCHAR(50),
     @Role VARCHAR(20))
 AS
 BEGIN
-    SET NOCOUNT ON;
-    BEGIN TRANSACTION;
-
-    DECLARE @UserID INT;
-
-    -- Insert into Users table
-    INSERT INTO Users (FullName, Address, Sex, DateOfBirth, PhoneNumber, Email)
-    VALUES (@FullName, @Address, @Sex, @DateOfBirth, @PhoneNumber, @Email);
-
-    SET @UserID = SCOPE_IDENTITY(); -- Get the recently inserted ID_User
-
-    -- Insert into Accounts table using the obtained UserID
-    INSERT INTO Accounts (ID_User, AccountName, Password, Role)
-    VALUES (@UserID, @AccountName, @Password, @Role);
-
-    -- Commit the transaction if both inserts are successful
-    COMMIT TRANSACTION;
+    INSERT INTO Users (FullName, Address, Sex, DateOfBirth, PhoneNumber, Email,AccountName, Password, Role)
+    VALUES (@FullName, @Address, @Sex, @DateOfBirth, @PhoneNumber, @Email,@AccountName, @Password, @Role);
 END;
 go
 
-
+select*from Users
 -----------------UPDATE
 create proc sp_user_update(
 @ID_User int,
@@ -49,12 +35,31 @@ create proc sp_user_update(
 @Address nvarchar(255),
 @Sex nvarchar(20),
 @DateOfBirth date,
+@PhoneNumber char(10))
+as
+begin
+update Users set FullName=@FullName, Address=@Address, Sex=@Sex, DateOfBirth=@DateOfBirth, PhoneNumber=@PhoneNumber
+where ID_User = @ID_User
+end
+
+exec sp_user_update @ID_User = 3, @FullName = 'Hi', @Address ='Hưng Yên',@Sex =N'Nữ',@DateOfBirth ='2023-12-18', @PhoneNumber='0987654321'
+select*from Users
+go
+create proc sp_user_update_all(
+@ID_User int,
+@Password varchar(50),
+@FullName nvarchar(255),
+@Address nvarchar(255),
+@Sex nvarchar(20),
+@DateOfBirth date,
 @PhoneNumber char(10),
-@Email varchar(50)
+@Email varchar(50),
+@Role varchar(10)
 )
 as
 begin
-update Users set FullName=@FullName, Address=@Address, Sex=@Sex, DateOfBirth=@DateOfBirth, PhoneNumber=@PhoneNumber, Email = @Email
+update Users set FullName=@FullName, Address=@Address, Sex=@Sex, DateOfBirth=@DateOfBirth, PhoneNumber=@PhoneNumber, 
+ Password = @Password, Email = @Email, Role = @Role
 where ID_User = @ID_User
 end
 
@@ -98,13 +103,14 @@ END;
 
 --------------------------------------Tìm kiếm
 select*from Users
+drop PROCEDURE sp_user_search
 
-exec sp_user_search @page_index = 1, @page_size =10,@FullName='', @Email = N'doe'
+exec sp_user_search @page_index = 1, @page_size =10, @Keywords = N'46'
 
 CREATE PROCEDURE sp_user_search 
     @page_index INT, 
     @page_size INT,
-    @Search_All NVARCHAR(255)
+    @Keywords NVARCHAR(255)
 AS
 BEGIN
     DECLARE @RecordCount BIGINT;
@@ -121,17 +127,24 @@ BEGIN
             k.Address,
             k.DateOfBirth,
             k.Sex,
-            k.PhoneNumber
+            k.PhoneNumber,
+			k.Role,
+			k.AccountName,
+			k.Password
         INTO #Results1
         FROM Users AS k
         WHERE  (
-                    @Search_All = '' 
-                    OR k.FullName LIKE N'%' + @Search_All + '%' 
-                    OR k.Email LIKE N'%' + @Search_All + '%'
-					OR k.PhoneNumber LIKE N'%' + @Search_All + '%'
-					OR k.DateOfBirth LIKE N'%' + @Search_All + '%'
-					OR k.Sex LIKE N'%' + @Search_All + '%'
-					OR k.Address LIKE N'%' + @Search_All + '%'
+                    @Keywords = '' 
+                    OR k.FullName LIKE N'%' + @Keywords + '%' 
+                    OR k.Email LIKE N'%' + @Keywords + '%'
+					OR k.PhoneNumber LIKE N'%' + @Keywords + '%'
+					OR k.DateOfBirth LIKE N'%' + @Keywords + '%'
+					OR k.Sex LIKE N'%' + @Keywords + '%'
+					OR k.Address LIKE N'%' + @Keywords + '%'
+					OR k.ID_User LIKE N'%' + @Keywords + '%'
+					OR k.Role LIKE N'%' + @Keywords + '%'
+					OR k.AccountName LIKE N'%' + @Keywords + '%'
+					OR k.Password LIKE N'%' + @Keywords + '%'
                 );                   
 
         SELECT @RecordCount = COUNT(*)
@@ -153,23 +166,30 @@ BEGIN
 
         SELECT 
             ROW_NUMBER() OVER (ORDER BY FullName ASC) AS RowNumber, 
-            k.ID_User,
+       k.ID_User,
             k.FullName,
             k.Email,
             k.Address,
             k.DateOfBirth,
             k.Sex,
-            k.PhoneNumber
+            k.PhoneNumber,
+			k.Role,
+			k.AccountName,
+			k.Password
         INTO #Results2
         FROM Users AS k
         WHERE  (
-                    @Search_All = '' 
-                    OR k.FullName LIKE N'%' + @Search_All + '%' 
-                    OR k.Email LIKE N'%' + @Search_All + '%'
-					OR k.PhoneNumber LIKE N'%' + @Search_All + '%'
-					OR k.DateOfBirth LIKE N'%' + @Search_All + '%'
-					OR k.Sex LIKE N'%' + @Search_All + '%'
-					OR k.Address LIKE N'%' + @Search_All + '%'
+                    @Keywords = '' 
+                    OR k.FullName LIKE N'%' + @Keywords + '%' 
+                    OR k.Email LIKE N'%' + @Keywords + '%'
+					OR k.PhoneNumber LIKE N'%' + @Keywords + '%'
+					OR k.DateOfBirth LIKE N'%' + @Keywords + '%'
+					OR k.Sex LIKE N'%' + @Keywords + '%'
+					OR k.Address LIKE N'%' + @Keywords + '%'
+					OR k.ID_User LIKE N'%' + @Keywords + '%'
+					OR k.Role LIKE N'%' + @Keywords + '%'
+					OR k.AccountName LIKE N'%' + @Keywords + '%'
+					OR k.Password LIKE N'%' + @Keywords + '%'
                 );                   
 
         SELECT @RecordCount = COUNT(*)

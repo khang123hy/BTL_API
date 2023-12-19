@@ -76,3 +76,90 @@ END;
 
 select*from Posts
 
+--------------------------------------------search
+
+CREATE PROCEDURE sp_Posts_search 
+    @page_index INT, 
+    @page_size INT,
+    @Keywords NVARCHAR(255)
+AS
+BEGIN
+    DECLARE @RecordCount BIGINT;
+
+    IF (@page_size <> 0)
+    BEGIN
+        SET NOCOUNT ON;
+
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNumber, 
+            k.ID_Post,
+            k.ID_User,
+            k.ID_Topic,
+            k.Title,
+			k.Content,
+			k.Image,
+            k.CreatedDate
+        INTO #Results1
+        FROM Posts AS k
+        WHERE  (
+                    @Keywords = '' 
+                    OR k.ID_Post LIKE N'%' + @Keywords + '%' 
+                    OR k.ID_User LIKE N'%' + @Keywords + '%'
+					OR k.ID_Topic LIKE N'%' + @Keywords + '%'
+					OR k.Title LIKE N'%' + @Keywords + '%'
+					OR k.Content LIKE N'%' + @Keywords + '%'
+					OR k.CreatedDate LIKE N'%' + @Keywords + '%'
+
+                );                   
+
+        SELECT @RecordCount = COUNT(*)
+        FROM #Results1;
+
+        SELECT 
+            *, 
+            @RecordCount AS RecordCount
+        FROM #Results1
+        WHERE 
+            RowNumber BETWEEN (@page_index - 1) * @page_size + 1 AND (((@page_index - 1) * @page_size + 1) + @page_size) - 1
+            OR @page_index = -1;
+
+        DROP TABLE #Results1; 
+    END
+    ELSE
+    BEGIN
+        SET NOCOUNT ON;
+
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNumber, 
+            k.ID_Post,
+            k.ID_User,
+            k.ID_Topic,
+            k.Title,
+			k.Content,
+			k.Image,
+            k.CreatedDate
+        INTO #Results2
+        FROM Posts AS k
+        WHERE  (
+                    @Keywords = '' 
+                    OR k.ID_Post LIKE N'%' + @Keywords + '%' 
+                    OR k.ID_User LIKE N'%' + @Keywords + '%'
+					OR k.ID_Topic LIKE N'%' + @Keywords + '%'
+					OR k.Title LIKE N'%' + @Keywords + '%'
+					OR k.Content LIKE N'%' + @Keywords + '%'
+					OR k.CreatedDate LIKE N'%' + @Keywords + '%'
+                );                   
+
+        SELECT @RecordCount = COUNT(*)
+        FROM #Results2;
+
+        SELECT 
+            *, 
+            @RecordCount AS RecordCount
+        FROM #Results2;                        
+
+        DROP TABLE #Results1; 
+    END;
+END;
+GO
+

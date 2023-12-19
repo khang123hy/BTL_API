@@ -4,23 +4,19 @@ go
 use DienDan_Vinfast
 GO
 
-CREATE TABLE Accounts(
-        ID_Account int PRIMARY KEY IDENTITY(1,1),
-        ID_User int FOREIGN KEY (ID_User) REFERENCES USERS(ID_User),
-        AccountName varchar(50) not null UNIQUE,
-        Password varchar(50) not null,
-        Role varchar(20) CHECK(Role = 'ADMIN' or Role = 'USER')
-)
-
 CREATE TABLE Users(
     ID_User INT PRIMARY KEY IDENTITY(1,1),
-    FullName NVARCHAR(255) NOT NULL,
-    Address NVARCHAR(255) not null,
-	Sex Nvarchar(20) not null,
+	AccountName varchar(50) not null UNIQUE,
+    Password varchar(50) not null,
+    FullName NVARCHAR(255),
+    Address NVARCHAR(255),
+	Sex Nvarchar(20),
     DateOfBirth date,
     PhoneNumber char(10),
-	 Email varchar(50) not null UNIQUE,
-)
+	Email varchar(50) UNIQUE,
+	Role varchar(20) not null CHECK(Role = 'ADMIN' or Role = 'USER')
+
+);
 -- Tạo bảng Chủ đề (Topics)
 CREATE TABLE Topics (
     ID_Topic INT PRIMARY KEY IDENTITY(1,1),
@@ -89,11 +85,11 @@ VALUES
 select * from Users
 INSERT INTO Users (FullName, Address, Sex, DateOfBirth, PhoneNumber, Email)
 VALUES 
-    ('John Doe', '123 Main St', 'Male', '1990-01-01', '1234567890', 'john.doe@example.com'),
-    ('Jane Smith', '456 Oak St', 'Female', '1985-05-15', '9876543210', 'jane.smith@example.com'),
-    ('Bob Johnson', '789 Pine St', 'Male', '1982-09-20', '5551112222', 'bob.johnson@example.com'),
-    ('Alice Brown', '101 Elm St', 'Female', '1995-03-12', '9998887777', 'alice.brown@example.com'),
-    ('Charlie Wilson', '202 Cedar St', 'Male', '1988-11-28', '4443332222', 'charlie.wilson@example.com');
+    ('John Doe', '123 Main St', 'Male', '1990-01-01', '1234567890', '7john.doe@example.com'),
+    ('Jane Smith', '456 Oak St', 'Female', '1985-05-15', '9876543210', '2jane.smith@example.com'),
+    ('Bob Johnson', '789 Pine St', 'Male', '1982-09-20', '5551112222', '2bob.johnson@example.com'),
+    ('Alice Brown', '101 Elm St', 'Female', '1995-03-12', '9998887777', '2alice.brown@example.com'),
+    ('Charlie Wilson', '202 Cedar St', 'Male', '1988-11-28', '4443332222', '2charlie.wilson@example.com');
 
 -- Chèn dữ liệu cho bảng Accounts
 INSERT INTO Accounts (ID_User, AccountName, Password, Role)
@@ -120,26 +116,23 @@ VALUES
 INSERT INTO Posts (ID_User, ID_Topic, Title, Content, Image, CreatedDate)
 VALUES 
     (1, 1, 'New Technology Advancements', 'Exciting developments in technology!', NULL, GETDATE()),
-    (2, 2, 'Amazing Beaches Around the World', 'Share your favorite beach destinations.', NULL, GETDATE());
+    (3, 2, 'Amazing Beaches Around the World', 'Share your favorite beach destinations.', NULL, GETDATE());
 
 -- Thêm dữ liệu vào bảng Comments
 INSERT INTO Comments (ID_Post, ID_User, Content, CreatedDate)
 VALUES 
-    (1, 2, 'Great post! I love the advancements mentioned.', GETDATE()),
+    (1, 3, 'Great post! I love the advancements mentioned.', GETDATE()),
     (2, 1, 'I have been to some amazing beache. Can not wait to share my experiences!', GETDATE());
 
 -- Thêm dữ liệu vào bảng Likes
 INSERT INTO Likes (ID_Post, ID_User)
 VALUES 
     (1, 1),
-    (2, 2);
+    (2, 3);
 
 -- Thêm dữ liệu vào bảng Notifications
 INSERT INTO Notifications (ID_User, Content, NotificationDate)
 VALUES 
     (1, 'You have a new like on your post!', GETDATE()),
-    (2, 'Someone commented on your post.', GETDATE());
+    (3, 'Someone commented on your post.', GETDATE());
 
-SELECT * from Accounts
-select*from Posts
-select*from Notifications

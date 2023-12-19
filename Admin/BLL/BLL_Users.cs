@@ -22,11 +22,15 @@ namespace BLL
             return _DAL_Users.Delete_User(id);
         }
 
-        public bool Update_User(User model)
+        public bool Update_User(User2 model)
         {
             return _DAL_Users.Update_User(model);
         }
-        public bool Create_User(User2 model)
+        public bool Update_User_ALL(User model)
+        {
+            return _DAL_Users.Update_User_ALL(model);
+        }
+        public bool Create_User(User model)
         {
             return _DAL_Users.Create_User(model);
         }

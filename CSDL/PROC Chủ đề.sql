@@ -85,7 +85,7 @@ END;
 select*from Topics
 
 ---------------------------search
-exec sp_Topic_search @page_index = 1, @page_size =10, @FullName = N'',@Email= N'doe'
+exec sp_Topic_search @page_index = 1, @page_size =10,@Keywords =''
 go
 
 CREATE PROCEDURE sp_Topic_search 
@@ -101,7 +101,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY FullName ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNumber, 
             k.ID_Topic,
             k.Title,
             k.Description,
@@ -134,7 +134,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY FullName ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNumber, 
             k.ID_Topic,
             k.Title,
             k.Description,

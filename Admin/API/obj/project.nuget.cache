@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CNPmJ1sFYCVoO3OS/VaUa9pM65Mw/dTuzKtaK88Ck6eCmqM8xII5qktpkUsIjeGkg860/fqxsclxBDbxBY/cEA==",
+  "dgSpecHash": "Dm9GWsfpipADsgJgpWbaK4sgLU5aB6f2jge+ayLOMK/Q2KYzEzAtaRyVxnj1OjcH5vTqed4rIGiHSX/DITKPmg==",
   "success": true,
   "projectFilePath": "D:\\Tài liệu học\\API\\Bài tập lớn\\Admin\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,6 @@
     "C:\\Users\\duykh\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.24\\microsoft.entityframeworkcore.design.6.0.24.nupkg.sha512",
     "C:\\Users\\duykh\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.24\\microsoft.entityframeworkcore.relational.6.0.24.nupkg.sha512",
     "C:\\Users\\duykh\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.24\\microsoft.entityframeworkcore.sqlserver.6.0.24.nupkg.sha512",
-    "C:\\Users\\duykh\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.24\\microsoft.entityframeworkcore.tools.6.0.24.nupkg.sha512",
     "C:\\Users\\duykh\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\duykh\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\duykh\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",

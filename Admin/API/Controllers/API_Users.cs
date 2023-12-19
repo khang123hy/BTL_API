@@ -30,20 +30,25 @@ namespace API.Controllers
 
         [Route("Update-User")]
         [HttpPost]
-        public bool Update_User(User model)
+        public bool Update_User(User2 model)
         {
             return _BLL_Users.Update_User(model);
         }
-
+        [Route("Update-User-all")]
+        [HttpPost]
+        public bool Update_User_ALL(User model)
+        {
+            return _BLL_Users.Update_User_ALL(model);
+        }
         [Route("Create-User")]
         [HttpPost]
-        public bool Create_User(User2 model)
+        public bool Create_User(User model)
         {
             return _BLL_Users.Create_User(model);
         }
 
         [Route("Deletes-User")]
-        [HttpPost]
+        [HttpDelete]
         public List_User Deletes_User([FromBody] List_User model)
         {
             _BLL_Users.Deletes_User(model);

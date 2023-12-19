@@ -32,7 +32,7 @@ namespace DAL
         }
 
 
-        public bool Create_User(User2 model)
+        public bool Create_User(User model)
         {
             string msgError = "";
             try
@@ -62,7 +62,7 @@ namespace DAL
             }
         }
 
-        public bool Update_User(User model)
+        public bool Update_User(User2 model)
         {
             string msgError = "";
             try
@@ -87,7 +87,34 @@ namespace DAL
                 throw ex;
             }
         }
+        public bool Update_User_ALL(User model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_user_update_all",
+                "@ID_User", model.ID_User,
+                "@Password", model.Password,
+                "@Email", model.Email,
+                "@Role", model.Role,
+                "@FullName", model.FullName,
+                "@Address", model.Address,
+                "@Sex", model.Sex,
+                "@DateOfBirth", model.DateOfBirth,
+                "@PhoneNumber", model.PhoneNumber
+                );
 
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public User Delete_User(int id)
         {
