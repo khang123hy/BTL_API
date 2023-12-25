@@ -4,18 +4,20 @@
     {
 
 
-        public int IdNotification { get; set; }
-        public int? IdUser { get; set; }
+        public int ID_Notification { get; set; }
+        public int? ID_User { get; set; }
         public string Content { get; set; } = null!;
         public DateTime? NotificationDate { get; set; }
 
-
-        public Notification(int idNotification, int? idUser, string content, DateTime? notificationDate)
+        public partial class LIST_Notification
         {
-            IdNotification = idNotification;
-            IdUser = idUser;
-            Content = content;
-            NotificationDate = notificationDate;
+            public List<CT_Notification> list_notification { get; set; }
+        }
+
+        public partial class CT_Notification
+        {
+            public int ID_Notification { get; set; }
+
         }
 
     }

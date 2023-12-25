@@ -40,6 +40,7 @@ namespace DAL
                 "@ID_Topic", model.ID_Topic,
                 "@Title", model.Title,
                 "@Content", model.Content,
+                "@Synopsis", model.Synopsis,
                 "@Image", model.Image);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
@@ -58,12 +59,14 @@ namespace DAL
             string msgError = "";
             try
             {
+
                 var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "Post_update",
                 "@ID_Post", model.ID_Post,
                 "@ID_User", model.ID_User,
                 "@ID_Topic", model.ID_Topic,
                 "@Title", model.Title,
                 "@Content", model.Content,
+                "@Synopsis", model.Synopsis,
                 "@Image", model.Image);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {

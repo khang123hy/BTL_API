@@ -8,6 +8,7 @@
         public int? ID_Topic { get; set; }
         public string Title { get; set; } = null!;
         public string Content { get; set; } = null!;
+        public string Synopsis { get; set; }
         public string Image { get; set; }
         public DateTime? CreatedDate { get; set; }
 

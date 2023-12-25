@@ -85,7 +85,7 @@ namespace Gateway
                 };
                 var tmp = tokenHandler.CreateToken(tokenDescriptor);
                 var token = tokenHandler.WriteToken(tmp);
-                var response = new { ID_User = ID_User, FullName = fullName, AccountName = AccountName, Password = Password, Token = token };
+                var response = new { ID_User = ID_User, FullName = fullName, AccountName = AccountName, Password = Password, Role = Role, Token = token };
                 var serializerSettings = new JsonSerializerSettings
                 {
                     Formatting = Formatting.Indented

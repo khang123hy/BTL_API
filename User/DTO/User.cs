@@ -1,26 +1,68 @@
-﻿namespace DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace DTO
 {
-    public partial class User
+
+
+    public class List_User
     {
+        public List<CT_User> list_json_ID_User { get; set; }
 
+    }
+    public class CT_User
+    {
         public int ID_User { get; set; }
-        public string USER_NAME { get; set; } = null!;
-        public string PASSWORD { get; set; } = null!;
-        public string Email { get; set; } = null!;
-        public string? FullName { get; set; }
-        public int? Role { get; set; }
+    }
+
+    public partial class Account
+    {
+        public string AccountName { get; set; }
+        public string Password { get; set; }
+        public string Role { get; set; }
+        public string Email { get; set; }
+
+    }
+
+    public class User
+    {
+        public int ID_User { get; set; }
+        public string AccountName { get; set; }
+        public string Password { get; set; }
+        public string FullName { get; set; }
+        public string Address { get; set; }
+        public string Sex { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Avatar { get; set; }
+        public string Email { get; set; }
+        public string Role { get; set; }
+    }
 
 
-        public User(int iD_User, string uSER_NAME, string pASSWORD, string email, string? fullName, int? role)
-        {
-            ID_User = iD_User;
-            USER_NAME = uSER_NAME;
-            PASSWORD = pASSWORD;
-            Email = email;
-            FullName = fullName;
-            Role = role;
-        }
+    public class User2
+    {
+        public int ID_User { get; set; }
+        public string FullName { get; set; }
+        public string Address { get; set; }
+        public string Sex { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string Avatar { get; set; }
+
+    }
 
 
+
+    public class AuthenticateModel
+    {
+        [Required]
+        public string Username { get; set; }
+
+        [Required]
+        public string Password { get; set; }
+    }
+    public class AppSettings
+    {
+        public string Secret { get; set; }
     }
 }

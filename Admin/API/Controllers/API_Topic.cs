@@ -15,7 +15,7 @@ namespace API.Controllers
             _topic = topic;
         }
 
-        [Route("get-Tocpic-by-id/{id}")]
+        [Route("get-Topic-by-id/{id}")]
         [HttpGet]
         public Topic GetTopicbyid(int id)
         {

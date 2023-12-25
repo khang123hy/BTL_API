@@ -8,8 +8,35 @@ go
 create PROCEDURE get_post_byid (@id int) --Gọi ra cơ sở dữ liệu bảng Posts
 as
 begin 
-SELECT*FROM Posts WHERE ID_Post = @id
+SELECT*FROM Posts
+WHERE ID_Post = @id
 end
+go
+
+
+ 
+alter PROCEDURE get_post_byid_User (@id int)
+as
+begin 
+SELECT
+			k.ID_Post,
+			k.ID_User,
+            k.ID_Topic,
+            k.Title as Title_Posts,
+			k.Content,
+			k.Image,
+            k.CreatedDate,
+			k.Synopsis,
+			u.FullName,
+			u.Avatar,
+			t.Title as Title_Topic
+FROM Posts k
+inner join Users u on k.ID_User = u.ID_User
+inner join Topics t on k.ID_Topic = t.ID_Topic
+WHERE ID_Post = @id
+end
+
+
 
 ALTER PROCEDURE sp_posts_create(
 @ID_User INT,
@@ -163,3 +190,84 @@ BEGIN
 END;
 GO
 
+
+----------------------------------SEARCH THEO BÀI VIẾT USER
+exec sp_Posts_search_User @page_index=1, @page_size=10,@Keywords=''
+select*from User
+ALTER PROCEDURE sp_Posts_search_User 
+    @page_index INT, 
+    @page_size INT,
+    @Keywords NVARCHAR(255)
+AS
+BEGIN
+    DECLARE @RecordCount BIGINT;
+
+    IF (@page_size <> 0)
+    BEGIN
+        SET NOCOUNT ON;
+
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNumber, 
+            k.ID_Post,
+            u.ID_User,
+            k.ID_Topic,
+            k.Title,
+			k.Content,
+			k.Image,
+            k.CreatedDate,
+			u.FullName
+        INTO #Results1
+        FROM Posts AS k
+		inner join Users u on u.ID_User = k.ID_User
+        WHERE  (
+                    @Keywords = '' 
+					OR k.Title LIKE N'%' + @Keywords + '%'
+                );                   
+
+        SELECT @RecordCount = COUNT(*)
+        FROM #Results1;
+
+        SELECT 
+            *, 
+            @RecordCount AS RecordCount
+        FROM #Results1
+        WHERE 
+            RowNumber BETWEEN (@page_index - 1) * @page_size + 1 AND (((@page_index - 1) * @page_size + 1) + @page_size) - 1
+            OR @page_index = -1;
+
+        DROP TABLE #Results1; 
+    END
+    ELSE
+    BEGIN
+        SET NOCOUNT ON;
+
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNumber, 
+            k.ID_Post,
+            u.ID_User,
+            k.ID_Topic,
+            k.Title,
+			k.Content,
+			k.Image,
+            k.CreatedDate,
+			u.FullName
+        INTO #Results2
+        FROM Posts AS k
+		inner join Users u on u.ID_User = k.ID_User
+        WHERE  (
+                    @Keywords = '' 
+					OR k.Title LIKE N'%' + @Keywords + '%'
+                );                                   
+
+        SELECT @RecordCount = COUNT(*)
+        FROM #Results2;
+
+        SELECT 
+            *, 
+            @RecordCount AS RecordCount
+        FROM #Results2;                        
+
+        DROP TABLE #Results1; 
+    END;
+END;
+GO

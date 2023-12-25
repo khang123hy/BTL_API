@@ -32,11 +32,13 @@ CREATE TABLE Posts (
     ID_Topic INT,
     Title NVARCHAR(150) NOT NULL,
     Content nvarchar(max) not null,
-    Image VARBINARY(MAX),
+	Synopsis nvarchar(max),
+    Image varchar(MAX),
     CreatedDate DATETIME DEFAULT(GETDATE()),
     FOREIGN KEY (ID_User) REFERENCES Users(ID_User),
     FOREIGN KEY (ID_Topic) REFERENCES Topics(ID_Topic)
 );
+
 
 -- Tạo bảng Bình luận (Comments)
 CREATE TABLE Comments (
@@ -121,6 +123,7 @@ VALUES
 -- Thêm dữ liệu vào bảng Comments
 INSERT INTO Comments (ID_Post, ID_User, Content, CreatedDate)
 VALUES 
+	    (2, 1, 'I have been to some amazing beache. Can not wait to share my experiences 2!', GETDATE()),
     (1, 3, 'Great post! I love the advancements mentioned.', GETDATE()),
     (2, 1, 'I have been to some amazing beache. Can not wait to share my experiences!', GETDATE());
 

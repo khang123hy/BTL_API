@@ -3,24 +3,54 @@
     public partial class Post
     {
 
-
         public int ID_Post { get; set; }
         public int? ID_User { get; set; }
         public int? ID_Topic { get; set; }
         public string Title { get; set; } = null!;
         public string Content { get; set; } = null!;
-        public byte[]? Image { get; set; }
+        public string Synopsis { get; set; }
+        public string Image { get; set; }
         public DateTime? CreatedDate { get; set; }
 
-        public Post(int iD_Post, int? iD_User, int? iD_Topic, string title, string content, byte[]? image, DateTime? createdDate)
-        {
-            ID_Post = iD_Post;
-            ID_User = iD_User;
-            ID_Topic = iD_Topic;
-            Title = title;
-            Content = content;
-            Image = image;
-            CreatedDate = createdDate;
-        }
+
+    }
+    public partial class Post2
+    {
+
+        public int ID_Post { get; set; }
+        public int? ID_User { get; set; }
+        public int? ID_Topic { get; set; }
+        public string FullName { get; set; }
+        public string Title { get; set; } = null!;
+        public string Content { get; set; } = null!;
+        public string Synopsis { get; set; }
+        public string Image { get; set; }
+        public DateTime? CreatedDate { get; set; }
+    }
+
+    public partial class Post3
+    {
+
+        public int ID_Post { get; set; }
+        public int? ID_User { get; set; }
+        public int? ID_Topic { get; set; }
+        public string FullName { get; set; }
+        public string Title_Posts { get; set; } = null!;
+        public string Title_Topic { get; set; } = null!;
+        public string Content { get; set; } = null!;
+        public string Synopsis { get; set; }
+        public string Image { get; set; }
+        public string Avatar { get; set; }
+        public DateTime? CreatedDate { get; set; }
+    }
+    public partial class LIST_Post
+    {
+        public List<CT_Post> list_post { get; set; }
+    }
+
+    public partial class CT_Post
+    {
+        public int ID_Post { get; set; }
+
     }
 }

@@ -31,23 +31,30 @@ go
 
 select*from Users
 -----------------UPDATE
-create proc sp_user_update(
+ALTER proc sp_user_update(
 @ID_User int,
 @FullName nvarchar(255),
 @Address nvarchar(255),
 @Sex nvarchar(20),
 @DateOfBirth date,
-@PhoneNumber char(10))
+@PhoneNumber char(10),
+@Avatar VARCHAR(max)
+)
+
 as
 begin
-update Users set FullName=@FullName, Address=@Address, Sex=@Sex, DateOfBirth=@DateOfBirth, PhoneNumber=@PhoneNumber
+update Users set FullName=@FullName, Address=@Address, Sex=@Sex, DateOfBirth=@DateOfBirth, PhoneNumber=@PhoneNumber, Avatar = @Avatar
+
 where ID_User = @ID_User
 end
 
 exec sp_user_update @ID_User = 3, @FullName = 'Hi', @Address ='Hưng Yên',@Sex =N'Nữ',@DateOfBirth ='2023-12-18', @PhoneNumber='0987654321'
 select*from Users
 go
-create proc sp_user_update_all(
+
+
+
+ALTER proc sp_user_update_all(
 @ID_User int,
 @Password varchar(50),
 @FullName nvarchar(255),
@@ -56,12 +63,13 @@ create proc sp_user_update_all(
 @DateOfBirth date,
 @PhoneNumber char(10),
 @Email varchar(50),
-@Role varchar(10)
+@Role varchar(10),
+@Avatar VARCHAR(max)
 )
 as
 begin
 update Users set FullName=@FullName, Address=@Address, Sex=@Sex, DateOfBirth=@DateOfBirth, PhoneNumber=@PhoneNumber, 
- Password = @Password, Email = @Email, Role = @Role
+ Password = @Password, Email = @Email, Role = @Role,Avatar = @Avatar
 where ID_User = @ID_User
 end
 

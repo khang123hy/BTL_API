@@ -8,14 +8,16 @@
         public string Title { get; set; } = null!;
         public string? Description { get; set; }
         public DateTime? CreatedDate { get; set; }
+    }
 
-        public Topic(int iD_Topic, string title, string? description, DateTime? createdDate)
-        {
-            ID_Topic = iD_Topic;
-            Title = title;
-            Description = description;
-            CreatedDate = createdDate;
-        }
+    public partial class LIST_Topic
+    {
+        public List<CT_Topic> list_topic { get; set; }
+    }
+
+    public partial class CT_Topic
+    {
+        public int ID_Topic { get; set; }
 
     }
 }

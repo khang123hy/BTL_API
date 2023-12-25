@@ -17,13 +17,29 @@ namespace BLL
             return _DAL_Topic.GetTopicbyID(id);
         }
 
-        public bool Create_Topic(Topic model)
+        public Topic Delete(int id)
         {
-            return _DAL_Topic.Create_Topic(model);
+            return _DAL_Topic.Delete(id);
         }
-        public bool Update_Topic(Topic model)
+
+        public bool Create(Topic model)
         {
-            return _DAL_Topic.Update_Topic(model);
+            return _DAL_Topic.Create(model);
+        }
+
+        public bool Update(Topic model)
+        {
+            return _DAL_Topic.Update(model);
+        }
+
+        public bool Deletes_Topic(LIST_Topic model)
+        {
+            return _DAL_Topic.Deletes_Topic(model);
+        }
+
+        public List<Topic> Search_Topic(int pageIndex, int pageSize, out long total, string Keywords)
+        {
+            return _DAL_Topic.Search_Topic(pageIndex, pageSize, out total, Keywords);
         }
     }
 }

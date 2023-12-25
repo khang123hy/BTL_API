@@ -15,6 +15,10 @@ namespace BLL
         {
             return _DAL_Post.getpost(id);
         }
+        public Post3 getpost_by_id_User(int id)
+        {
+            return _DAL_Post.getpost_by_id_User(id);
+        }
         public bool Update_Post(Post model)
         {
             return _DAL_Post.Update_Post(model);
@@ -22,6 +26,26 @@ namespace BLL
         public bool Create_Post(Post model)
         {
             return _DAL_Post.Create_Post(model);
+        }
+
+        public Post Delete_Post(int id)
+        {
+            return _DAL_Post.Delete_Post(id);
+        }
+
+        public bool Deletes_Post(LIST_Post model)
+        {
+            return _DAL_Post.Deletes_Post(model);
+        }
+
+        public List<Post> Search_Posts(int pageIndex, int pageSize, out long total, string Keywords)
+        {
+            return _DAL_Post.Search_Posts(pageIndex, pageSize, out total, Keywords);
+        }
+
+        public List<Post2> Search_Posts_User(int pageIndex, int pageSize, out long total, string Keywords)
+        {
+            return _DAL_Post.Search_Posts_User(pageIndex, pageSize, out total, Keywords);
         }
     }
 }
