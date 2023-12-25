@@ -2704,11 +2704,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\User\\BTL User\\DTO\\DTO.csproj",
+      "projectUniqueName": "D:\\Tài liệu học\\API\\Bài tập lớn\\User\\DTO\\DTO.csproj",
       "projectName": "DTO",
-      "projectPath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\User\\BTL User\\DTO\\DTO.csproj",
+      "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\User\\DTO\\DTO.csproj",
       "packagesPath": "C:\\Users\\duykh\\.nuget\\packages\\",
-      "outputPath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\User\\BTL User\\DTO\\obj\\",
+      "outputPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\User\\DTO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\duykh\\AppData\\Roaming\\NuGet\\NuGet.Config",

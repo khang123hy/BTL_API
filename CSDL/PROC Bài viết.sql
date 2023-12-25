@@ -11,12 +11,12 @@ begin
 SELECT*FROM Posts WHERE ID_Post = @id
 end
 
-create PROCEDURE sp_posts_create(
+ALTER PROCEDURE sp_posts_create(
 @ID_User INT,
 @ID_Topic INT,
 @Title NVARCHAR(150),
 @Content nvarchar(max) ,
-@Image VARBINARY(MAX)
+@Image varchar(MAX)
 )
 AS
     BEGIN

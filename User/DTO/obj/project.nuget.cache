@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b641s1lfuwsWJminVl3d8YmIhB/HgVm73tVvmhj/Mu+8YxzYKuacG2uZlvJbcn+HJiTf3SRlRuWQ+IBoIppU7Q==",
+  "dgSpecHash": "d55O019Z89XSE+2CM7K/sfsrmDCv1EcKiab3PD70V5r3Dt+NV//7QkfOpbWaQOQmEt1XKc6OUgNmx84PJG3txg==",
   "success": true,
-  "projectFilePath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\User\\BTL User\\DTO\\DTO.csproj",
+  "projectFilePath": "D:\\Tài liệu học\\API\\Bài tập lớn\\User\\DTO\\DTO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duykh\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\duykh\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.24\\microsoft.aspnetcore.authentication.jwtbearer.6.0.24.nupkg.sha512",

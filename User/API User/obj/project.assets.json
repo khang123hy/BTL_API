@@ -2816,11 +2816,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\User\\BTL User\\API User\\API User.csproj",
+      "projectUniqueName": "D:\\Tài liệu học\\API\\Bài tập lớn\\User\\API User\\API User.csproj",
       "projectName": "API User",
-      "projectPath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\User\\BTL User\\API User\\API User.csproj",
+      "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\User\\API User\\API User.csproj",
       "packagesPath": "C:\\Users\\duykh\\.nuget\\packages\\",
-      "outputPath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\User\\BTL User\\API User\\obj\\",
+      "outputPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\User\\API User\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\duykh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2837,11 +2837,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Tài liệu học\\API\\BTL\\BackEnd\\User\\BTL User\\BLL\\BLL.csproj": {
-              "projectPath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\User\\BTL User\\BLL\\BLL.csproj"
+            "D:\\Tài liệu học\\API\\Bài tập lớn\\User\\BLL\\BLL.csproj": {
+              "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\User\\BLL\\BLL.csproj"
             },
-            "D:\\Tài liệu học\\API\\BTL\\BackEnd\\User\\BTL User\\DTO\\DTO.csproj": {
-              "projectPath": "D:\\Tài liệu học\\API\\BTL\\BackEnd\\User\\BTL User\\DTO\\DTO.csproj"
+            "D:\\Tài liệu học\\API\\Bài tập lớn\\User\\DTO\\DTO.csproj": {
+              "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\User\\DTO\\DTO.csproj"
             }
           }
         }

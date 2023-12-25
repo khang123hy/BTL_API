@@ -8,7 +8,7 @@
         public int? ID_Topic { get; set; }
         public string Title { get; set; } = null!;
         public string Content { get; set; } = null!;
-        public byte[]? Image { get; set; }
+        public string Image { get; set; }
         public DateTime? CreatedDate { get; set; }
 
         public partial class LIST_Post

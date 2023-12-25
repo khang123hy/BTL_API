@@ -36,14 +36,17 @@ GO
 exec sp_topic_create @Title = 'Hê lô thôi', @Description ='Ko có gì'
 
 select*from Topics
-create PROCEDURE sp_topic_update(
+
+drop PROCEDURE sp_topic_update
+create PROCEDURE sp_topic_update
+(
    @ID_Topic INT,
     @Title nvarchar(255) ,
     @Description nvarchar(max)
 )
 AS
     BEGIN
-		update Topics set Title = @Title, Description = @Description where ID_Topic = @ID_Topic; 
+		update Topics set Title = @Title, Description = @Description, CreatedDate =GETDATE()  where ID_Topic = @ID_Topic; 
     END;
 GO
 

@@ -19,11 +19,13 @@ create proc sp_user_create(
     @DateOfBirth DATE,
     @PhoneNumber CHAR(10),
     @Email VARCHAR(50),
-    @Role VARCHAR(20))
+    @Role VARCHAR(20),
+    @Avatar VARCHAR(max)
+	)
 AS
 BEGIN
-    INSERT INTO Users (FullName, Address, Sex, DateOfBirth, PhoneNumber, Email,AccountName, Password, Role)
-    VALUES (@FullName, @Address, @Sex, @DateOfBirth, @PhoneNumber, @Email,@AccountName, @Password, @Role);
+    INSERT INTO Users (FullName, Address, Sex, DateOfBirth, PhoneNumber, Email,AccountName, Password, Role,Avatar)
+    VALUES (@FullName, @Address, @Sex, @DateOfBirth, @PhoneNumber, @Email,@AccountName, @Password, @Role,@Avatar);
 END;
 go
 

@@ -7,7 +7,7 @@
     //Comment
     {
       "UpstreamPathTemplate": "/api/Comment/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
@@ -25,7 +25,7 @@
     //API_Like
     {
       "UpstreamPathTemplate": "/api/Like/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
@@ -43,7 +43,7 @@
     //API_Post
     {
       "UpstreamPathTemplate": "/api/Post/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
@@ -61,7 +61,7 @@
     //API_Topic
     {
       "UpstreamPathTemplate": "/api/Topic/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
 
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",

@@ -46,7 +46,8 @@ namespace DAL
                       "@AccountName", model.AccountName,
                       "@Password", model.Password,
                       "@Email", model.Email,
-                      "@Role", model.Role
+                      "@Role", model.Role,
+                      "@Avatar", model.Avatar
                   );
 
 
@@ -73,7 +74,9 @@ namespace DAL
                 "@Address", model.Address,
                 "@Sex", model.Sex,
                 "@DateOfBirth", model.DateOfBirth,
-                "@PhoneNumber", model.PhoneNumber
+                "@PhoneNumber", model.PhoneNumber,
+                 "@Avatar", model.Avatar
+
                 );
 
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
@@ -101,7 +104,9 @@ namespace DAL
                 "@Address", model.Address,
                 "@Sex", model.Sex,
                 "@DateOfBirth", model.DateOfBirth,
-                "@PhoneNumber", model.PhoneNumber
+                "@PhoneNumber", model.PhoneNumber,
+                 "@Avatar", model.Avatar
+
                 );
 
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
