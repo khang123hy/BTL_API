@@ -15,6 +15,7 @@ namespace BLL.Interfaces
 
         List<Post> Search_Posts(int pageIndex, int pageSize, out long total, string Keywords);
         List<Post2> Search_Posts_User(int pageIndex, int pageSize, out long total, string Keywords);
+        List<Post2> Search_Posts_by_Topic_User(int pageIndex, int pageSize, out long total, string Keywords);
 
     }
 }

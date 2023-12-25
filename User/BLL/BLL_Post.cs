@@ -47,5 +47,9 @@ namespace BLL
         {
             return _DAL_Post.Search_Posts_User(pageIndex, pageSize, out total, Keywords);
         }
+        public List<Post2> Search_Posts_by_Topic_User(int pageIndex, int pageSize, out long total, string Keywords)
+        {
+            return _DAL_Post.Search_Posts_by_Topic_User(pageIndex, pageSize, out total, Keywords);
+        }
     }
 }

@@ -171,5 +171,26 @@ namespace DAL
                 throw ex;
             }
         }
+
+        public List<Post2> Search_Posts_by_Topic_User(int pageIndex, int pageSize, out long total, string Keywords)
+        {
+            string msgError = "";
+            total = 0;
+            try
+            {
+                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_Posts_search_by_topic_User",
+                    "@page_index", pageIndex,
+                    "@page_size", pageSize,
+                    "@Keywords", Keywords);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                return dt.ConvertTo<Post2>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
