@@ -10,7 +10,7 @@ end
 
 go
 
-create proc sp_user_create(
+alter proc sp_user_create(
     @AccountName VARCHAR(50),
     @Password VARCHAR(50),
     @FullName NVARCHAR(255),
@@ -20,7 +20,7 @@ create proc sp_user_create(
     @PhoneNumber CHAR(10),
     @Email VARCHAR(50),
     @Role VARCHAR(20),
-    @Avatar VARCHAR(max)
+    @Avatar nvARCHAR(max)
 	)
 AS
 BEGIN
@@ -38,7 +38,7 @@ ALTER proc sp_user_update(
 @Sex nvarchar(20),
 @DateOfBirth date,
 @PhoneNumber char(10),
-@Avatar VARCHAR(max)
+@Avatar nVARCHAR(max)
 )
 
 as
@@ -64,7 +64,7 @@ ALTER proc sp_user_update_all(
 @PhoneNumber char(10),
 @Email varchar(50),
 @Role varchar(10),
-@Avatar VARCHAR(max)
+@Avatar nVARCHAR(max)
 )
 as
 begin
@@ -115,9 +115,9 @@ END;
 select*from Users
 drop PROCEDURE sp_user_search
 
-exec sp_user_search @page_index = 1, @page_size =10, @Keywords = N'46'
+exec sp_user_search @page_index = 1, @page_size =10, @Keywords = N''
 
-CREATE PROCEDURE sp_user_search 
+alter PROCEDURE sp_user_search 
     @page_index INT, 
     @page_size INT,
     @Keywords NVARCHAR(255)
@@ -139,6 +139,7 @@ BEGIN
             k.Sex,
             k.PhoneNumber,
 			k.Role,
+			k.Avatar,
 			k.AccountName,
 			k.Password
         INTO #Results1
@@ -184,6 +185,7 @@ BEGIN
             k.Sex,
             k.PhoneNumber,
 			k.Role,
+			k.Avatar,
 			k.AccountName,
 			k.Password
         INTO #Results2

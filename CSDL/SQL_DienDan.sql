@@ -14,9 +14,10 @@ CREATE TABLE Users(
     DateOfBirth date,
     PhoneNumber char(10),
 	Email varchar(50) UNIQUE,
-	Role varchar(20) not null CHECK(Role = 'ADMIN' or Role = 'USER')
-
+	Role varchar(20) not null CHECK(Role = 'ADMIN' or Role = 'USER'),
+	Avatar nvarchar(Max)
 );
+
 -- Tạo bảng Chủ đề (Topics)
 CREATE TABLE Topics (
     ID_Topic INT PRIMARY KEY IDENTITY(1,1),

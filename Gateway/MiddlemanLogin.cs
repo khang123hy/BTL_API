@@ -67,6 +67,7 @@ namespace Gateway
                 var Role = query.Rows[0]["Role"].ToString();
                 var Password = query.Rows[0]["Password"].ToString();
                 var ID_User = query.Rows[0]["ID_User"].ToString();
+                var Avatar = query.Rows[0]["Avatar"].ToString();
 
                 // authentication successful so generate jwt token
                 var tokenHandler = new JwtSecurityTokenHandler();
@@ -85,7 +86,7 @@ namespace Gateway
                 };
                 var tmp = tokenHandler.CreateToken(tokenDescriptor);
                 var token = tokenHandler.WriteToken(tmp);
-                var response = new { ID_User = ID_User, FullName = fullName, AccountName = AccountName, Password = Password, Role = Role, Token = token };
+                var response = new { ID_User = ID_User, FullName = fullName, AccountName = AccountName, Password = Password, Role = Role, Avatar = Avatar, Token = token };
                 var serializerSettings = new JsonSerializerSettings
                 {
                     Formatting = Formatting.Indented

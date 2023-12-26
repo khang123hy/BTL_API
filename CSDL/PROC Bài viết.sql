@@ -190,9 +190,9 @@ BEGIN
 END;
 GO
 
-
 ----------------------------------SEARCH THEO BÀI VIẾT USER
-select*from User
+select*from Comments
+select*from Users
 ALTER PROCEDURE sp_Posts_search_User 
     @page_index INT, 
     @page_size INT,
@@ -214,7 +214,8 @@ BEGIN
 			k.Content,
 			k.Image,
             k.CreatedDate,
-			u.FullName
+			u.FullName,
+			u.Avatar
         INTO #Results1
         FROM Posts AS k
 		inner join Users u on u.ID_User = k.ID_User
@@ -249,7 +250,8 @@ BEGIN
 			k.Content,
 			k.Image,
             k.CreatedDate,
-			u.FullName
+			u.FullName,
+			u.Avatar
         INTO #Results2
         FROM Posts AS k
 		inner join Users u on u.ID_User = k.ID_User

@@ -21,7 +21,7 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    SELECT * FROM Users 
+    SELECT * FROM Topics 
     WHERE AccountName = @AccountName AND Password = @Password;
 END
 
