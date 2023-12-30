@@ -93,12 +93,13 @@ CREATE PROCEDURE sp_user_deletes
 )
 AS
 BEGIN
+
+	--Kiểm tra @list_json_ID_User có khác null ko, nếu khác thì thức hiện bước tiếp theo
     IF (@list_json_ID_User IS NOT NULL) 
     BEGIN
         -- Chèn dữ liệu vào bảng tạm 
         SELECT
             JSON_VALUE(p.value, '$.iD_User') AS iD_User
-
         INTO #Results 
         FROM OPENJSON(@list_json_ID_User) AS p;
 
@@ -118,19 +119,20 @@ drop PROCEDURE sp_user_search
 exec sp_user_search @page_index = 1, @page_size =10, @Keywords = N''
 
 alter PROCEDURE sp_user_search 
+--CHuyển tham số đầu vào
     @page_index INT, 
     @page_size INT,
     @Keywords NVARCHAR(255)
 AS
 BEGIN
     DECLARE @RecordCount BIGINT;
-
+	--Nếu khác 0 thì phân trang, ko thì trả ra ko phân trang
     IF (@page_size <> 0)
     BEGIN
         SET NOCOUNT ON;
-
+		 -- Tạo bảng tạm #Results1, chèn dữ liệu người dùng được lấy từ bảng Users vào bảng tạm
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY FullName ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_User DESC) AS RowNumber, 
             k.ID_User,
             k.FullName,
             k.Email,
@@ -157,10 +159,10 @@ BEGIN
 					OR k.AccountName LIKE N'%' + @Keywords + '%'
 					OR k.Password LIKE N'%' + @Keywords + '%'
                 );                   
-
+		--Đếm số bản ghi rồi tổng lại
         SELECT @RecordCount = COUNT(*)
         FROM #Results1;
-
+		-- Nếu @pageSize khác 0, trả về kết quả phân trang. Ngược lại, trả về toàn bộ kết quả.
         SELECT 
             *, 
             @RecordCount AS RecordCount
@@ -169,6 +171,7 @@ BEGIN
             RowNumber BETWEEN (@page_index - 1) * @page_size + 1 AND (((@page_index - 1) * @page_size + 1) + @page_size) - 1
             OR @page_index = -1;
 
+		--Xoá bảng tạm
         DROP TABLE #Results1; 
     END
     ELSE
@@ -176,7 +179,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY FullName ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_User DESC) AS RowNumber, 
        k.ID_User,
             k.FullName,
             k.Email,
@@ -208,7 +211,7 @@ BEGIN
         FROM #Results2;
 
         SELECT 
-            *, 
+            *,
             @RecordCount AS RecordCount
         FROM #Results2;                        
 

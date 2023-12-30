@@ -77,7 +77,7 @@ END;
 ----------------------------------------------------------search
 select*from Comments
 
-CREATE PROCEDURE sp_Comment_search 
+alter PROCEDURE sp_Comment_search 
     @page_index INT, 
     @page_size INT,
     @Keywords NVARCHAR(255)
@@ -90,7 +90,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY Content ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_Comment desc) AS RowNumber, 
             k.ID_Comment,
             k.ID_Post,
             k.ID_User,
@@ -126,7 +126,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY Content ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_Comment desc) AS RowNumber, 
             k.ID_Comment,
             k.ID_Post,
             k.ID_User,
@@ -173,7 +173,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY Content ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_Comment desc) AS RowNumber, 
             k.ID_Comment,
             k.ID_Post,
             k.ID_User,
@@ -207,7 +207,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY Content ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_Comment desc) AS RowNumber, 
             k.ID_Comment,
             k.ID_Post,
             k.ID_User,

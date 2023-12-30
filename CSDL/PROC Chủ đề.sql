@@ -12,41 +12,45 @@ as
 		select*from Topics where ID_Topic = @id;
 	end
 go
-create PROCEDURE Topic_create(
+alter PROCEDURE Topic_create(
     @Title VARCHAR(255) ,
-    @Description nvarchar(max)
+    @Description nvarchar(max),
+    @Image nvarchar(max)
 )
 AS
     BEGIN
-       insert into Topics(Title,Description)
-	   values(@Title,@Description);
+       insert into Topics(Title,Description,Image)
+	   values(@Title,@Description,@Image);
     END;
 GO
 
 
-create PROCEDURE sp_topic_create(
+alter PROCEDURE sp_topic_create(
     @Title nvarchar(255) ,
-    @Description nvarchar(max)
+    @Description nvarchar(max),
+	    @Image nvarchar(max)
+
 )
 AS
     BEGIN
-		insert into Topics(Title,Description) values (@Title,@Description); 
+		insert into Topics(Title,Description,Image) values (@Title,@Description,@Image); 
     END;
 GO
-exec sp_topic_create @Title = 'Hê lô thôi', @Description ='Ko có gì'
+
+exec sp_topic_create @Title = 'Chăm sóc xe hơi', @Description ='Ko có gì'
 
 select*from Topics
 
-drop PROCEDURE sp_topic_update
-create PROCEDURE sp_topic_update
+alter PROCEDURE sp_topic_update
 (
    @ID_Topic INT,
     @Title nvarchar(255) ,
-    @Description nvarchar(max)
+    @Description nvarchar(max),
+    @Image nvarchar(max)
 )
 AS
     BEGIN
-		update Topics set Title = @Title, Description = @Description, CreatedDate =GETDATE()  where ID_Topic = @ID_Topic; 
+		update Topics set Title = @Title, Description = @Description,Image=@Image, CreatedDate =GETDATE()  where ID_Topic = @ID_Topic; 
     END;
 GO
 
@@ -91,7 +95,7 @@ select*from Topics
 exec sp_Topic_search @page_index = 1, @page_size =10,@Keywords =''
 go
 
-CREATE PROCEDURE sp_Topic_search 
+alter PROCEDURE sp_Topic_search 
     @page_index INT, 
     @page_size INT,
     @Keywords NVARCHAR(255)
@@ -104,10 +108,11 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_Topic DESC) AS RowNumber, 
             k.ID_Topic,
             k.Title,
             k.Description,
+            k.Image,
             k.CreatedDate
         INTO #Results1
         FROM Topics AS k
@@ -137,10 +142,11 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_Topic DESC) AS RowNumber, 
             k.ID_Topic,
             k.Title,
             k.Description,
+            k.Image,
             k.CreatedDate
         INTO #Results2
         FROM Topics AS k
@@ -164,3 +170,4 @@ BEGIN
     END;
 END;
 GO
+select*from Posts k inner join Users h on h.ID_User = k.ID_User

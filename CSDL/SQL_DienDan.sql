@@ -17,15 +17,20 @@ CREATE TABLE Users(
 	Role varchar(20) not null CHECK(Role = 'ADMIN' or Role = 'USER'),
 	Avatar nvarchar(Max)
 );
-
 -- Tạo bảng Chủ đề (Topics)
-CREATE TABLE Topics (
+create TABLE Topics (
     ID_Topic INT PRIMARY KEY IDENTITY(1,1),
-    Title VARCHAR(255) NOT NULL, -- tieu de
-    Description TEXT, -- ghi chu
+    Title nVARCHAR(255) NOT NULL, -- tieu de
+    Description nvarchar(max), -- ghi chu
+	Image NVARCHAR(MAX),
     CreatedDate DATETIME DEFAULT(GETDATE()) --Ngay tao
-   
 );
+-- Sửa kiểu dữ liệu của cột Title từ VARCHAR(255) sang NVARCHAR(255)
+ALTER TABLE Topics
+create COLUMN Image nvarchar(max);
+-- Thêm cột Image
+ALTER TABLE Topics
+ADD Image NVARCHAR(MAX);
 -- Tạo bảng Bài viết
 CREATE TABLE Posts (
     ID_Post int PRIMARY KEY IDENTITY(1,1),
@@ -34,12 +39,13 @@ CREATE TABLE Posts (
     Title NVARCHAR(150) NOT NULL,
     Content nvarchar(max) not null,
 	Synopsis nvarchar(max),
-    Image varchar(MAX),
+    Image nvarchar(MAX),
     CreatedDate DATETIME DEFAULT(GETDATE()),
     FOREIGN KEY (ID_User) REFERENCES Users(ID_User),
     FOREIGN KEY (ID_Topic) REFERENCES Topics(ID_Topic)
 );
-
+ALTER TABLE Posts
+ALTER COLUMN  Image nvarchar(MAX);
 
 -- Tạo bảng Bình luận (Comments)
 CREATE TABLE Comments (
@@ -64,11 +70,14 @@ CREATE TABLE Likes (
 -- Tạo bảng Thông báo (Notifications)
 CREATE TABLE Notifications (
     ID_Notification INT PRIMARY KEY IDENTITY(1,1),
-    ID_User INT,
+    ID_User_Tao INT,
+    ID_User_Nhan INT,
     Content nvarchar(max) NOT NULL,
+    Link nvarchar(max),
     NotificationDate DATETIME default(getdate()),
-    FOREIGN KEY (ID_User) REFERENCES USERS(ID_User)
+    FOREIGN KEY (ID_User_Tao) REFERENCES USERS(ID_User)
 );
+
 
 drop table Notifications
 DROP table Likes
@@ -135,8 +144,9 @@ VALUES
     (2, 3);
 
 -- Thêm dữ liệu vào bảng Notifications
-INSERT INTO Notifications (ID_User, Content, NotificationDate)
+INSERT INTO Notifications (ID_User_Tao,ID_User_Nhan, Content, NotificationDate)
 VALUES 
-    (1, 'You have a new like on your post!', GETDATE()),
-    (3, 'Someone commented on your post.', GETDATE());
+    (1,3, 'You have a new like on your post!', GETDATE()),
+    (3, 1,'Someone commented on your post.', GETDATE());
 
+	select*from Notifications

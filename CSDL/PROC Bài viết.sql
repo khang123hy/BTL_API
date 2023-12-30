@@ -43,27 +43,29 @@ ALTER PROCEDURE sp_posts_create(
 @ID_Topic INT,
 @Title NVARCHAR(150),
 @Content nvarchar(max) ,
-@Image varchar(MAX)
+@Synopsis nvarchar(max) ,
+@Image nvarchar(MAX)
 )
 AS
     BEGIN
-       insert into Posts(ID_User,ID_Topic,Title,Content,Image)
-	   values(@ID_User,@ID_Topic,@Title,@Content,@Image);
+       insert into Posts(ID_User,ID_Topic,Title,Content,Synopsis,Image)
+	   values(@ID_User,@ID_Topic,@Title,@Content,@Synopsis,@Image);
     END;
 GO
 
 
-create PROCEDURE Post_update(
+alter PROCEDURE Post_update(
 @ID_Post INT,
 @ID_User INT,
 @ID_Topic INT,
 @Title NVARCHAR(150),
 @Content TEXT ,
-@Image VARBINARY(MAX)
+@Synopsis nvarchar(max) ,
+@Image nvarchar(MAX)
 )
 AS
     BEGIN
-		update Posts set  ID_User = @ID_User, ID_Topic = @ID_Topic, Title = @Title, Content = @Content, Image = @Image where ID_Post = @ID_Post; 
+		update Posts set  ID_User = @ID_User, ID_Topic = @ID_Topic, Title = @Title, Content = @Content,Synopsis=@Synopsis, Image = @Image where ID_Post = @ID_Post; 
     END;
 GO
 
@@ -105,7 +107,7 @@ select*from Posts
 
 --------------------------------------------search
 
-CREATE PROCEDURE sp_Posts_search 
+alter PROCEDURE sp_Posts_search 
     @page_index INT, 
     @page_size INT,
     @Keywords NVARCHAR(255)
@@ -118,7 +120,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_Post DESC) AS RowNumber, 
             k.ID_Post,
             k.ID_User,
             k.ID_Topic,
@@ -157,7 +159,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_Post DESC) AS RowNumber, 
             k.ID_Post,
             k.ID_User,
             k.ID_Topic,
@@ -206,7 +208,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_Post DESC) AS RowNumber, 
             k.ID_Post,
             u.ID_User,
             k.ID_Topic,
@@ -242,7 +244,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_Post DESC) AS RowNumber, 
             k.ID_Post,
             u.ID_User,
             k.ID_Topic,
@@ -276,7 +278,7 @@ GO
 -------------------------------------------------Topic
 exec sp_Posts_search_by_topic_User @page_index=1, @page_size=10,@Keywords=''
 
-create PROCEDURE sp_Posts_search_by_topic_User (
+alter PROCEDURE sp_Posts_search_by_topic_User (
     @page_index INT, 
     @page_size INT,
     @Keywords NVARCHAR(255))
@@ -289,7 +291,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_Post DESC) AS RowNumber, 
             k.ID_Post,
             u.ID_User,
             k.ID_Topic,
@@ -297,6 +299,7 @@ BEGIN
 			k.Content,
 			k.Image,
             k.CreatedDate,
+            u.Avatar,
 			u.FullName
         INTO #Results1
         FROM Posts AS k
@@ -323,7 +326,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY Title ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_Post DESC) AS RowNumber, 
             k.ID_Post,
             u.ID_User,
             k.ID_Topic,
@@ -331,6 +334,7 @@ BEGIN
 			k.Content,
 			k.Image,
             k.CreatedDate,
+			            u.Avatar,
 			u.FullName
         INTO #Results2
         FROM Posts AS k

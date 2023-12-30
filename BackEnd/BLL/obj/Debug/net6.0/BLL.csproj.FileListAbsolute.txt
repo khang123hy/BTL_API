@@ -1,0 +1,95 @@
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\bin\Debug\net6.0\BLL.deps.json
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\bin\Debug\net6.0\BLL.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\bin\Debug\net6.0\BLL.pdb
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\bin\Debug\net6.0\DAL.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\bin\Debug\net6.0\DTO.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\bin\Debug\net6.0\DAL.pdb
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\bin\Debug\net6.0\DTO.pdb
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\obj\Debug\net6.0\BLL.csproj.CopyComplete
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\obj\Debug\net6.0\BLL.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\obj\Debug\net6.0\refint\BLL.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\obj\Debug\net6.0\BLL.pdb
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\obj\Debug\net6.0\ref\BLL.dll
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\bin\Debug\net6.0\BLL.runtimeconfig.json
+C:\Users\duykh\Desktop\Đồ án 2\Back End\Đồ án 2\BLL\obj\Debug\net6.0\BLL.genruntimeconfig.cache
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\bin\Debug\net6.0\BLL.deps.json
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\bin\Debug\net6.0\BLL.runtimeconfig.json
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\bin\Debug\net6.0\BLL.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\bin\Debug\net6.0\BLL.pdb
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\bin\Debug\net6.0\DAL.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\bin\Debug\net6.0\DTO.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\bin\Debug\net6.0\DAL.pdb
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\bin\Debug\net6.0\DTO.pdb
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\obj\Debug\net6.0\BLL.csproj.CopyComplete
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\obj\Debug\net6.0\BLL.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\obj\Debug\net6.0\refint\BLL.dll
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\obj\Debug\net6.0\BLL.pdb
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\obj\Debug\net6.0\BLL.genruntimeconfig.cache
+D:\Tài liệu học\API\BTL\BackEnd\Admin\BLL\obj\Debug\net6.0\ref\BLL.dll
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\bin\Debug\net6.0\BLL.deps.json
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\bin\Debug\net6.0\BLL.runtimeconfig.json
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\bin\Debug\net6.0\BLL.dll
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\bin\Debug\net6.0\BLL.pdb
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\bin\Debug\net6.0\DAL.dll
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\bin\Debug\net6.0\DTO.dll
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\bin\Debug\net6.0\DAL.pdb
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\bin\Debug\net6.0\DTO.pdb
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\obj\Debug\net6.0\BLL.csproj.CopyComplete
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\obj\Debug\net6.0\BLL.dll
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\obj\Debug\net6.0\refint\BLL.dll
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\obj\Debug\net6.0\BLL.pdb
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\obj\Debug\net6.0\BLL.genruntimeconfig.cache
+D:\Tài liệu học\API\Bài tập lớn\Admin\BLL\obj\Debug\net6.0\ref\BLL.dll
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\bin\Debug\net6.0\BLL.deps.json
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\bin\Debug\net6.0\BLL.runtimeconfig.json
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\bin\Debug\net6.0\BLL.dll
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\bin\Debug\net6.0\BLL.pdb
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\bin\Debug\net6.0\DAL.dll
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\bin\Debug\net6.0\DTO.dll
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\bin\Debug\net6.0\DAL.pdb
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\bin\Debug\net6.0\DTO.pdb
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\obj\Debug\net6.0\BLL.csproj.CopyComplete
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\obj\Debug\net6.0\BLL.dll
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\obj\Debug\net6.0\refint\BLL.dll
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\obj\Debug\net6.0\BLL.pdb
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\obj\Debug\net6.0\BLL.genruntimeconfig.cache
+D:\Tài liệu học\API\Bài tập lớn\User\BLL\obj\Debug\net6.0\ref\BLL.dll
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\bin\Debug\net6.0\BLL.deps.json
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\bin\Debug\net6.0\BLL.runtimeconfig.json
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\bin\Debug\net6.0\BLL.dll
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\bin\Debug\net6.0\BLL.pdb
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\bin\Debug\net6.0\DAL.dll
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\bin\Debug\net6.0\DTO.dll
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\bin\Debug\net6.0\DAL.pdb
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\bin\Debug\net6.0\DTO.pdb
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\obj\Debug\net6.0\BLL.csproj.CopyComplete
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\obj\Debug\net6.0\BLL.dll
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\obj\Debug\net6.0\refint\BLL.dll
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\obj\Debug\net6.0\BLL.pdb
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\obj\Debug\net6.0\BLL.genruntimeconfig.cache
+D:\Tài liệu học\API\Bài tập lớn\BackEnd\BLL\obj\Debug\net6.0\ref\BLL.dll

@@ -21,15 +21,19 @@ update Notifications set  ID_User = @ID_User ,Content = @Content where ID_Notifi
 end
 
 go
+Select*from Users
+Select*from Notifications
 --Insert Notification
-create proc sp_notification_insert
+alter proc sp_notification_insert
 (
-@ID_User int,
+@ID_User_Nhan int,
+@Link nvarchar(max),
+@ID_User_Tao int,
 @Content nvarchar(max)
 )
 as
 begin
-insert into Notifications (ID_User,Content) values (@ID_User,@Content);
+insert into Notifications (ID_User_Nhan,ID_User_Tao,Content,Link) values (@ID_User_Nhan,@ID_User_Tao,@Content,@Link);
 end
 go
 drop proc sp_notification_update
@@ -73,7 +77,7 @@ END;
 -------------------------------------------------search
 select*from Notifications
 
-CREATE PROCEDURE sp_Notification_search 
+alter PROCEDURE sp_Notification_search 
     @page_index INT, 
     @page_size INT,
     @Keywords NVARCHAR(255)
@@ -86,7 +90,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY Content ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_Notification DESC) AS RowNumber, 
             k.ID_Notification,
             k.ID_User,
             k.Content,
@@ -119,7 +123,7 @@ BEGIN
         SET NOCOUNT ON;
 
         SELECT 
-            ROW_NUMBER() OVER (ORDER BY Content ASC) AS RowNumber, 
+            ROW_NUMBER() OVER (ORDER BY ID_Notification DESC) AS RowNumber, 
             k.ID_Notification,
             k.ID_User,
             k.Content,
@@ -144,5 +148,44 @@ BEGIN
 
         DROP TABLE #Results1; 
     END;
+END;
+GO
+
+
+-----------------------user
+
+select*from Notifications
+alter PROC sp_search_notification_by_user
+    @Keywords NVARCHAR(255)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        ROW_NUMBER() OVER (ORDER BY ID_Notification DESC) AS RowNumber, 
+        k.ID_Notification,
+        k.ID_User_Nhan,
+        k.ID_User_Tao,
+        k.Content,
+        k.Link,
+        u.Avatar,
+		u.FullName,
+        k.NotificationDate
+    INTO #Results
+    FROM Notifications AS k
+	inner join Users u on k.ID_User_Tao = u.ID_User
+    WHERE (
+            @Keywords = '' 
+            OR k.ID_User_Nhan LIKE N'%' + @Keywords + '%'
+          );
+
+    DECLARE @RecordCount BIGINT;
+    SELECT @RecordCount = COUNT(*) FROM #Results;
+
+    SELECT 
+        *,
+        @RecordCount AS RecordCount
+    FROM #Results;
+    DROP TABLE #Results;
 END;
 GO
