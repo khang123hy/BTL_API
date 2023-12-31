@@ -19,18 +19,28 @@ namespace BLL
         }
 
 
-        public Like Getlikeby_User(int id_user)
+        public Like Getlikeby_User(int id_user, int id_post)
         {
-            return _DAL_Like.Getlikeby_User(id_user);
+            return _DAL_Like.Getlikeby_User(id_user, id_post);
         }
 
-        public bool Delete_Like(Like model)
+        public Like Delete_Like(int id)
         {
-            return _DAL_Like.Delete_Like(model);
+            return _DAL_Like.Delete_Like(id);
+        }
+
+        public bool Create_Like_Notification(LikeAndNotification model)
+        {
+            return _DAL_Like.Create_Like_Notification(model);
         }
         public bool Create_Like(Like model)
         {
             return _DAL_Like.Create_Like(model);
+        }
+
+        public List<Like2> Search_Like_Posts(out long total, string Keywords)
+        {
+            return _DAL_Like.Search_Like_Posts(out total, Keywords);
         }
     }
 }

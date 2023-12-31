@@ -44,6 +44,24 @@ namespace DAL
                 throw ex;
             }
         }
+        public List<list_json_post> Search_PostDetails_User(out long total, string Keywords)
+        {
+            string msgError = "";
+            total = 0;
+            try
+            {
+                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_search_PostDetails_by_posts",
+                    "@Keywords", Keywords);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                return dt.ConvertTo<list_json_post>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public bool Create_Post(Post model)
         {
@@ -68,6 +86,31 @@ namespace DAL
                 throw ex;
             }
         }
+
+
+        public bool Create_post_list(Post_list model)
+        {
+            string msgError = "";
+            try
+            {
+                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_Posts_create_list",
+                "@ID_User", model.ID_User,
+                "@ID_Topic", model.ID_Topic,
+                "@Title", model.Title,
+                "@Synopsis", model.Synopsis,
+                "@list_json_PostDetails", model.list_json_posts != null ? MessageConvert.SerializeObject(model.list_json_posts) : null);
+                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
+                {
+                    throw new Exception(Convert.ToString(result) + msgError);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
         public bool Update_Post(Post model)
         {
@@ -151,16 +194,61 @@ namespace DAL
             }
         }
 
-        public List<Post2> Search_Posts_User(int pageIndex, int pageSize, out long total, string Keywords)
+        public List<Post2> Search_Posts_User_Desc(int pageIndex, int pageSize, out long total, string Keywords, string OrderBy)
         {
             string msgError = "";
             total = 0;
             try
             {
-                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_Posts_search_User",
+                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_Posts_search_User_Desc",
                     "@page_index", pageIndex,
                     "@page_size", pageSize,
-                    "@Keywords", Keywords);
+                    "@Keywords", Keywords,
+                    "@OrderBy", OrderBy);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                return dt.ConvertTo<Post2>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public List<Post2> Search_Posts_User_Asc(int pageIndex, int pageSize, out long total, string Keywords, string OrderBy)
+        {
+            string msgError = "";
+            total = 0;
+            try
+            {
+                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_Posts_search_User_Asc",
+                    "@page_index", pageIndex,
+                    "@page_size", pageSize,
+                    "@Keywords", Keywords,
+                    "@OrderBy", OrderBy);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                return dt.ConvertTo<Post2>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public List<Post2> Search_Posts_by_Topic_User_Desc(int pageIndex, int pageSize, out long total, string Keywords, string OrderBy, string ID_Topic)
+        {
+            string msgError = "";
+            total = 0;
+            try
+            {
+                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_Posts_search_by_topic_User_desc",
+                    "@page_index", pageIndex,
+                    "@page_size", pageSize,
+                    "@Keywords", Keywords,
+                    "@ID_Topic", ID_Topic,
+                    "@OrderBy", OrderBy
+                    );
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
@@ -172,16 +260,19 @@ namespace DAL
             }
         }
 
-        public List<Post2> Search_Posts_by_Topic_User(int pageIndex, int pageSize, out long total, string Keywords)
+        public List<Post2> Search_Posts_by_Topic_User_Asc(int pageIndex, int pageSize, out long total, string Keywords, string OrderBy, string ID_Topic)
         {
             string msgError = "";
             total = 0;
             try
             {
-                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_Posts_search_by_topic_User",
+                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_Posts_search_by_topic_User_ASC",
                     "@page_index", pageIndex,
                     "@page_size", pageSize,
-                    "@Keywords", Keywords);
+                    "@Keywords", Keywords,
+                    "@ID_Topic", ID_Topic,
+                    "@OrderBy", OrderBy
+                    );
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];

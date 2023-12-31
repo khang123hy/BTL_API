@@ -26,26 +26,24 @@ create TABLE Topics (
     CreatedDate DATETIME DEFAULT(GETDATE()) --Ngay tao
 );
 -- Sửa kiểu dữ liệu của cột Title từ VARCHAR(255) sang NVARCHAR(255)
-ALTER TABLE Topics
-create COLUMN Image nvarchar(max);
--- Thêm cột Image
-ALTER TABLE Topics
-ADD Image NVARCHAR(MAX);
--- Tạo bảng Bài viết
+
 CREATE TABLE Posts (
     ID_Post int PRIMARY KEY IDENTITY(1,1),
     ID_User INT,
     ID_Topic INT,
     Title NVARCHAR(150) NOT NULL,
-    Content nvarchar(max) not null,
-	Synopsis nvarchar(max),
-    Image nvarchar(MAX),
+    Synopsis nvarchar(max),
     CreatedDate DATETIME DEFAULT(GETDATE()),
     FOREIGN KEY (ID_User) REFERENCES Users(ID_User),
     FOREIGN KEY (ID_Topic) REFERENCES Topics(ID_Topic)
 );
-ALTER TABLE Posts
-ALTER COLUMN  Image nvarchar(MAX);
+CREATE TABLE PostDetails (
+    ID_Detail int PRIMARY KEY IDENTITY(1,1),
+    ID_Post INT,
+    Content nvarchar(max) NOT NULL,
+    Image nvarchar(MAX),
+    FOREIGN KEY (ID_Post) REFERENCES Posts(ID_Post) 
+);
 
 -- Tạo bảng Bình luận (Comments)
 CREATE TABLE Comments (
@@ -59,19 +57,20 @@ CREATE TABLE Comments (
 );
 -- Tạo bảng Thích (Likes)
 CREATE TABLE Likes (
+    ID_Likes INT PRIMARY KEY IDENTITY(1,1),
     ID_Post INT,
     ID_User INT,
-	PRIMARY KEY(ID_Post,ID_User),
     FOREIGN KEY (ID_Post) REFERENCES Posts(ID_Post),
     FOREIGN KEY (ID_User) REFERENCES USERS(ID_User)
 );
-
-
+drop table Notifications
 -- Tạo bảng Thông báo (Notifications)
 CREATE TABLE Notifications (
     ID_Notification INT PRIMARY KEY IDENTITY(1,1),
     ID_User_Tao INT,
     ID_User_Nhan INT,
+    ID_Like_or_Comment INT,
+    Note nvarchar(max),
     Content nvarchar(max) NOT NULL,
     Link nvarchar(max),
     NotificationDate DATETIME default(getdate()),
@@ -89,64 +88,99 @@ DROP TABLE ACCOUNTS
 ---------------------------------------------------------------------
 --THÊM DỮ LIỆU VÀO CÁC BẢNG
 -- Thêm dữ liệu vào bảng USERS
-INSERT INTO USERS (FullName,Sex, Address, DateOfBirth, PhoneNumber,Email)
+select*from Users
+-- Thêm dữ liệu cho bảng Users
+INSERT INTO Users (AccountName, Password, FullName, Address, Sex, DateOfBirth, PhoneNumber, Email, Role, Avatar)
 VALUES 
-    ('Nguyen Van A','Nam', '123 Main Street', '1990-01-01', '1234567890','user1@email.com'),
-    ('Tran Thi B',N'Nữ', '456 Oak Street', '1985-05-15', '0987654321', 'admin@email.com');
--- Chèn dữ liệu cho bảng Users
-select * from Users
-INSERT INTO Users (FullName, Address, Sex, DateOfBirth, PhoneNumber, Email)
-VALUES 
-    ('John Doe', '123 Main St', 'Male', '1990-01-01', '1234567890', '7john.doe@example.com'),
-    ('Jane Smith', '456 Oak St', 'Female', '1985-05-15', '9876543210', '2jane.smith@example.com'),
-    ('Bob Johnson', '789 Pine St', 'Male', '1982-09-20', '5551112222', '2bob.johnson@example.com'),
-    ('Alice Brown', '101 Elm St', 'Female', '1995-03-12', '9998887777', '2alice.brown@example.com'),
-    ('Charlie Wilson', '202 Cedar St', 'Male', '1988-11-28', '4443332222', '2charlie.wilson@example.com');
+    ('user1', 'password1', 'Người Dùng 1', 'Địa chỉ 1', 'Nam', '1990-01-01', '1234567890', 'user1@email.com', 'USER', 'avatar1.jpg'),
+    ('user2', 'password2', 'Người Dùng 2', 'Địa chỉ 2', 'Nữ', '1995-02-02', '9876543210', 'user2@email.com', 'USER', 'avatar2.jpg'),
+    ('admin1', 'adminpass1', 'Quản trị viên 1', 'Địa chỉ Admin 1', 'Nam', '1985-03-03', '1111111111', 'admin1@email.com', 'ADMIN', 'admin_avatar1.jpg'),
+    ('admin2', 'adminpass2', 'Quản trị viên 2', 'Địa chỉ Admin 2', 'Nữ', '1980-04-04', '2222222222', 'admin2@email.com', 'ADMIN', 'admin_avatar2.jpg'),
+    ('user3', 'password3', 'Người Dùng 3', 'Địa chỉ 3', 'Nam', '1992-05-05', '3333333333', 'user3@email.com', 'USER', 'avatar3.jpg');
 
--- Chèn dữ liệu cho bảng Accounts
-INSERT INTO Accounts (ID_User, AccountName, Password, Role)
+-- Thêm dữ liệu cho bảng Topics
+INSERT INTO Topics (Title, Description, Image, CreatedDate)
 VALUES 
-    (4, 'john_doe_account', 'password123', 'USER'),
-    (5, 'jane_smith_account', 'pass456', 'ADMIN'),
-    (6, 'bob_johnson_account', 'secure789', 'USER'),
-    (7, 'alice_brown_account', 'pass123', 'USER'),
-    (8, 'charlie_wilson_account', 'password456', 'ADMIN');
+    ('Chủ đề 1', 'Mô tả chủ đề 1', 'topic_image1.jpg', GETDATE()),
+    ('Chủ đề 2', 'Mô tả chủ đề 2', 'topic_image2.jpg', GETDATE()),
+    ('Chủ đề 3', 'Mô tả chủ đề 3', 'topic_image3.jpg', GETDATE()),
+    ('Chủ đề 4', 'Mô tả chủ đề 4', 'topic_image4.jpg', GETDATE()),
+    ('Chủ đề 5', 'Mô tả chủ đề 5', 'topic_image5.jpg', GETDATE());
 
--- Thêm dữ liệu vào bảng ACCOUNTS
-INSERT INTO ACCOUNTS (ID_USER, AccountName, PASSWORD , Role)
+-- Thêm dữ liệu cho bảng Posts
+INSERT INTO Posts (ID_User, ID_Topic, Title, Synopsis, CreatedDate)
 VALUES 
-    (1, 'user', '1',  'USER'), -- User
-    (2, 'admin', '1', 'ADMIN'); -- Admin
-	select*from ACCOUNTS
--- Thêm dữ liệu vào bảng Topics
-INSERT INTO Topics (Title, Description, CreatedDate)
-VALUES 
-    ('Technology', 'Discussion about the latest technology trends.', GETDATE()),
-    ('Travel', 'Share your travel experiences and recommendations.', GETDATE());
+    (1, 1, 'Bài đăng 1', 'Tóm tắt bài đăng 1', GETDATE()),
+    (2, 2, 'Bài đăng 2', 'Tóm tắt bài đăng 2', GETDATE()),
+    (3, 3, 'Bài đăng 3', 'Tóm tắt bài đăng 3', GETDATE()),
+    (4, 4, 'Bài đăng 4', 'Tóm tắt bài đăng 4', GETDATE()),
+    (5, 5, 'Bài đăng 5', 'Tóm tắt bài đăng 5', GETDATE());
 
--- Thêm dữ liệu vào bảng Posts
-INSERT INTO Posts (ID_User, ID_Topic, Title, Content, Image, CreatedDate)
+-- Thêm dữ liệu cho bảng PostDetails
+INSERT INTO PostDetails (ID_Post, Content, Image)
 VALUES 
-    (1, 1, 'New Technology Advancements', 'Exciting developments in technology!', NULL, GETDATE()),
-    (3, 2, 'Amazing Beaches Around the World', 'Share your favorite beach destinations.', NULL, GETDATE());
-
--- Thêm dữ liệu vào bảng Comments
+    (1, 'Nội dung bài đăng 1', 'image1.jpg'),
+    (2, 'Nội dung bài đăng 2', 'image2.jpg'),
+    (3, 'Nội dung bài đăng 3', 'image3.jpg'),
+    (4, 'Nội dung bài đăng 4', 'image4.jpg'),
+    (5, 'Nội dung bài đăng 5', 'image5.jpg');
+select*from Posts
+select*from Likes
+-- Thêm dữ liệu cho bảng Comments
 INSERT INTO Comments (ID_Post, ID_User, Content, CreatedDate)
 VALUES 
-	    (2, 1, 'I have been to some amazing beache. Can not wait to share my experiences 2!', GETDATE()),
-    (1, 3, 'Great post! I love the advancements mentioned.', GETDATE()),
-    (2, 1, 'I have been to some amazing beache. Can not wait to share my experiences!', GETDATE());
+    (5, 5, 'Bình luận 1 cho bài đăng 1', GETDATE()),
+    (5, 6, 'Bình luận 2 cho bài đăng 2', GETDATE()),
+    (5, 7, 'Bình luận 3 cho bài đăng 3', GETDATE()),
+    (6, 8, 'Bình luận 4 cho bài đăng 4', GETDATE()),
+    (7, 9, 'Bình luận 5 cho bài đăng 5', GETDATE());
 
--- Thêm dữ liệu vào bảng Likes
+	select*from Users
+	select k.Title ,k.ID_Post, count(d.ID_Post) from Likes d left join Posts k on k.ID_Post=d.ID_Post group by k.Title,k.ID_Post
+-- Thêm dữ liệu cho bảng Likes
 INSERT INTO Likes (ID_Post, ID_User)
 VALUES 
-    (1, 1),
-    (2, 3);
+    (16, 6),
+    (13, 8),
+    (13, 7),
+    (13, 6),
+    (13, 5);
 
--- Thêm dữ liệu vào bảng Notifications
-INSERT INTO Notifications (ID_User_Tao,ID_User_Nhan, Content, NotificationDate)
+-- Thêm dữ liệu cho bảng Notifications
+INSERT INTO Notifications (ID_User_Tao, ID_User_Nhan, Content, Link, NotificationDate)
 VALUES 
-    (1,3, 'You have a new like on your post!', GETDATE()),
-    (3, 1,'Someone commented on your post.', GETDATE());
+    (1, 2, 'Thông báo 1', '/link1', GETDATE()),
+    (2, 3, 'Thông báo 2', '/link2', GETDATE()),
+    (3, 4, 'Thông báo 3', '/link3', GETDATE()),
+    (4, 5, 'Thông báo 4', '/link4', GETDATE()),
+    (5, 1, 'Thông báo 5', '/link5', GETDATE());
 
-	select*from Notifications
+
+	select
+	k.ID_Post,
+            u.ID_User,
+            k.ID_Topic,
+            k.Title,
+            k.Synopsis,
+            k.CreatedDate,
+            u.Avatar,
+            u.FullName,
+            COUNT(DISTINCT c.ID_Comment) as Comment,
+			COUNT(DISTINCT d.ID_Likes) as Likes
+        FROM Posts AS k
+        left JOIN Users u ON u.ID_User = k.ID_User
+        left JOIN Comments c ON k.ID_Post = c.ID_Post
+        left JOIN Likes d ON k.ID_Post = d.ID_Post
+        GROUP BY
+            k.ID_Post,
+            u.ID_User,
+            k.ID_Topic,
+            k.Title,
+            k.Synopsis,
+            k.CreatedDate,
+            u.Avatar,
+            u.FullName;  
+
+select*from Likes
+
+select*from Users

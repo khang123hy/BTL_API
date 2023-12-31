@@ -39,6 +39,8 @@ namespace DAL
                 var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_notification_insert",
                   "@ID_User_Nhan", model.ID_User_Nhan,
                   "@ID_User_Tao", model.ID_User_Tao,
+                  "@ID_Like_or_Comment", model.ID_Like_or_Comment,
+                  "@Note", model.Note,
                   "@Link", model.Link,
                 "@Content", model.Content);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))

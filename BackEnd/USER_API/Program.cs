@@ -32,6 +32,8 @@ builder.Services.AddTransient<ITF_DAL_Account, DAL_Account>();
 builder.Services.AddTransient<ITF_BLL_Account, BLL_Account>();
 builder.Services.AddTransient<ITF_DAL_Notification, DAL_Notification>();
 builder.Services.AddTransient<ITF_BLL_Notification, BLL_Notification>();
+builder.Services.AddTransient<ITF_DAL_File, DAL_File>();
+builder.Services.AddTransient<ITF_BLL_File, BLL_File>();
 
 // configure strongly typed settings objects
 IConfiguration configuration = builder.Configuration;

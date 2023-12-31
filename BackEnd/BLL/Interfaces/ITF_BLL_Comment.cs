@@ -10,9 +10,12 @@ namespace BLL.Interfaces
 
         public Comment Delete_Comment(int id);
 
+        Comment Delete_Comment_Notification(int id);
+
         public bool Update_Comment(Comment model);
 
         public bool Create_Comment(Comment model);
+        bool Create_Comment_Notification(CommentAndNotfication model);
 
         bool Deletes_Notification(LIST_Comment model);
         List<Comment> Search_Comment(int pageIndex, int pageSize, out long total, string Keywords);

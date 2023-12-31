@@ -1,5 +1,4 @@
 ﻿using BLL.Interfaces;
-using DTO;
 using Microsoft.AspNetCore.Mvc;
 
 namespace USER_API.Controllers
@@ -43,11 +42,5 @@ namespace USER_API.Controllers
             }
         }
 
-        [Route("Create-Notification")]
-        [HttpPost]
-        public bool Create(Notification model)
-        {
-            return _notification.Create(model);
-        }
     }
 }

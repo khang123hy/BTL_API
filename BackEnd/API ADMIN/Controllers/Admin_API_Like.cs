@@ -21,19 +21,8 @@ namespace API.Controllers
             return _BLL_Like.Getlikeby_Posts(id_post);
         }
 
-        [Route("get-like-user")]
-        [HttpGet]
-        public Like Getlikeby_User(int id_user)
-        {
-            return _BLL_Like.Getlikeby_User(id_user);
-        }
 
-        [Route("Delete-like")]
-        [HttpDelete]
-        public bool Delete_Like(Like model)
-        {
-            return _BLL_Like.Delete_Like(model);
-        }
+
 
         [Route("Create-like")]
         [HttpPost]

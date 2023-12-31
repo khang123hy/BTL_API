@@ -11,6 +11,8 @@ namespace DAL.Interfaces
         bool Update_Comment(Comment model);
 
         bool Create_Comment(Comment model);
+        bool Create_Comment_Notification(CommentAndNotfication model);
+        Comment Delete_Comment_Notification(int id);
 
         bool Deletes_Notification(LIST_Comment model);
 

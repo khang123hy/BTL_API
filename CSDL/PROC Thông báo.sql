@@ -29,14 +29,15 @@ alter proc sp_notification_insert
 @ID_User_Nhan int,
 @Link nvarchar(max),
 @ID_User_Tao int,
+@ID_Like_or_Comment int,
+@Note nvarchar(max),
 @Content nvarchar(max)
 )
 as
 begin
-insert into Notifications (ID_User_Nhan,ID_User_Tao,Content,Link) values (@ID_User_Nhan,@ID_User_Tao,@Content,@Link);
+insert into Notifications (ID_User_Nhan,ID_User_Tao,Content,Link,ID_Like_or_Comment,Note) values (@ID_User_Nhan,@ID_User_Tao,@Content,@Link,@ID_Like_or_Comment,@Note);
 end
 go
-drop proc sp_notification_update
 
 
 go
@@ -189,3 +190,11 @@ BEGIN
     DROP TABLE #Results;
 END;
 GO
+
+
+create proc sp_delete_notification(@ID_User int, @ID_Post int)
+as
+begin
+	delete from Notifications where ID_Post = @ID_Post and ID_User =@ID_User
+end
+select*from Notifications

@@ -14,16 +14,19 @@ namespace USER_API.Controllers
             _Comment = comment;
         }
 
-
-
-
-        [Route("Create-Comment")]
+        [Route("Create-Comment-Notification")]
         [HttpPost]
-        public bool Create_Comment(Comment model)
+        public bool Create_Comment_Notification(CommentAndNotfication model)
         {
-            return _Comment.Create_Comment(model);
+            return _Comment.Create_Comment_Notification(model);
         }
 
+        [Route("Delete-Comment-Notification")]
+        [HttpDelete]
+        public Comment Delete_Comment_Notification(int id)
+        {
+            return _Comment.Delete_Comment_Notification(id);
+        }
 
         [Route("Search-Comment-User")]
         [HttpPost]

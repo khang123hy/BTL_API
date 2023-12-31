@@ -12,6 +12,21 @@
 
 
     }
+    public partial class CommentAndNotfication
+    {
+
+
+        public int ID_Comment { get; set; }
+        public int? ID_Post { get; set; }
+        public int? ID_User { get; set; }
+        public int? ID_User_Nhan { get; set; }
+        public string? Content { get; set; }
+        public string? Title { get; set; }
+        public string? Link { get; set; }
+        public DateTime? CreatedDate { get; set; }
+
+
+    }
     public partial class Comment2
     {
 

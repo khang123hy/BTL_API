@@ -235,3 +235,41 @@ BEGIN
     END;
 END;
 GO
+
+alter PROC Comment_Create_thongbao(
+    @ID_Post INT,
+    @ID_User INT,
+    @ID_User_Nhan INT,
+    @Link NVARCHAR(MAX),
+    @Title NVARCHAR(MAX),
+    @Content NVARCHAR(MAX)
+)
+AS
+BEGIN
+    DECLARE @ID_Comment INT;
+
+    -- Thêm bình luận và lấy ID_Comment
+    INSERT INTO Comments (ID_Post, ID_User, Content)
+    VALUES (@ID_Post, @ID_User, @Content);
+
+    -- Lấy ID_Comment
+    SET @ID_Comment = SCOPE_IDENTITY();
+
+    -- Thêm thông báo với ID_Comment vừa lấy được
+    INSERT INTO Notifications (ID_User_Tao, ID_User_Nhan, ID_Like_or_Comment, Note, Content, Link)
+    VALUES (@ID_User, @ID_User_Nhan, @ID_Comment, 'Comment', @Title, @Link);
+END;
+GO
+
+
+
+create proc sp_comment_Delete_Notification
+(@ID_Comment int)
+as
+begin
+	delete from Comments where ID_Comment =@ID_Comment;
+	delete from Notifications where ID_Like_or_Comment = @ID_Comment and Note = 'Comment';
+end
+go
+select*from Comments
+select*from Notifications
