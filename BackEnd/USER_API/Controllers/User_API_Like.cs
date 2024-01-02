@@ -14,12 +14,12 @@ namespace USER_API.Controllers
             _BLL_Like = bLL_Like;
         }
 
-        [Route("get-like-posts")]
-        [HttpGet]
-        public Like Getlikeby_Posts(int id_post)
-        {
-            return _BLL_Like.Getlikeby_Posts(id_post);
-        }
+        //[Route("get-like-posts")]
+        //[HttpGet]
+        //public Like Getlikeby_Posts(int id_post)
+        //{
+        //    return _BLL_Like.Getlikeby_Posts(id_post);
+        //}
 
         [Route("get-like-user")]
         [HttpGet]

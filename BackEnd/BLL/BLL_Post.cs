@@ -19,17 +19,14 @@ namespace BLL
         {
             return _DAL_Post.getpost_by_id_User(id);
         }
-        public bool Update_Post(Post model)
-        {
-            return _DAL_Post.Update_Post(model);
-        }
-        public bool Create_Post(Post model)
-        {
-            return _DAL_Post.Create_Post(model);
-        }
+
         public bool Create_post_list(Post_list model)
         {
             return _DAL_Post.Create_post_list(model);
+        }
+        public bool Update_post_list(Post_list model)
+        {
+            return _DAL_Post.Update_post_list(model);
         }
         public Post Delete_Post(int id)
         {
@@ -45,7 +42,10 @@ namespace BLL
         {
             return _DAL_Post.Search_Posts(pageIndex, pageSize, out total, Keywords);
         }
-
+        public List<Post_list> Search_Posts_Admin(int pageIndex, int pageSize, out long total, string Keywords)
+        {
+            return _DAL_Post.Search_Posts_Admin(pageIndex, pageSize, out total, Keywords);
+        }
         public List<Post2> Search_Posts_User_Asc(int pageIndex, int pageSize, out long total, string Keywords, string OrderBy)
         {
             return _DAL_Post.Search_Posts_User_Asc(pageIndex, pageSize, out total, Keywords, OrderBy);

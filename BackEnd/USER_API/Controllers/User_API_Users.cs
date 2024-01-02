@@ -21,12 +21,12 @@ namespace USER_API.Controllers
         {
             return _BLL_Users.GetUser_byID(id);
         }
-        [Route("Delete-User")]
-        [HttpDelete]
-        public User Delete_User(int id)
-        {
-            return _BLL_Users.Delete_User(id);
-        }
+        //[Route("Delete-User")]
+        //[HttpDelete]
+        //public User Delete_User(int id)
+        //{
+        //    return _BLL_Users.Delete_User(id);
+        //}
 
         [Route("Update-User")]
         [HttpPost]

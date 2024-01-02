@@ -43,7 +43,6 @@ namespace BLL
             return _DAL_Comment.Update_Comment(model);
         }
 
-
         public bool Deletes_Notification(LIST_Comment model)
         {
             return _DAL_Comment.Deletes_Notification(model);

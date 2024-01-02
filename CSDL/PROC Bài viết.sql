@@ -35,50 +35,61 @@ WHERE ID_Post = @id
 end
 
 
-
-ALTER PROCEDURE sp_posts_create(
-@ID_User INT,
-@ID_Topic INT,
-@Title NVARCHAR(150),
-@Content nvarchar(max) ,
-@Synopsis nvarchar(max) ,
-@Image nvarchar(MAX)
-)
+create PROCEDURE sp_Posts_delete
+(@ID_Post INT)
 AS
-    BEGIN
-       insert into Posts(ID_User,ID_Topic,Title,Content,Synopsis,Image)
-	   values(@ID_User,@ID_Topic,@Title,@Content,@Synopsis,@Image);
-    END;
+BEGIN
+    -- Xoá chi tiết bài viết
+    DELETE FROM PostDetails WHERE ID_Post = @ID_Post;
+
+    -- Xoá bài viết
+    DELETE FROM Posts WHERE ID_Post = @ID_Post;
+    SELECT '';
+END;
 GO
 
 
-alter PROCEDURE Post_update(
-@ID_Post INT,
-@ID_User INT,
-@ID_Topic INT,
-@Title NVARCHAR(150),
-@Content TEXT ,
-@Synopsis nvarchar(max) ,
-@Image nvarchar(MAX)
+
+alter PROCEDURE sp_Posts_update_List
+(@ID_Post              int, 
+ @ID_User              int, 
+ @ID_Topic             int, 
+ @Title                NVARCHAR(255),  
+ @Synopsis             NVARCHAR(max),  
+ @list_json_PostDetails NVARCHAR(MAX)
 )
 AS
+BEGIN
+    UPDATE Posts
+    SET
+        ID_User = @ID_User,
+        ID_Topic = @ID_Topic,
+        Title = @Title,
+        Synopsis = @Synopsis,
+		CreatedDate = getdate()
+    WHERE
+        ID_Post = @ID_Post;
+
+    -- Xoá các chi tiết bài viết cũ
+    DELETE FROM PostDetails WHERE ID_Post = @ID_Post;
+
+    -- Thêm các chi tiết bài viết mới
+    IF(@list_json_PostDetails IS NOT NULL)
     BEGIN
-		update Posts set  ID_User = @ID_User, ID_Topic = @ID_Topic, Title = @Title, Content = @Content,Synopsis=@Synopsis, Image = @Image where ID_Post = @ID_Post; 
+        INSERT INTO PostDetails (ID_Post, Content, Image)
+        SELECT @ID_Post,
+               JSON_VALUE(p.value, '$.content'), 
+               JSON_VALUE(p.value, '$.image')
+        FROM OPENJSON(@list_json_PostDetails) AS p;
     END;
+
+    SELECT '';
+END;
 GO
 
-
-create PROCEDURE sp_posts_delete(
-   @ID_Post INT
-)
-AS
-    BEGIN
-		delete from Posts where ID_Post = @ID_Post;
-    END;
-GO
 
 ----------------------------------deletes 
-CREATE PROCEDURE sp_post_deletes
+alter PROCEDURE sp_post_deletes
 (
     @list_post NVARCHAR(MAX)
 )
@@ -92,14 +103,16 @@ BEGIN
         INTO #Results 
         FROM OPENJSON(@list_post) AS p;
 
-        -- Thực hiện xóa tài khoản dựa trên trường note và iduser
-        DELETE A 
-        FROM Posts A
-        INNER JOIN #Results R ON A.ID_Post = R.iD_Post;
-        
+        -- Thực hiện xóa chi tiết bài viết
+        DELETE FROM PostDetails WHERE ID_Post IN (SELECT iD_Post FROM #Results);
+
+        -- Thực hiện xóa bài viết
+        DELETE FROM Posts WHERE ID_Post IN (SELECT iD_Post FROM #Results);
+
         DROP TABLE #Results;
     END;
 END;
+
 
 select*from Posts
 
@@ -774,5 +787,112 @@ BEGIN
         @RecordCount AS RecordCount
     FROM #Results;
     DROP TABLE #Results;
+END;
+GO
+
+
+
+exec sp_Posts_search_list @page_index = '1' ,@page_size ='10',@Keywords=''
+ALTER PROCEDURE sp_Posts_search_list 
+    @page_index INT, 
+    @page_size INT,
+    @Keywords NVARCHAR(255)
+AS
+BEGIN
+    DECLARE @RecordCount BIGINT;
+
+    IF (@page_size <> 0)
+    BEGIN
+        SET NOCOUNT ON;
+
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY p.ID_Post DESC) AS RowNumber, 
+            p.ID_Post,
+            p.ID_User,
+            p.ID_Topic,
+            p.Title,
+			p.Synopsis,
+            p.CreatedDate,
+            (
+                SELECT pd.Content , pd.Image 
+                FROM PostDetails AS pd
+                WHERE p.ID_Post = pd.ID_Post
+                FOR JSON PATH
+            ) AS list_json_posts
+        INTO #Results1
+        FROM Posts AS p
+        WHERE  (
+                    @Keywords = '' 
+                    OR CAST(p.ID_Post AS NVARCHAR(255)) LIKE N'%' + @Keywords + '%' 
+                    OR CAST(p.ID_User AS NVARCHAR(255)) LIKE N'%' + @Keywords + '%'
+                    OR CAST(p.ID_Topic AS NVARCHAR(255)) LIKE N'%' + @Keywords + '%'
+                    OR p.Title LIKE N'%' + @Keywords + '%'
+                    OR CONVERT(NVARCHAR(255), p.CreatedDate, 121) LIKE N'%' + @Keywords + '%'
+                );                   
+
+        SELECT @RecordCount = COUNT(*)
+        FROM #Results1;
+
+        SELECT 
+            ID_Post,
+            ID_User,
+            ID_Topic,
+            Title,
+			Synopsis,
+            CreatedDate,
+            list_json_posts,
+            @RecordCount AS RecordCount
+        FROM #Results1
+        WHERE 
+            RowNumber BETWEEN (@page_index - 1) * @page_size + 1 AND (((@page_index - 1) * @page_size + 1) + @page_size) - 1
+            OR @page_index = -1;
+
+        DROP TABLE #Results1; 
+    END
+    ELSE
+    BEGIN
+        SET NOCOUNT ON;
+
+        SELECT 
+            ROW_NUMBER() OVER (ORDER BY p.ID_Post DESC) AS RowNumber, 
+            p.ID_Post,
+            p.ID_User,
+            p.ID_Topic,
+            p.Title,
+			p.Synopsis,
+            p.CreatedDate,
+            (
+                SELECT pd.Content , pd.Image 
+                FROM PostDetails AS pd
+                WHERE p.ID_Post = pd.ID_Post
+                FOR JSON PATH
+            ) AS list_json_posts
+        INTO #Results2
+        FROM Posts AS p
+        WHERE  (
+                    @Keywords = '' 
+                    OR CAST(p.ID_Post AS NVARCHAR(255)) LIKE N'%' + @Keywords + '%' 
+                    OR CAST(p.ID_User AS NVARCHAR(255)) LIKE N'%' + @Keywords + '%'
+                    OR CAST(p.ID_Topic AS NVARCHAR(255)) LIKE N'%' + @Keywords + '%'
+                    OR p.Title LIKE N'%' + @Keywords + '%'
+                    OR CONVERT(NVARCHAR(255), p.CreatedDate, 121) LIKE N'%' + @Keywords + '%'
+                );                   
+
+        SELECT @RecordCount = COUNT(*)
+        FROM #Results2;
+
+        SELECT 
+            ID_Post,
+            ID_User,
+            ID_Topic,
+            Title,
+			Synopsis,
+            CreatedDate,
+            list_json_posts,
+            @RecordCount AS RecordCount
+        FROM #Results2;                        
+
+        DROP TABLE #Results2; 
+    END;
 END;
 GO

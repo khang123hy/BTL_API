@@ -17,12 +17,6 @@ namespace USER_API.Controllers
             _File = file;
         }
 
-        [Route("Get-posts")]
-        [HttpGet]
-        public Post getpost(int id)
-        {
-            return _Post.getpost(id);
-        }
 
         [Route("Get-posts-user")]
         [HttpGet]
@@ -61,13 +55,7 @@ namespace USER_API.Controllers
         }
 
 
-        [Route("Create-Posts")]
-        [HttpPost]
-        public Post CreatePost([FromBody] Post model)
-        {
-            _Post.Create_Post(model);
-            return model;
-        }
+
 
 
         [Route("Create-Posts_list")]

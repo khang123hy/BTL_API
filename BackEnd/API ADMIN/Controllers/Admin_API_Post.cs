@@ -24,20 +24,19 @@ namespace API.Controllers
             return _Post.getpost(id);
         }
 
-
-        [Route("Create-Posts")]
+        [Route("Create-Posts_list")]
         [HttpPost]
-        public Post CreatePost([FromBody] Post model)
+        public Post_list Create_post_list([FromBody] Post_list model)
         {
-            _Post.Create_Post(model);
+            _Post.Create_post_list(model);
             return model;
         }
 
-        [Route("Update-Posts")]
+        [Route("Update-Posts_list")]
         [HttpPost]
-        public Post UpdatePost([FromBody] Post model)
+        public Post_list Update_post_list([FromBody] Post_list model)
         {
-            _Post.Update_Post(model);
+            _Post.Update_post_list(model);
             return model;
         }
 
@@ -83,6 +82,35 @@ namespace API.Controllers
                 throw new Exception(ex.Message);
             }
         }
+
+        [Route("Search-Posts-List")]
+        [HttpPost]
+        public IActionResult Search_Posts_Admin([FromBody] Dictionary<string, object> formData)
+        {
+            try
+            {
+                var page = int.Parse(formData["page"].ToString());
+                var pageSize = int.Parse(formData["pageSize"].ToString());
+                string Keywords = "";
+                if (formData.Keys.Contains("Keywords") && !string.IsNullOrEmpty(Convert.ToString(formData["Keywords"]))) { Keywords = Convert.ToString(formData["Keywords"]); }
+                long total = 0;
+                var data = _Post.Search_Posts_Admin(page, pageSize, out total, Keywords);
+                return Ok(
+                            new
+                            {
+                                TotalItems = total,
+                                Data = data,
+                                Page = page,
+                                PageSize = pageSize
+                            }
+                        );
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
 
         [Route("Upload-Posts")]
         [HttpPut]

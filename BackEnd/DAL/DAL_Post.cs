@@ -63,29 +63,6 @@ namespace DAL
             }
         }
 
-        public bool Create_Post(Post model)
-        {
-            string msgError = "";
-            try
-            {
-                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_posts_create",
-                "@ID_User", model.ID_User,
-                "@ID_Topic", model.ID_Topic,
-                "@Title", model.Title,
-                "@Content", model.Content,
-                "@Synopsis", model.Synopsis,
-                "@Image", model.Image);
-                if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
-                {
-                    throw new Exception(Convert.ToString(result) + msgError);
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
 
 
         public bool Create_post_list(Post_list model)
@@ -111,21 +88,18 @@ namespace DAL
             }
         }
 
-
-        public bool Update_Post(Post model)
+        public bool Update_post_list(Post_list model)
         {
             string msgError = "";
             try
             {
-
-                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "Post_update",
+                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_Posts_update_List",
                 "@ID_Post", model.ID_Post,
                 "@ID_User", model.ID_User,
                 "@ID_Topic", model.ID_Topic,
                 "@Title", model.Title,
-                "@Content", model.Content,
                 "@Synopsis", model.Synopsis,
-                "@Image", model.Image);
+                "@list_json_PostDetails", model.list_json_posts != null ? MessageConvert.SerializeObject(model.list_json_posts) : null);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -137,6 +111,7 @@ namespace DAL
                 throw ex;
             }
         }
+
 
         public Post Delete_Post(int id)
         {
@@ -187,6 +162,26 @@ namespace DAL
                     throw new Exception(msgError);
                 if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
                 return dt.ConvertTo<Post>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public List<Post_list> Search_Posts_Admin(int pageIndex, int pageSize, out long total, string Keywords)
+        {
+            string msgError = "";
+            total = 0;
+            try
+            {
+                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_Posts_search_list",
+                    "@page_index", pageIndex,
+                    "@page_size", pageSize,
+                    "@Keywords", Keywords);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+                return dt.ConvertTo<Post_list>().ToList();
             }
             catch (Exception ex)
             {
