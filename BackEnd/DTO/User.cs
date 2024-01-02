@@ -20,6 +20,8 @@ namespace DTO
         public string Password { get; set; }
         public string Role { get; set; }
         public string Email { get; set; }
+        public string Avatar { get; set; }
+        public string FullName { get; set; }
 
     }
 
@@ -64,4 +66,9 @@ namespace DTO
     {
         public string Secret { get; set; }
     }
+    public class Check
+    {
+        public int Check_Account { get; set; }
+    }
+
 }

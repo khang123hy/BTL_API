@@ -33,7 +33,8 @@ builder.Services.AddTransient<ITF_DAL_Notification, DAL_Notification>();
 builder.Services.AddTransient<ITF_BLL_Notification, BLL_Notification>();
 builder.Services.AddTransient<ITF_DAL_File, DAL_File>();
 builder.Services.AddTransient<ITF_BLL_File, BLL_File>();
-
+builder.Services.AddTransient<ITF_DAL_ThongKe, DAL_ThongKe>();
+builder.Services.AddTransient<ITF_BLL_ThongKe, BLL_ThongKe>();
 
 // configure strongly typed settings objects
 IConfiguration configuration = builder.Configuration;

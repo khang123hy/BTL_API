@@ -17,5 +17,6 @@ namespace DAL.Interfaces
 
         List<User> Search_User(int pageIndex, int pageSize, out long total, string Keywords);
 
+
     }
 }

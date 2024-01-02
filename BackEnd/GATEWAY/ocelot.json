@@ -8,7 +8,19 @@
 
 
     //-------------------------------------ADMIN-------------------------------------------------------------
-
+    //Account
+    {
+      "UpstreamPathTemplate": "/api/Account/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/Admin_API_Account/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 61041
+        }
+      ]
+    },
     //Comment
     {
       "UpstreamPathTemplate": "/api/Comment/{everything}",
@@ -99,9 +111,38 @@
         }
       ]
     },
-
+    {
+      "UpstreamPathTemplate": "/api/ThongKe/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamPathTemplate": "/api/Admin_API_ThongKe/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 61041
+        }
+      ]
+    },
 
     //-------------------------------------USER-------------------------------------------------------------
+
+    {
+      "UpstreamPathTemplate": "/api/Account_User/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "DownstreamPathTemplate": "/api/User_API_Account/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9312
+        }
+      ]
+    },
+
     //Comment-USER
     {
       "UpstreamPathTemplate": "/api/Comment_User/{everything}",

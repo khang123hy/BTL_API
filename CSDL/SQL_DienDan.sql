@@ -15,8 +15,9 @@ CREATE TABLE Users(
     PhoneNumber char(10),
 	Email varchar(50) UNIQUE,
 	Role varchar(20) not null CHECK(Role = 'ADMIN' or Role = 'USER'),
+	CreatedDate DATETIME DEFAULT(GETDATE()),
 	Avatar nvarchar(Max)
-);
+);    
 -- Tạo bảng Chủ đề (Topics)
 create TABLE Topics (
     ID_Topic INT PRIMARY KEY IDENTITY(1,1),
@@ -36,6 +37,14 @@ CREATE TABLE Posts (
     CreatedDate DATETIME DEFAULT(GETDATE()),
     FOREIGN KEY (ID_User) REFERENCES Users(ID_User),
     FOREIGN KEY (ID_Topic) REFERENCES Topics(ID_Topic)
+);
+-- Tạo bảng Thích (Likes)
+CREATE TABLE Likes (
+    ID_Likes INT PRIMARY KEY IDENTITY(1,1),
+    ID_Post INT,
+    ID_User INT,
+    FOREIGN KEY (ID_Post) REFERENCES Posts(ID_Post),
+    FOREIGN KEY (ID_User) REFERENCES USERS(ID_User)
 );
 CREATE TABLE PostDetails (
     ID_Detail int PRIMARY KEY IDENTITY(1,1),
@@ -90,6 +99,16 @@ DROP TABLE ACCOUNTS
 -- Thêm dữ liệu vào bảng USERS
 select*from Users
 -- Thêm dữ liệu cho bảng Users
+-- Insert data into the table
+delete
+INSERT INTO Users (AccountName, Password, FullName, Address, Sex, DateOfBirth, PhoneNumber, Email, Role, Avatar,CreatedDate)
+VALUES 
+('usera1', 'user', 'Jane Doe', '456 Second St', 'Female', '1992-03-15', '9876543211', 'user2@example.com', 'USER', 'USERS/01e96c3ce1bda1dfdd339a4999fd9248.jpg','2024-10-10'),
+('usera2', 'user', 'Bob Johnson', '789 Third St', 'Male', '1988-08-22', '5551234567', 'user3@example.com', 'USER', 'USERS/01e96c3ce1bda1dfdd339a4999fd9248.jpg','2023-10-10'),
+('admina1', 'admin', 'Admin Two', '789 Admin St', 'Male', '1980-05-10', '5559876543', 'admin2@example.com', 'ADMIN', 'USERS/01e96c3ce1bda1dfdd339a4999fd9248.jpg','2023-10-10'),
+('usera3', 'user', 'Alice Smith', '101 Fourth St', 'Female', '1995-12-05', '1239876540', 'user4@example.com', 'USER', 'USERS/01e96c3ce1bda1dfdd339a4999fd9248.jpg','2023-12-28'),
+('admina2', 'admin', 'Admin Three', '111 Admin St', 'Male', '1975-09-18', '9998887777', 'admin3@example.com', 'ADMIN', 'USERS/01e96c3ce1bda1dfdd339a4999fd9248.jpg','2023-2-10');
+
 INSERT INTO Users (AccountName, Password, FullName, Address, Sex, DateOfBirth, PhoneNumber, Email, Role, Avatar)
 VALUES 
     ('user1', 'password1', 'Người Dùng 1', 'Địa chỉ 1', 'Nam', '1990-01-01', '1234567890', 'user1@email.com', 'USER', 'avatar1.jpg'),

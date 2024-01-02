@@ -29,6 +29,7 @@ namespace DAL
             }
         }
 
+
         public Post3 getpost_by_id_User(int id)
         {
             string msgError = "";

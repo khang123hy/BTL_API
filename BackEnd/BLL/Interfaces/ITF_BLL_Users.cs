@@ -13,6 +13,7 @@ namespace BLL.Interfaces
         bool Deletes_User(List_User model);
 
         List<User> Search_User(int pageIndex, int pageSize, out long total, string Keywords);
+
     }
 
 

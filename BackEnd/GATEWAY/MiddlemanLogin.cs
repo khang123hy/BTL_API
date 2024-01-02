@@ -78,15 +78,14 @@ namespace Gateway
                     {
                         new Claim(ClaimTypes.Name, fullName),
                         new Claim(ClaimTypes.Name, AccountName),
-                        new Claim(ClaimTypes.Role, Role),
-                        new Claim(ClaimTypes.DenyOnlyWindowsDeviceGroup, Password)
+                        new Claim(ClaimTypes.Role, Role)
                     }),
                     Expires = DateTime.UtcNow.AddDays(7),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
                 };
                 var tmp = tokenHandler.CreateToken(tokenDescriptor);
                 var token = tokenHandler.WriteToken(tmp);
-                var response = new { ID_User = ID_User, FullName = fullName, AccountName = AccountName, Password = Password, Role = Role, Avatar = Avatar, Token = token };
+                var response = new { ID_User = ID_User, FullName = fullName, AccountName = AccountName, Role = Role, Avatar = Avatar, Token = token };
                 var serializerSettings = new JsonSerializerSettings
                 {
                     Formatting = Formatting.Indented

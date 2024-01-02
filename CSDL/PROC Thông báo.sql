@@ -156,6 +156,7 @@ GO
 -----------------------user
 
 select*from Notifications
+exec sp_search_notification_by_user @Keywords =''
 alter PROC sp_search_notification_by_user
     @Keywords NVARCHAR(255)
 AS

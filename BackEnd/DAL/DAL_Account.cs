@@ -1,4 +1,5 @@
-﻿using DAL.Helper.Interfaces;
+﻿using DAL.Helper;
+using DAL.Helper.Interfaces;
 using DAL.Interfaces;
 using DTO;
 
@@ -15,6 +16,21 @@ namespace DAL
 
 
         #region Account
+        public Check check_AccountName(string AccountName, string Email)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_check_AccountName", "@AccountName", AccountName, "@Email", Email);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<Check>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public bool Create_Account(Account model)
         {
             string msgError = "";
@@ -24,6 +40,8 @@ namespace DAL
                 "@AccountName", model.AccountName,
                 "@Password", model.Password,
                 "@Email", model.Email,
+                "@Avatar", model.Avatar,
+                "@FullName", model.FullName,
                 "@Role", model.Role
                 );
 

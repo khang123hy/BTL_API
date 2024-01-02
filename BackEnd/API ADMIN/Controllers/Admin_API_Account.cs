@@ -15,6 +15,12 @@ namespace API.Controllers
         }
 
 
+        [Route("CheckAccount-Account")]
+        [HttpPost]
+        public Check check_AccountName(string AccountName, string Email)
+        {
+            return _BLL_Account.check_AccountName(AccountName, Email);
+        }
         //Account
         [Route("Create-Account")]
         [HttpPost]

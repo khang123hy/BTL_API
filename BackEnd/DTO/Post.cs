@@ -70,4 +70,5 @@
         public int ID_Post { get; set; }
 
     }
+
 }
