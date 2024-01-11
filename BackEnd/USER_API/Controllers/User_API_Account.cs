@@ -22,10 +22,38 @@ namespace USER_API.Controllers
         ////Account
         [Route("Create-Account")]
         [HttpPost]
-        public bool Create_Account(Account model)
+        public IActionResult Create_Account(Account model)
         {
-            return _BLL_Account.Create_Account(model);
+            try
+            {
+                bool success = _BLL_Account.Create_Account(model);
+
+                if (success)
+                {
+                    return Ok(new { Success = true });
+                }
+                else
+                {
+                    // Nếu có lỗi, xây dựng phản hồi lỗi
+                    var errorResponse = new ErrorNotification
+                    {
+                        ErrorMessage = $"Đã xảy ra lỗi khi tạo tài khoản. Vui lòng thử lại."
+                    };
+
+                    return BadRequest(errorResponse);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Ghi nhật ký ngoại lệ hoặc xử lý nó một cách thích hợp
+                var errorResponse = new ErrorNotification
+                {
+                    ErrorMessage = $"{ex.Message}"
+                };
+                return StatusCode(500, errorResponse);
+            }
         }
+
 
 
     }

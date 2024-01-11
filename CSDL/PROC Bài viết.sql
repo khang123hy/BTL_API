@@ -14,7 +14,6 @@ end
 go
 
 
- 
 alter PROCEDURE get_post_byid_User (@id int)
 as
 begin 
@@ -117,7 +116,6 @@ END;
 select*from Posts
 
 --------------------------------------------search
-
 alter PROCEDURE sp_Posts_search 
     @page_index INT, 
     @page_size INT,
@@ -126,7 +124,6 @@ AS
 BEGIN
     DECLARE @RecordCount BIGINT;
 
-    IF (@page_size <> 0)
     BEGIN
         SET NOCOUNT ON;
 
@@ -162,41 +159,7 @@ BEGIN
 
         DROP TABLE #Results1; 
     END
-    ELSE
-    BEGIN
-        SET NOCOUNT ON;
-
-        SELECT 
-            ROW_NUMBER() OVER (ORDER BY ID_Post DESC) AS RowNumber, 
-            k.ID_Post,
-            k.ID_User,
-            k.ID_Topic,
-            k.Title,
-			k.Content,
-			k.Image,
-            k.CreatedDate
-        INTO #Results2
-        FROM Posts AS k
-        WHERE  (
-                    @Keywords = '' 
-                    OR k.ID_Post LIKE N'%' + @Keywords + '%' 
-                    OR k.ID_User LIKE N'%' + @Keywords + '%'
-					OR k.ID_Topic LIKE N'%' + @Keywords + '%'
-					OR k.Title LIKE N'%' + @Keywords + '%'
-					OR k.Content LIKE N'%' + @Keywords + '%'
-					OR k.CreatedDate LIKE N'%' + @Keywords + '%'
-                );                   
-
-        SELECT @RecordCount = COUNT(*)
-        FROM #Results2;
-
-        SELECT 
-            *, 
-            @RecordCount AS RecordCount
-        FROM #Results2;                        
-
-        DROP TABLE #Results1; 
-    END;
+  
 END;
 GO
 
@@ -213,7 +176,6 @@ AS
 BEGIN
     DECLARE @RecordCount BIGINT;
 
-    IF (@page_size <> 0)
     BEGIN
         SET NOCOUNT ON;
 
@@ -267,56 +229,7 @@ BEGIN
 
         DROP TABLE #Results1; 
     END
-    ELSE
-    BEGIN
-        SET NOCOUNT ON;
-
-         SELECT 
-            ROW_NUMBER() OVER (ORDER BY 
-                CASE 
-                    WHEN @OrderBy = 'Comment' THEN  COUNT(DISTINCT c.ID_Comment)
-                    WHEN @OrderBy = 'Likes' THEN COUNT(DISTINCT l.ID_Likes)  
-                    ELSE k.ID_Post 
-                END ASC
-            ) AS RowNumber, 
-            k.ID_Post,
-            u.ID_User,
-            k.ID_Topic,
-            k.Title,
-            k.Synopsis,
-            k.CreatedDate,
-            u.Avatar,
-            u.FullName,
-             COUNT(DISTINCT c.ID_Comment) as Comment,
-            COUNT(DISTINCT l.ID_Likes) as Likes
-        INTO #Results2
-        FROM Posts AS k
-        INNER JOIN Users u ON u.ID_User = k.ID_User
-        LEFT JOIN Comments c ON k.ID_Post = c.ID_Post
-        LEFT JOIN Likes l ON l.ID_Post = k.ID_Post
-        WHERE (
-            @Keywords = '' OR
-            k.Title LIKE N'%' + @Keywords + '%'
-        )
-        GROUP BY
-            k.ID_Post,
-            u.ID_User,
-            k.ID_Topic,
-            k.Title,
-            k.Synopsis,
-            k.CreatedDate,
-            u.Avatar,
-            u.FullName;                                
-
-        SELECT @RecordCount = COUNT(*)
-        FROM #Results2;
-        SELECT 
-            *, 
-            @RecordCount AS RecordCount
-        FROM #Results2;                        
-
-        DROP TABLE #Results1; 
-    END;
+   
 END;
 GO
 exec sp_Posts_search_User_Desc @page_index ='1',@page_size='12',@Keywords='',@OrderBy=''
@@ -329,7 +242,6 @@ AS
 BEGIN
     DECLARE @RecordCount BIGINT;
 
-    IF (@page_size <> 0)
     BEGIN
         SET NOCOUNT ON;
 
@@ -383,56 +295,6 @@ BEGIN
 
         DROP TABLE #Results1; 
     END
-    ELSE
-    BEGIN
-        SET NOCOUNT ON;
-
-         SELECT 
-            ROW_NUMBER() OVER (ORDER BY 
-                CASE 
-                    WHEN @OrderBy = 'Comment' THEN  COUNT(DISTINCT c.ID_Comment)
-                    WHEN @OrderBy = 'Likes' THEN COUNT(DISTINCT l.ID_Likes) 
-                    ELSE k.ID_Post 
-                END DESC
-            ) AS RowNumber, 
-            k.ID_Post,
-            u.ID_User,
-            k.ID_Topic,
-            k.Title,
-            k.Synopsis,
-            k.CreatedDate,
-            u.Avatar,
-            u.FullName,
-             COUNT(DISTINCT c.ID_Comment) as Comment,
-			COUNT(DISTINCT l.ID_Likes) as Likes
-        INTO #Results2
-        FROM Posts AS k
-        INNER JOIN Users u ON u.ID_User = k.ID_User
-        LEFT JOIN Comments c ON k.ID_Post = c.ID_Post
-        LEFT JOIN Likes l ON l.ID_Post = k.ID_Post
-        WHERE (
-            @Keywords = '' OR
-            k.Title LIKE N'%' + @Keywords + '%'
-        )
-        GROUP BY
-            k.ID_Post,
-            u.ID_User,
-            k.ID_Topic,
-            k.Title,
-            k.Synopsis,
-            k.CreatedDate,
-            u.Avatar,
-            u.FullName;                                
-
-        SELECT @RecordCount = COUNT(*)
-        FROM #Results2;
-        SELECT 
-            *, 
-            @RecordCount AS RecordCount
-        FROM #Results2;                        
-
-        DROP TABLE #Results1; 
-    END;
 END;
 GO
 
@@ -448,11 +310,12 @@ ALTER PROCEDURE sp_Posts_search_by_topic_User_ASC (
     @OrderBy NVARCHAR(255))  
 AS
 BEGIN
+
     DECLARE @RecordCount BIGINT;
 
-    IF (@page_size <> 0)
     BEGIN
         SET NOCOUNT ON;
+
 
         SELECT 
             ROW_NUMBER() OVER (ORDER BY 
@@ -470,9 +333,9 @@ BEGIN
             k.CreatedDate,
             u.Avatar,
             u.FullName,
-             COUNT(DISTINCT c.ID_Comment) as Comment,
+            COUNT(DISTINCT c.ID_Comment) as Comment,
 			COUNT(DISTINCT l.ID_Likes) as Likes
-        INTO #Results1
+        INTO #Results
         FROM Posts AS k
         INNER JOIN Users u ON u.ID_User = k.ID_User
         LEFT JOIN Comments c ON k.ID_Post = c.ID_Post
@@ -496,79 +359,24 @@ BEGIN
             u.FullName;
 
         SELECT @RecordCount = COUNT(*)
-        FROM #Results1;
+        FROM #Results;
 
         SELECT 
             *, 
             @RecordCount AS RecordCount
-        FROM #Results1
+        FROM #Results
         WHERE 
             RowNumber BETWEEN (@page_index - 1) * @page_size + 1 AND (((@page_index - 1) * @page_size + 1) + @page_size) - 1
             OR @page_index = -1;
 
-        DROP TABLE #Results1; 
+        DROP TABLE #Results; 
     END
-    ELSE
-    BEGIN
-        SET NOCOUNT ON;
-
-        SELECT 
-            ROW_NUMBER() OVER (ORDER BY 
-                CASE 
-                 WHEN @OrderBy = 'Comment' THEN  COUNT(DISTINCT c.ID_Comment)
-                    WHEN @OrderBy = 'Likes' THEN COUNT(DISTINCT l.ID_Likes)  
-                    ELSE k.ID_Post 
-                END ASC
-            ) AS RowNumber, 
-            k.ID_Post,
-            u.ID_User,
-            k.ID_Topic,
-            k.Title,
-            k.Synopsis,
-            k.CreatedDate,
-            u.Avatar,
-            u.FullName,
-             COUNT(DISTINCT c.ID_Comment) as Comment,
-			COUNT(DISTINCT l.ID_Likes) as Likes
-        INTO #Results2
-        FROM Posts AS k
-        INNER JOIN Users u ON u.ID_User = k.ID_User
-        LEFT JOIN Comments c ON k.ID_Post = c.ID_Post
-        LEFT JOIN Likes l ON l.ID_Post = k.ID_Post
-        WHERE (
-            @Keywords = '' OR
-            k.Title LIKE N'%' + @Keywords + '%'
-        )
-        AND (
-            @ID_Topic = '' OR
-            k.ID_Topic LIKE N'%' + @ID_Topic + '%'
-        )
-        GROUP BY
-            k.ID_Post,
-            u.ID_User,
-            k.ID_Topic,
-            k.Title,
-            k.Synopsis,
-            k.CreatedDate,
-            u.Avatar,
-            u.FullName;
-
-        SELECT @RecordCount = COUNT(*)
-        FROM #Results2;
-
-        SELECT 
-            *, 
-            @RecordCount AS RecordCount
-        FROM #Results2;                        
-
-        DROP TABLE #Results1; 
-    END;
 END;
 
 GO
 
---Hiển thị theo từ lớn > bé 
-alter PROCEDURE sp_Posts_search_by_topic_User_desc (
+-- Stored procedure để tìm kiếm bài viết theo chủ đề, người dùng, sắp xếp theo thứ tự giảm dần
+ALTER PROCEDURE sp_Posts_search_by_topic_User_desc (
     @page_index INT, 
     @page_size INT,
     @Keywords NVARCHAR(255),
@@ -576,15 +384,19 @@ alter PROCEDURE sp_Posts_search_by_topic_User_desc (
     @OrderBy NVARCHAR(255))  
 AS
 BEGIN
+    -- Biến để lưu trữ tổng số bản ghi
     DECLARE @RecordCount BIGINT;
 
-    IF (@page_size <> 0)
     BEGIN
+        -- Tắt in thông báo số bản ghi ảnh hưởng
         SET NOCOUNT ON;
 
+        -- Tạo bảng tạm #Results1 để lưu trữ kết quả tìm kiếm
         SELECT 
             ROW_NUMBER() OVER (ORDER BY 
+				--Quyết đinh sắp xếp dữ liệu dựa vào @OrderBy
                 CASE 
+					--Sắp xếp giảm dần theo số bình luận hoặc 
                     WHEN @OrderBy = 'Comment' THEN  COUNT(DISTINCT c.ID_Comment)
                     WHEN @OrderBy = 'Likes' THEN COUNT(DISTINCT l.ID_Likes)  
                     ELSE k.ID_Post 
@@ -598,14 +410,14 @@ BEGIN
             k.CreatedDate,
             u.Avatar,
             u.FullName,
-             COUNT(DISTINCT c.ID_Comment) as Comment,
+            COUNT(DISTINCT c.ID_Comment) as Comment,
 			COUNT(DISTINCT l.ID_Likes) as Likes
         INTO #Results1
         FROM Posts AS k
         INNER JOIN Users u ON u.ID_User = k.ID_User
         LEFT JOIN Comments c ON k.ID_Post = c.ID_Post
         LEFT JOIN Likes l ON l.ID_Post = k.ID_Post
-       WHERE (
+        WHERE (
             @Keywords = '' OR
             k.Title LIKE N'%' + @Keywords + '%'
         )
@@ -623,9 +435,11 @@ BEGIN
             u.Avatar,
             u.FullName;
 
+        -- Lấy tổng số bản ghi từ #Results1
         SELECT @RecordCount = COUNT(*)
         FROM #Results1;
 
+        -- Trả về kết quả phân trang và tổng số bản ghi
         SELECT 
             *, 
             @RecordCount AS RecordCount
@@ -634,65 +448,12 @@ BEGIN
             RowNumber BETWEEN (@page_index - 1) * @page_size + 1 AND (((@page_index - 1) * @page_size + 1) + @page_size) - 1
             OR @page_index = -1;
 
+        -- Xóa bảng tạm #Results1 khi không cần thiết
         DROP TABLE #Results1; 
     END
-    ELSE
-    BEGIN
-        SET NOCOUNT ON;
-
-        SELECT 
-            ROW_NUMBER() OVER (ORDER BY 
-                CASE 
-                    WHEN @OrderBy = 'Comment' THEN  COUNT(DISTINCT c.ID_Comment)
-                    WHEN @OrderBy = 'Likes' THEN COUNT(DISTINCT l.ID_Likes) 
-                    ELSE k.ID_Post 
-                END DESC
-            ) AS RowNumber, 
-            k.ID_Post,
-            u.ID_User,
-            k.ID_Topic,
-            k.Title,
-			k.Synopsis,
-            k.CreatedDate,
-            u.Avatar,
-			u.FullName,
-			 COUNT(DISTINCT c.ID_Comment) as Comment,
-			COUNT(DISTINCT l.ID_Likes) as Likes
-        INTO #Results2
-        FROM Posts AS k
-		inner join Users u on u.ID_User = k.ID_User
-		left join Comments c on k.ID_Post = c.ID_Post
-		left join Likes l on l.ID_Post = k.ID_Post
-        WHERE (
-            @Keywords = '' OR
-            k.Title LIKE N'%' + @Keywords + '%'
-        )
-        AND (
-            @ID_Topic = '' OR
-            k.ID_Topic LIKE N'%' + @ID_Topic + '%'
-        )
-				GROUP BY
-				k.ID_Post,
-				u.ID_User,
-				k.ID_Topic,
-				k.Title,
-				k.Synopsis,
-				k.CreatedDate,
-				u.Avatar,
-				u.FullName;
-
-        SELECT @RecordCount = COUNT(*)
-        FROM #Results2;
-
-        SELECT 
-            *, 
-            @RecordCount AS RecordCount
-        FROM #Results2;                        
-
-        DROP TABLE #Results1; 
-    END;
 END;
 GO
+
 
 ----------------------------------
 CREATE TABLE Posts (
@@ -713,46 +474,44 @@ CREATE TABLE PostDetails (
     FOREIGN KEY (ID_Post) REFERENCES Posts(ID_Post)
 );
 
-alter PROCEDURE sp_Posts_create_list
-(@ID_User              int, 
- @ID_Topic          int, 
- @Title         NVARCHAR(255),  
- @Synopsis         NVARCHAR(max),  
- @list_json_PostDetails NVARCHAR(MAX)
+-- Stored procedure để tạo mới bài viết và chi tiết bài viết
+ALTER PROCEDURE sp_Posts_create_list
+(
+    @ID_User INT, 
+    @ID_Topic INT, 
+    @Title NVARCHAR(255),  
+    @Synopsis NVARCHAR(MAX),  
+    @list_json_PostDetails NVARCHAR(MAX)
 )
 AS
+BEGIN
+    -- Khai báo biến cục bộ để lưu trữ ID của bài viết mới
+    DECLARE @ID_Post INT;
+
+    -- Chèn bài viết mới vào bảng Posts
+    INSERT INTO Posts (ID_User, ID_Topic, Title, Synopsis)
+    VALUES (@ID_User, @ID_Topic, @Title, @Synopsis);
+
+    -- Lấy ID của bài viết vừa được thêm mới
+    SET @ID_Post = SCOPE_IDENTITY();
+
+    -- Kiểm tra xem chuỗi JSON chi tiết bài viết có giá trị không
+    IF (@list_json_PostDetails IS NOT NULL)
     BEGIN
-		DECLARE @ID_Post INT;
-
-        INSERT INTO Posts
-                (ID_User, 
-                 ID_Topic, 
-                 Title,
-				 Synopsis
-                )
-                VALUES
-                (@ID_User, 
-                 @ID_Topic, 
-                 @Title,
-				 @Synopsis
-                );
-
-				SET @ID_Post = SCOPE_IDENTITY();
-                IF(@list_json_PostDetails IS NOT NULL)
-                    BEGIN
-                        INSERT INTO PostDetails
-						 (ID_Post, 
-						  Content,
-                          Image             
-                        )
-                    SELECT @PostID,
-						JSON_VALUE(p.value, '$.content'), 
-                            JSON_VALUE(p.value, '$.image')
-                    FROM OPENJSON(@list_json_PostDetails) AS p;
-                END;
-        SELECT '';
+        -- Chèn chi tiết bài viết từ chuỗi JSON vào bảng PostDetails
+        INSERT INTO PostDetails (ID_Post, Content, Image)
+        SELECT 
+            @ID_Post, -- ID của bài viết mới
+            JSON_VALUE(p.value, '$.content'), -- Giá trị 'content' từ JSON
+            JSON_VALUE(p.value, '$.image') -- Giá trị 'image' từ JSON
+        FROM OPENJSON(@list_json_PostDetails) AS p;
     END;
+
+    -- Trả về một chuỗi rỗng sau khi thực hiện thủ tục
+    SELECT '';
+END;
 GO
+
 
 ---------------------------------Hiển thị chi tiết bài viết
 select*from PostDetails

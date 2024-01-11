@@ -95,19 +95,32 @@ namespace DAL
 
         public bool Deletes_Topic(LIST_Topic model)
         {
+            // Chuỗi để lưu trữ thông báo lỗi
             string msgError = "";
+
             try
             {
-                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_topic_deletes",
-                "@list_topic", model.list_topic != null ? MessageConvert.SerializeObject(model.list_topic) : null);
+                // Gọi stored procedure từ đối tượng _dbhelper
+                var result = _dbhelper.ExecuteScalarSProcedureWithTransaction(
+                    out msgError,
+                    "sp_topic_deletes", // Tên stored procedure
+                    "@list_topic",
+                    model.list_topic != null ? MessageConvert.SerializeObject(model.list_topic) : null
+                );
+
+                // Kiểm tra kết quả stored procedure và thông báo lỗi
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
+                    // Nếu có lỗi, ném một ngoại lệ với thông báo lỗi
                     throw new Exception(Convert.ToString(result) + msgError);
                 }
+
+                // Nếu không có lỗi, trả về true để thể hiện thành công
                 return true;
             }
             catch (Exception ex)
             {
+                // Nếu có ngoại lệ, ném lại để xử lý ở cấp độ cao hơn
                 throw ex;
             }
         }

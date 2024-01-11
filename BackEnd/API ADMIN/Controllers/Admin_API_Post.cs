@@ -118,25 +118,37 @@ namespace API.Controllers
         {
             try
             {
+                // Kiểm tra xem tệp tin có dung lượng lớn hơn 0 hay không
                 if (file.Length > 0)
                 {
+                    // Tạo đường dẫn tệp tin trong thư mục "POSTS"
                     string filePath = $"POSTS/{file.FileName.Replace("-", "_").Replace("%", "")}";
+
+                    // Tạo đường dẫn tuyệt đối và kiểm tra/thêm thư mục nếu cần
                     var fullPath = _PostFile.CreatePathFile(filePath);
+
+                    // Tạo FileStream để ghi dữ liệu tệp tin lên đĩa
                     using (var fileStream = new FileStream(fullPath, FileMode.Create))
                     {
+                        // Sao chép dữ liệu từ tệp tin đã được gửi lên vào FileStream
                         await file.CopyToAsync(fileStream);
                     }
+
+                    // Trả về đường dẫn của tệp tin đã tải lên với mã trạng thái HTTP 200 (OK)
                     return Ok(new { filePath });
                 }
                 else
                 {
+                    // Trả về BadRequest nếu không có tệp tin được gửi lên
                     return BadRequest();
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "Không thể upload tệp");
+                // Xử lý ngoại lệ và trả về mã trạng thái HTTP 500 (Internal Server Error) và thông báo lỗi
+                return StatusCode(500, "Không thể upload tệp: " + ex.Message);
             }
         }
+
     }
 }

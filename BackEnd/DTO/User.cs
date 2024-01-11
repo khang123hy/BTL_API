@@ -22,8 +22,12 @@ namespace DTO
         public string Email { get; set; }
         public string Avatar { get; set; }
         public string FullName { get; set; }
-
     }
+    public partial class ErrorNotification
+    {
+        public string? ErrorMessage { get; set; }
+    }
+
 
     public class User
     {

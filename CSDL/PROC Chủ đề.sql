@@ -12,6 +12,8 @@ as
 		select*from Topics where ID_Topic = @id;
 	end
 go
+select*from Topics
+
 alter PROCEDURE Topic_create(
     @Title VARCHAR(255) ,
     @Description nvarchar(max),
@@ -19,8 +21,21 @@ alter PROCEDURE Topic_create(
 )
 AS
     BEGIN
-       insert into Topics(Title,Description,Image)
-	   values(@Title,@Description,@Image);
+		  SET NOCOUNT ON;
+		DECLARE @ErrorMessage NVARCHAR(MAX);
+		-- Kiểm tra xem tiêu đề đã tồn tại chưa
+		IF EXISTS (SELECT 1 FROM Topics WHERE Title = @Title)
+		BEGIN
+			SET @ErrorMessage = N'Tên chủ đề đã tồn vui lòng tạo tên chủ đề khác.';
+			-- Lưu thông báo lỗi vào biến cục bộ
+			SELECT @ErrorMessage AS ErrorMessage;
+			RETURN;
+		END
+		--Thêm dữ liệu vào
+		   insert into Topics(Title,Description,Image)
+		   values(@Title,@Description,@Image);
+		-- Lưu thông báo lỗi (nếu có) vào biến cục bộ (trong trường hợp có lỗi sau khi thêm mới)
+		SELECT NULL AS ErrorMessage;
     END;
 GO
 
@@ -72,22 +87,25 @@ CREATE PROCEDURE sp_topic_deletes
 )
 AS
 BEGIN
+    -- Kiểm tra xem tham số đầu vào có khác NULL hay không
     IF (@list_topic IS NOT NULL) 
     BEGIN
-        -- Chèn dữ liệu vào bảng tạm 
+        -- Phân tích chuỗi JSON và lưu trữ ID_Topic vào bảng tạm #Results
         SELECT
             JSON_VALUE(p.value, '$.iD_Topic') AS iD_Topic
         INTO #Results 
         FROM OPENJSON(@list_topic) AS p;
 
-        -- Thực hiện xóa tài khoản dựa trên trường note và iduser
+        -- Xóa các bản ghi trong bảng Topics có ID_Topic trùng với #Results
         DELETE A 
         FROM Topics A
         INNER JOIN #Results R ON A.ID_Topic = R.iD_Topic;
         
+        -- Giải phóng tài nguyên bảng tạm
         DROP TABLE #Results;
     END;
 END;
+
 
 select*from Topics
 

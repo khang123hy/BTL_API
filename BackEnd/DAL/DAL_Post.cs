@@ -211,20 +211,27 @@ namespace DAL
                 throw ex;
             }
         }
-        public List<Post2> Search_Posts_User_Asc(int pageIndex, int pageSize, out long total, string Keywords, string OrderBy)
+        //Tạo phương thức trả về List<Post2>
+        public List<Post2> Search_Posts_User_Asc(int pageIndex, int pageSize, string Keywords, string OrderBy, out long total /*được gán giá trị tổng số bản ghi*/)
         {
+            //Lưu trữ thông báo lỗi từ Proc
             string msgError = "";
             total = 0;
             try
             {
+                //trả kết quả proc ra dạng datatable 
                 var dt = _dbhelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_Posts_search_User_Asc",
                     "@page_index", pageIndex,
                     "@page_size", pageSize,
                     "@Keywords", Keywords,
                     "@OrderBy", OrderBy);
+                //kiểm tra thông báo lỗi có từ proc ko nếu từ proc thì vứt vào msgError
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
+                //Nếu DataTable có ít nhất một dòng, lấy giá trị của cột "RecordCount" từ dòng đầu tiên và gán cho biến total
                 if (dt.Rows.Count > 0) total = (long)dt.Rows[0]["RecordCount"];
+
+                //Chuyển đổi kết quả datatable sang các đối tượng post2 và trả về kết quả list<post2>
                 return dt.ConvertTo<Post2>().ToList();
             }
             catch (Exception ex)
@@ -232,6 +239,7 @@ namespace DAL
                 throw ex;
             }
         }
+
         public List<Post2> Search_Posts_by_Topic_User_Desc(int pageIndex, int pageSize, out long total, string Keywords, string OrderBy, string ID_Topic)
         {
             string msgError = "";

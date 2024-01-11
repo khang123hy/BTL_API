@@ -24,8 +24,30 @@ alter proc sp_user_create(
 	)
 AS
 BEGIN
-    INSERT INTO Users (FullName, Address, Sex, DateOfBirth, PhoneNumber, Email,AccountName, Password, Role,Avatar)
-    VALUES (@FullName, @Address, @Sex, @DateOfBirth, @PhoneNumber, @Email,@AccountName, @Password, @Role,@Avatar);
+		SET NOCOUNT ON;
+		DECLARE @ErrorMessage NVARCHAR(MAX);
+		-- Kiểm tra xem tiêu đề đã tồn tại chưa
+		IF EXISTS (SELECT 1 FROM Users WHERE AccountName = @AccountName)
+		BEGIN
+			SET @ErrorMessage = N'Tên tài khoản đã tồn tại, vui lòng nhập tài khoản khác.';
+			-- Lưu thông báo lỗi vào biến cục bộ
+			SELECT @ErrorMessage AS ErrorMessage;
+			RETURN;
+		END
+		IF EXISTS (SELECT 1 FROM Users WHERE Email = @Email)
+		BEGIN
+			SET @ErrorMessage = N'Email đã tồn tại, vui lòng nhập email khác.';
+			-- Lưu thông báo lỗi vào biến cục bộ
+			SELECT @ErrorMessage AS ErrorMessage;
+			RETURN;
+		END
+
+		--Thêm
+		INSERT INTO Users (FullName, Address, Sex, DateOfBirth, PhoneNumber, Email,AccountName, Password, Role,Avatar)
+		VALUES (@FullName, @Address, @Sex, @DateOfBirth, @PhoneNumber, @Email,@AccountName, @Password, @Role,@Avatar);
+		
+		-- Lưu thông báo lỗi (nếu có) vào biến cục bộ (trong trường hợp có lỗi sau khi thêm mới)
+		SELECT NULL AS ErrorMessage;
 END;
 go
 
@@ -68,9 +90,24 @@ ALTER proc sp_user_update_all(
 )
 as
 begin
-update Users set FullName=@FullName, Address=@Address, Sex=@Sex, DateOfBirth=@DateOfBirth, PhoneNumber=@PhoneNumber, 
- Password = @Password, Email = @Email, Role = @Role,Avatar = @Avatar
-where ID_User = @ID_User
+		 SET NOCOUNT ON;
+    DECLARE @ErrorMessage NVARCHAR(MAX);
+
+    -- Kiểm tra xem đã tồn tại chưa (ngoại trừ bản ghi đang cập nhật)
+    IF EXISTS (SELECT 1 FROM Users WHERE Email = @Email AND ID_User <> @ID_User)
+    BEGIN
+        SET @ErrorMessage = N'Email đã tồn tại, vui lòng email khác.';
+        -- Lưu thông báo lỗi vào biến cục bộ
+        SELECT @ErrorMessage AS ErrorMessage;
+        RETURN;
+    END
+
+		update Users set FullName=@FullName, Address=@Address, Sex=@Sex, DateOfBirth=@DateOfBirth, PhoneNumber=@PhoneNumber, 
+		 Password = @Password, Email = @Email, Role = @Role,Avatar = @Avatar
+		where ID_User = @ID_User
+
+		  -- Lưu thông báo lỗi (nếu có) vào biến cục bộ (trong trường hợp có lỗi sau khi cập nhật)
+    SELECT NULL AS ErrorMessage;
 end
 
 go

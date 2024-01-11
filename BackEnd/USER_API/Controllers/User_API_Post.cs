@@ -68,18 +68,24 @@ namespace USER_API.Controllers
 
         [Route("Search-Postsc-User_Asc")]
         [HttpPost]
+        //Nhận dữ liệu từ HTTP POST
         public IActionResult Search_Posts_User_Asc([FromBody] Dictionary<string, object> formData)
         {
             try
             {
+                //Lấy giá trị và chuyển thành kiểu string
                 var page = int.Parse(formData["page"].ToString());
                 var pageSize = int.Parse(formData["pageSize"].ToString());
+                //Lấy giá trị từ đầu và nếu ko có thì là ""
                 string Keywords = "";
                 if (formData.Keys.Contains("Keywords") && !string.IsNullOrEmpty(Convert.ToString(formData["Keywords"]))) { Keywords = Convert.ToString(formData["Keywords"]); }
                 string OrderBy = "";
                 if (formData.Keys.Contains("OrderBy") && !string.IsNullOrEmpty(Convert.ToString(formData["OrderBy"]))) { OrderBy = Convert.ToString(formData["OrderBy"]); }
                 long total = 0;
+                //Gọi phương thức để tìm kiếm dựa vào giá trị nhập vào
                 var data = _Post.Search_Posts_User_Asc(page, pageSize, out total, Keywords, OrderBy);
+
+                //trả về đối tượng JSON chưa kết quả
                 return Ok(
                             new
                             {
