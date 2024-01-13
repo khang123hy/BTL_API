@@ -139,8 +139,8 @@ BEGIN
             JSON_VALUE(p.value, '$.iD_User') AS iD_User
         INTO #Results 
         FROM OPENJSON(@list_json_ID_User) AS p;
-
-        -- Thực hiện xóa tài khoản dựa trên trường note và iduser
+		--OPENJSON giúp phần tích chuỗi json và lấy giá trị iduser
+        -- Thực hiện xóa tài khoản dựa trên trường iduser
         DELETE A 
         FROM Users A
         INNER JOIN #Results R ON A.ID_User = R.iD_User;
@@ -164,7 +164,6 @@ AS
 BEGIN
     DECLARE @RecordCount BIGINT;
 	--Nếu khác 0 thì phân trang, ko thì trả ra ko phân trang
-    IF (@page_size <> 0)
     BEGIN
         SET NOCOUNT ON;
 		 -- Tạo bảng tạm #Results1, chèn dữ liệu người dùng được lấy từ bảng Users vào bảng tạm
@@ -211,48 +210,6 @@ BEGIN
 		--Xoá bảng tạm
         DROP TABLE #Results1; 
     END
-    ELSE
-    BEGIN
-        SET NOCOUNT ON;
-
-        SELECT 
-            ROW_NUMBER() OVER (ORDER BY ID_User DESC) AS RowNumber, 
-       k.ID_User,
-            k.FullName,
-            k.Email,
-            k.Address,
-            k.DateOfBirth,
-            k.Sex,
-            k.PhoneNumber,
-			k.Role,
-			k.Avatar,
-			k.AccountName,
-			k.Password
-        INTO #Results2
-        FROM Users AS k
-        WHERE  (
-                    @Keywords = '' 
-                    OR k.FullName LIKE N'%' + @Keywords + '%' 
-                    OR k.Email LIKE N'%' + @Keywords + '%'
-					OR k.PhoneNumber LIKE N'%' + @Keywords + '%'
-					OR k.DateOfBirth LIKE N'%' + @Keywords + '%'
-					OR k.Sex LIKE N'%' + @Keywords + '%'
-					OR k.Address LIKE N'%' + @Keywords + '%'
-					OR k.ID_User LIKE N'%' + @Keywords + '%'
-					OR k.Role LIKE N'%' + @Keywords + '%'
-					OR k.AccountName LIKE N'%' + @Keywords + '%'
-					OR k.Password LIKE N'%' + @Keywords + '%'
-                );                   
-
-        SELECT @RecordCount = COUNT(*)
-        FROM #Results2;
-
-        SELECT 
-            *,
-            @RecordCount AS RecordCount
-        FROM #Results2;                        
-
-        DROP TABLE #Results1; 
-    END;
+   
 END;
 GO

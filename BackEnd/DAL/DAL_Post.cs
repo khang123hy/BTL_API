@@ -212,7 +212,7 @@ namespace DAL
             }
         }
         //Tạo phương thức trả về List<Post2>
-        public List<Post2> Search_Posts_User_Asc(int pageIndex, int pageSize, string Keywords, string OrderBy, out long total /*được gán giá trị tổng số bản ghi*/)
+        public List<Post2> Search_Posts_User_Asc(int pageIndex, int pageSize, out long total /*được gán giá trị tổng số bản ghi*/, string Keywords, string OrderBy)
         {
             //Lưu trữ thông báo lỗi từ Proc
             string msgError = "";

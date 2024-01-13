@@ -86,14 +86,14 @@ AS
 BEGIN
     DECLARE @RecordCount BIGINT;
 
-    IF (@page_size <> 0)
     BEGIN
         SET NOCOUNT ON;
 
         SELECT 
             ROW_NUMBER() OVER (ORDER BY ID_Notification DESC) AS RowNumber, 
             k.ID_Notification,
-            k.ID_User,
+            k.ID_User_Nhan,
+            k.ID_User_Tao,
             k.Content,
             k.NotificationDate
         INTO #Results1
@@ -101,7 +101,7 @@ BEGIN
         WHERE  (
                     @Keywords = '' 
                     OR k.ID_Notification LIKE N'%' + @Keywords + '%' 
-                    OR k.ID_User LIKE N'%' + @Keywords + '%'
+                    OR k.ID_User_Nhan LIKE N'%' + @Keywords + '%'
 					OR k.Content LIKE N'%' + @Keywords + '%'
 					OR k.NotificationDate LIKE N'%' + @Keywords + '%'
                 );                   
@@ -119,36 +119,7 @@ BEGIN
 
         DROP TABLE #Results1; 
     END
-    ELSE
-    BEGIN
-        SET NOCOUNT ON;
-
-        SELECT 
-            ROW_NUMBER() OVER (ORDER BY ID_Notification DESC) AS RowNumber, 
-            k.ID_Notification,
-            k.ID_User,
-            k.Content,
-            k.NotificationDate
-        INTO #Results2
-        FROM Notifications AS k
-        WHERE  (
-                    @Keywords = '' 
-                    OR k.ID_Notification LIKE N'%' + @Keywords + '%' 
-                    OR k.ID_User LIKE N'%' + @Keywords + '%'
-					OR k.Content LIKE N'%' + @Keywords + '%'
-					OR k.NotificationDate LIKE N'%' + @Keywords + '%'
-                );                   
-
-        SELECT @RecordCount = COUNT(*)
-        FROM #Results2;
-
-        SELECT 
-            *, 
-            @RecordCount AS RecordCount
-        FROM #Results2;                        
-
-        DROP TABLE #Results1; 
-    END;
+   
 END;
 GO
 
@@ -157,6 +128,7 @@ GO
 
 select*from Notifications
 exec sp_search_notification_by_user @Keywords =''
+
 alter PROC sp_search_notification_by_user
     @Keywords NVARCHAR(255)
 AS

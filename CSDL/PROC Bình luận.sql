@@ -85,7 +85,6 @@ AS
 BEGIN
     DECLARE @RecordCount BIGINT;
 
-    IF (@page_size <> 0)
     BEGIN
         SET NOCOUNT ON;
 
@@ -121,38 +120,7 @@ BEGIN
 
         DROP TABLE #Results1; 
     END
-    ELSE
-    BEGIN
-        SET NOCOUNT ON;
-
-        SELECT 
-            ROW_NUMBER() OVER (ORDER BY ID_Comment desc) AS RowNumber, 
-            k.ID_Comment,
-            k.ID_Post,
-            k.ID_User,
-			k.Content,
-            k.CreatedDate
-        INTO #Results2
-        FROM Comments AS k
-        WHERE  (
-                    @Keywords = '' 
-                    OR k.ID_Comment LIKE N'%' + @Keywords + '%' 
-                    OR k.ID_Post LIKE N'%' + @Keywords + '%'
-					OR k.ID_User LIKE N'%' + @Keywords + '%'
-					OR k.Content LIKE N'%' + @Keywords + '%'
-					OR k.CreatedDate LIKE N'%' + @Keywords + '%'
-                );                   
-
-        SELECT @RecordCount = COUNT(*)
-        FROM #Results2;
-
-        SELECT 
-            *, 
-            @RecordCount AS RecordCount
-        FROM #Results2;                        
-
-        DROP TABLE #Results1; 
-    END;
+   
 END;
 GO
 
@@ -168,7 +136,6 @@ AS
 BEGIN
     DECLARE @RecordCount BIGINT;
 
-    IF (@page_size <> 0)
     BEGIN
         SET NOCOUNT ON;
 
@@ -202,37 +169,7 @@ BEGIN
 
         DROP TABLE #Results1; 
     END
-    ELSE
-    BEGIN
-        SET NOCOUNT ON;
-
-        SELECT 
-            ROW_NUMBER() OVER (ORDER BY ID_Comment desc) AS RowNumber, 
-            k.ID_Comment,
-            k.ID_Post,
-            k.ID_User,
-			k.Content,
-            k.CreatedDate,
-			u.FullName,
-			u.Avatar
-        INTO #Results2
-             FROM Comments AS k
-		INNER JOIN Users u on k.ID_User=u.ID_User
-        WHERE  (
-                             @Keywords = '' 
-                    OR k.ID_Post LIKE N'%' + @Keywords + '%'
-                );                   
-
-        SELECT @RecordCount = COUNT(*)
-        FROM #Results2;
-
-        SELECT 
-            *, 
-            @RecordCount AS RecordCount
-        FROM #Results2;                        
-
-        DROP TABLE #Results1; 
-    END;
+ 
 END;
 GO
 

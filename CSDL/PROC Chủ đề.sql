@@ -121,7 +121,6 @@ AS
 BEGIN
     DECLARE @RecordCount BIGINT;
 
-    IF (@page_size <> 0)
     BEGIN
         SET NOCOUNT ON;
 
@@ -155,37 +154,7 @@ BEGIN
 
         DROP TABLE #Results1; 
     END
-    ELSE
-    BEGIN
-        SET NOCOUNT ON;
-
-        SELECT 
-            ROW_NUMBER() OVER (ORDER BY ID_Topic DESC) AS RowNumber, 
-            k.ID_Topic,
-            k.Title,
-            k.Description,
-            k.Image,
-            k.CreatedDate
-        INTO #Results2
-        FROM Topics AS k
-        WHERE  (
-                    @Keywords = '' 
-                    OR k.ID_Topic LIKE N'%' + @Keywords + '%' 
-                    OR k.Title LIKE N'%' + @Keywords + '%'
-					OR k.Description LIKE N'%' + @Keywords + '%'
-					OR k.CreatedDate LIKE N'%' + @Keywords + '%'
-                );                   
-
-        SELECT @RecordCount = COUNT(*)
-        FROM #Results2;
-
-        SELECT 
-            *, 
-            @RecordCount AS RecordCount
-        FROM #Results2;                        
-
-        DROP TABLE #Results1; 
-    END;
+ 
 END;
 GO
 select*from Posts k inner join Users h on h.ID_User = k.ID_User

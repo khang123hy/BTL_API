@@ -68,7 +68,6 @@ namespace USER_API.Controllers
 
         [Route("Search-Postsc-User_Asc")]
         [HttpPost]
-        //Nhận dữ liệu từ HTTP POST
         public IActionResult Search_Posts_User_Asc([FromBody] Dictionary<string, object> formData)
         {
             try
@@ -85,7 +84,7 @@ namespace USER_API.Controllers
                 //Gọi phương thức để tìm kiếm dựa vào giá trị nhập vào
                 var data = _Post.Search_Posts_User_Asc(page, pageSize, out total, Keywords, OrderBy);
 
-                //trả về đối tượng JSON chưa kết quả
+                //trả về đối tượng JSON chứa kết quả
                 return Ok(
                             new
                             {
