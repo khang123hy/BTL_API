@@ -39,11 +39,6 @@ CREATE TABLE Posts (
     FOREIGN KEY (ID_Topic) REFERENCES Topics(ID_Topic) ON DELETE CASCADE
 );
 
--- Thêm ON DELETE CASCADE cho khóa ngoại trên cột ID_Topic trong bảng Posts
-ALTER TABLE Posts
-DROP CONSTRAINT FK_Topic_Posts; -- Xóa ràng buộc khóa ngoại hiện tại (đổi tên ràng buộc nếu cần)
-ALTER TABLE Posts
-ADD CONSTRAINT FK_Topic_Posts FOREIGN KEY (ID_Topic) REFERENCES Topics(ID_Topic) ON DELETE CASCADE;
 
 
 -- Tạo bảng Thích (Likes)

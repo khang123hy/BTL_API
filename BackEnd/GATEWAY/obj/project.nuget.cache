@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fru0d5xkTeVJkxW1Rea92ZHG8tMHHT1xrpo4aKEiTcTXI2Hb862/t2CFU9+CWr7k8EmP+iKgB+nM06yMizZ98g==",
+  "dgSpecHash": "07iSG4V1Uz0=",
   "success": true,
-  "projectFilePath": "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\GATEWAY\\GATEWAY.csproj",
+  "projectFilePath": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\GATEWAY.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duykh\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\duykh\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -68,5 +68,16 @@
     "C:\\Users\\duykh\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\duykh\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Data.SqlClient' 4.8.5 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

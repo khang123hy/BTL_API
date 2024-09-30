@@ -1,0 +1,1335 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\api admin\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|solutionrelative:api admin\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\api admin\\controllers\\admin_api_thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|solutionrelative:api admin\\controllers\\admin_api_thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\api admin\\controllers\\admin_api_like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|solutionrelative:api admin\\controllers\\admin_api_like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\api admin\\controllers\\admin_api_comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|solutionrelative:api admin\\controllers\\admin_api_comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AE9FAA5-4540-4710-BD51-CCC95C53E076}|DTO\\DTO.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dto\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AE9FAA5-4540-4710-BD51-CCC95C53E076}|DTO\\DTO.csproj|solutionrelative:dto\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AE9FAA5-4540-4710-BD51-CCC95C53E076}|DTO\\DTO.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dto\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AE9FAA5-4540-4710-BD51-CCC95C53E076}|DTO\\DTO.csproj|solutionrelative:dto\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AE9FAA5-4540-4710-BD51-CCC95C53E076}|DTO\\DTO.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dto\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AE9FAA5-4540-4710-BD51-CCC95C53E076}|DTO\\DTO.csproj|solutionrelative:dto\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AE9FAA5-4540-4710-BD51-CCC95C53E076}|DTO\\DTO.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dto\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AE9FAA5-4540-4710-BD51-CCC95C53E076}|DTO\\DTO.csproj|solutionrelative:dto\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AE9FAA5-4540-4710-BD51-CCC95C53E076}|DTO\\DTO.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dto\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AE9FAA5-4540-4710-BD51-CCC95C53E076}|DTO\\DTO.csproj|solutionrelative:dto\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AE9FAA5-4540-4710-BD51-CCC95C53E076}|DTO\\DTO.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dto\\like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AE9FAA5-4540-4710-BD51-CCC95C53E076}|DTO\\DTO.csproj|solutionrelative:dto\\like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AE9FAA5-4540-4710-BD51-CCC95C53E076}|DTO\\DTO.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dto\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AE9FAA5-4540-4710-BD51-CCC95C53E076}|DTO\\DTO.csproj|solutionrelative:dto\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\bll_notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\bll_notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\bll_file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\bll_file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\bll_comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\bll_comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\bll_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\bll_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\controllers\\user_api_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\controllers\\user_api_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\controllers\\user_api_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\controllers\\user_api_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\api admin\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|solutionrelative:api admin\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\api admin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|solutionrelative:api admin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\interfaces\\itf_dal_comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\interfaces\\itf_dal_comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\interfaces\\itf_dal_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\interfaces\\itf_dal_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\dal_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\dal_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EDDB88C-2477-47CF-BC49-8BF1BF8A0DC4}|GATEWAY\\GATEWAY.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\gateway\\middlemanlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EDDB88C-2477-47CF-BC49-8BF1BF8A0DC4}|GATEWAY\\GATEWAY.csproj|solutionrelative:gateway\\middlemanlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EDDB88C-2477-47CF-BC49-8BF1BF8A0DC4}|GATEWAY\\GATEWAY.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\gateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7EDDB88C-2477-47CF-BC49-8BF1BF8A0DC4}|GATEWAY\\GATEWAY.csproj|solutionrelative:gateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EDDB88C-2477-47CF-BC49-8BF1BF8A0DC4}|GATEWAY\\GATEWAY.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\gateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EDDB88C-2477-47CF-BC49-8BF1BF8A0DC4}|GATEWAY\\GATEWAY.csproj|solutionrelative:gateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EDDB88C-2477-47CF-BC49-8BF1BF8A0DC4}|GATEWAY\\GATEWAY.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\gateway\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7EDDB88C-2477-47CF-BC49-8BF1BF8A0DC4}|GATEWAY\\GATEWAY.csproj|solutionrelative:gateway\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\dal_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\dal_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\dal_post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\dal_post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\api admin\\controllers\\admin_api_post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|solutionrelative:api admin\\controllers\\admin_api_post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\bll_post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\bll_post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\interfaces\\itf_bll_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\interfaces\\itf_bll_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\bll_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\bll_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\bll_thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\bll_thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\dal_like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\dal_like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\dal_notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\dal_notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\api admin\\controllers\\admin_api_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|solutionrelative:api admin\\controllers\\admin_api_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\interfaces\\itf_bll_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\interfaces\\itf_bll_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\interfaces\\itf_dal_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\interfaces\\itf_dal_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\interfaces\\itf_bll_thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\interfaces\\itf_bll_thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\api admin\\controllers\\admin_api_topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|solutionrelative:api admin\\controllers\\admin_api_topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\dal_file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\dal_file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\dal_comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\dal_comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\dal_topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\dal_topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\api admin\\controllers\\admin_api_notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA24166C-10EE-41EE-BFED-EF7874366EFC}|API ADMIN\\API ADMIN.csproj|solutionrelative:api admin\\controllers\\admin_api_notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\bll_topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\bll_topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\interfaces\\itf_dal_topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\interfaces\\itf_dal_topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\interfaces\\itf_dal_file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\interfaces\\itf_dal_file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\dal_thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\dal_thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\interfaces\\itf_dal_thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\interfaces\\itf_dal_thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\interfaces\\itf_dal_notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\interfaces\\itf_dal_notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\interfaces\\itf_bll_comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\interfaces\\itf_bll_comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\interfaces\\itf_bll_file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\interfaces\\itf_bll_file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\interfaces\\itf_bll_post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\interfaces\\itf_bll_post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\interfaces\\itf_bll_notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\interfaces\\itf_bll_notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\interfaces\\itf_dal_post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\interfaces\\itf_dal_post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\bll_like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\bll_like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EDDB88C-2477-47CF-BC49-8BF1BF8A0DC4}|GATEWAY\\GATEWAY.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\gateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7EDDB88C-2477-47CF-BC49-8BF1BF8A0DC4}|GATEWAY\\GATEWAY.csproj|solutionrelative:gateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\bll\\interfaces\\itf_bll_like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{519E77D0-42B1-4023-BA74-B7942DA76197}|BLL\\BLL.csproj|solutionrelative:bll\\interfaces\\itf_bll_like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\dal\\interfaces\\itf_dal_like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C945A71-8E9D-4770-9186-4C9399957DC8}|DAL\\DAL.csproj|solutionrelative:dal\\interfaces\\itf_dal_like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EDDB88C-2477-47CF-BC49-8BF1BF8A0DC4}|GATEWAY\\GATEWAY.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\gateway\\gateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{7EDDB88C-2477-47CF-BC49-8BF1BF8A0DC4}|GATEWAY\\GATEWAY.csproj|solutionrelative:gateway\\gateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\api user.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\api user.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\api user.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\api user.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\controllers\\user_api_post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\controllers\\user_api_post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\controllers\\user_api_topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\controllers\\user_api_topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\controllers\\user_api_like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\controllers\\user_api_like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\controllers\\user_api_comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\controllers\\user_api_comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\controllers\\user_api_notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\controllers\\user_api_notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\controllers\\user_api_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\controllers\\user_api_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\controllers\\user_api_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\controllers\\user_api_account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\controllers\\user_api_comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\controllers\\user_api_comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\controllers\\user_api_post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\controllers\\user_api_post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\controllers\\user_api_topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\controllers\\user_api_topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\controllers\\user_api_like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\controllers\\user_api_like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\controllers\\user_api_notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\controllers\\user_api_notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|c:\\users\\duykh\\onedrive\\desktop\\btl_api\\backend\\user_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:2:0:{59A73662-95DD-42FD-974B-5353464546B7}|USER_API\\API USER.csproj|solutionrelative:user_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ThongKe.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\ThongKe.cs",
+              "RelativeDocumentMoniker": "DTO\\ThongKe.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\ThongKe.cs",
+              "RelativeToolTip": "DTO\\ThongKe.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAuwBkAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Topic.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\Topic.cs",
+              "RelativeDocumentMoniker": "DTO\\Topic.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\Topic.cs",
+              "RelativeToolTip": "DTO\\Topic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\User.cs",
+              "RelativeDocumentMoniker": "DTO\\User.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\User.cs",
+              "RelativeToolTip": "DTO\\User.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAwwCMAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Admin_API_Comment.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Controllers\\Admin_API_Comment.cs",
+              "RelativeDocumentMoniker": "API ADMIN\\Controllers\\Admin_API_Comment.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Controllers\\Admin_API_Comment.cs",
+              "RelativeToolTip": "API ADMIN\\Controllers\\Admin_API_Comment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Admin_API_Like.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Controllers\\Admin_API_Like.cs",
+              "RelativeDocumentMoniker": "API ADMIN\\Controllers\\Admin_API_Like.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Controllers\\Admin_API_Like.cs",
+              "RelativeToolTip": "API ADMIN\\Controllers\\Admin_API_Like.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAApwBgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Admin_API_ThongKe.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Controllers\\Admin_API_ThongKe.cs",
+              "RelativeDocumentMoniker": "API ADMIN\\Controllers\\Admin_API_ThongKe.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Controllers\\Admin_API_ThongKe.cs",
+              "RelativeToolTip": "API ADMIN\\Controllers\\Admin_API_ThongKe.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAACAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "API ADMIN\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Properties\\launchSettings.json",
+              "RelativeToolTip": "API ADMIN\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T09:25:44.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Post.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\Post.cs",
+              "RelativeDocumentMoniker": "DTO\\Post.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\Post.cs",
+              "RelativeToolTip": "DTO\\Post.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAIA+wEgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\Notification.cs",
+              "RelativeDocumentMoniker": "DTO\\Notification.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\Notification.cs",
+              "RelativeToolTip": "DTO\\Notification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Like.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\Like.cs",
+              "RelativeDocumentMoniker": "DTO\\Like.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\Like.cs",
+              "RelativeToolTip": "DTO\\Like.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\Comment.cs",
+              "RelativeDocumentMoniker": "DTO\\Comment.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\Comment.cs",
+              "RelativeToolTip": "DTO\\Comment.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAuwDAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BLL_Notification.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_Notification.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL_Notification.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_Notification.cs",
+              "RelativeToolTip": "BLL\\BLL_Notification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BLL_File.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_File.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL_File.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_File.cs",
+              "RelativeToolTip": "BLL\\BLL_File.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BLL_Comment.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_Comment.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL_Comment.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_Comment.cs",
+              "RelativeToolTip": "BLL\\BLL_Comment.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BLL_Account.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_Account.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL_Account.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_Account.cs",
+              "RelativeToolTip": "BLL\\BLL_Account.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "User_API_Users.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Users.cs",
+              "RelativeDocumentMoniker": "USER_API\\Controllers\\User_API_Users.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Users.cs",
+              "RelativeToolTip": "USER_API\\Controllers\\User_API_Users.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwCMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\appsettings.json",
+              "RelativeDocumentMoniker": "USER_API\\appsettings.json",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\appsettings.json*",
+              "RelativeToolTip": "USER_API\\appsettings.json*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T09:25:44.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Program.cs",
+              "RelativeDocumentMoniker": "USER_API\\Program.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Program.cs",
+              "RelativeToolTip": "USER_API\\Program.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFYAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "User_API_Account.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Account.cs",
+              "RelativeDocumentMoniker": "USER_API\\Controllers\\User_API_Account.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Account.cs",
+              "RelativeToolTip": "USER_API\\Controllers\\User_API_Account.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAgwA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "USER_API\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "USER_API\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T09:25:44.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\appsettings.json",
+              "RelativeDocumentMoniker": "API ADMIN\\appsettings.json",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\appsettings.json*",
+              "RelativeToolTip": "API ADMIN\\appsettings.json*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T09:25:44.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Program.cs",
+              "RelativeDocumentMoniker": "API ADMIN\\Program.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Program.cs",
+              "RelativeToolTip": "API ADMIN\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ITF_DAL_Comment.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_Comment.cs",
+              "RelativeDocumentMoniker": "DAL\\Interfaces\\ITF_DAL_Comment.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_Comment.cs",
+              "RelativeToolTip": "DAL\\Interfaces\\ITF_DAL_Comment.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ITF_DAL_Account.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_Account.cs",
+              "RelativeDocumentMoniker": "DAL\\Interfaces\\ITF_DAL_Account.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_Account.cs",
+              "RelativeToolTip": "DAL\\Interfaces\\ITF_DAL_Account.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "DAL\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Properties\\launchSettings.json",
+              "RelativeToolTip": "DAL\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T09:31:24.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "MiddlemanLogin.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\MiddlemanLogin.cs",
+              "RelativeDocumentMoniker": "GATEWAY\\MiddlemanLogin.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\MiddlemanLogin.cs",
+              "RelativeToolTip": "GATEWAY\\MiddlemanLogin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\Program.cs",
+              "RelativeDocumentMoniker": "GATEWAY\\Program.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\Program.cs",
+              "RelativeToolTip": "GATEWAY\\Program.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAACwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "GATEWAY\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\Properties\\launchSettings.json",
+              "RelativeToolTip": "GATEWAY\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T09:25:44.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DAL_Account.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_Account.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_Account.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_Account.cs",
+              "RelativeToolTip": "DAL\\DAL_Account.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwBYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\ocelot.json",
+              "RelativeDocumentMoniker": "GATEWAY\\ocelot.json",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\ocelot.json",
+              "RelativeToolTip": "GATEWAY\\ocelot.json",
+              "ViewState": "AQIAANUAAAAAAAAAAAAAAHYAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T09:25:44.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "DAL_Users.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_Users.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_Users.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_Users.cs",
+              "RelativeToolTip": "DAL\\DAL_Users.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Admin_API_Post.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Controllers\\Admin_API_Post.cs",
+              "RelativeDocumentMoniker": "API ADMIN\\Controllers\\Admin_API_Post.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Controllers\\Admin_API_Post.cs",
+              "RelativeToolTip": "API ADMIN\\Controllers\\Admin_API_Post.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAwwFsAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "User_API_Post.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Post.cs",
+              "RelativeDocumentMoniker": "USER_API\\Controllers\\User_API_Post.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Post.cs",
+              "RelativeToolTip": "USER_API\\Controllers\\User_API_Post.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAcwFYAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "BLL_Post.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_Post.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL_Post.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_Post.cs",
+              "RelativeToolTip": "BLL\\BLL_Post.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAuwBgAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DAL_Post.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_Post.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_Post.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_Post.cs",
+              "RelativeToolTip": "DAL\\DAL_Post.cs",
+              "ViewState": "AQIAANQAAAAAAAAAAAAUwI4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ITF_BLL_Account.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_Account.cs",
+              "RelativeDocumentMoniker": "BLL\\Interfaces\\ITF_BLL_Account.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_Account.cs",
+              "RelativeToolTip": "BLL\\Interfaces\\ITF_BLL_Account.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "BLL_Users.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_Users.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL_Users.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_Users.cs",
+              "RelativeToolTip": "BLL\\BLL_Users.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAkwCwAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "BLL_ThongKe.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_ThongKe.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL_ThongKe.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_ThongKe.cs",
+              "RelativeToolTip": "BLL\\BLL_ThongKe.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwB4AAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "DAL_Like.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_Like.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_Like.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_Like.cs",
+              "RelativeToolTip": "DAL\\DAL_Like.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAgwGEAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "DAL_Notification.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_Notification.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_Notification.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_Notification.cs",
+              "RelativeToolTip": "DAL\\DAL_Notification.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAIAwwHgAAABpAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Admin_API_Users.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Controllers\\Admin_API_Users.cs",
+              "RelativeDocumentMoniker": "API ADMIN\\Controllers\\Admin_API_Users.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Controllers\\Admin_API_Users.cs",
+              "RelativeToolTip": "API ADMIN\\Controllers\\Admin_API_Users.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAADwv1AAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ITF_BLL_Users.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_Users.cs",
+              "RelativeDocumentMoniker": "BLL\\Interfaces\\ITF_BLL_Users.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_Users.cs",
+              "RelativeToolTip": "BLL\\Interfaces\\ITF_BLL_Users.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAYwA4AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ITF_DAL_Users.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_Users.cs",
+              "RelativeDocumentMoniker": "DAL\\Interfaces\\ITF_DAL_Users.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_Users.cs",
+              "RelativeToolTip": "DAL\\Interfaces\\ITF_DAL_Users.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ITF_BLL_ThongKe.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_ThongKe.cs",
+              "RelativeDocumentMoniker": "BLL\\Interfaces\\ITF_BLL_ThongKe.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_ThongKe.cs",
+              "RelativeToolTip": "BLL\\Interfaces\\ITF_BLL_ThongKe.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Admin_API_Topic.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Controllers\\Admin_API_Topic.cs",
+              "RelativeDocumentMoniker": "API ADMIN\\Controllers\\Admin_API_Topic.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Controllers\\Admin_API_Topic.cs",
+              "RelativeToolTip": "API ADMIN\\Controllers\\Admin_API_Topic.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAYwFUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "User_API_Topic.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Topic.cs",
+              "RelativeDocumentMoniker": "USER_API\\Controllers\\User_API_Topic.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Topic.cs",
+              "RelativeToolTip": "USER_API\\Controllers\\User_API_Topic.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAowBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "DAL_File.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_File.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_File.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_File.cs",
+              "RelativeToolTip": "DAL\\DAL_File.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAuwB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "DAL_Comment.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_Comment.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_Comment.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_Comment.cs",
+              "RelativeToolTip": "DAL\\DAL_Comment.cs",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAIwA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "DAL_Topic.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_Topic.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_Topic.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_Topic.cs",
+              "RelativeToolTip": "DAL\\DAL_Topic.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAQwHcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Admin_API_Notification.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Controllers\\Admin_API_Notification.cs",
+              "RelativeDocumentMoniker": "API ADMIN\\Controllers\\Admin_API_Notification.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\API ADMIN\\Controllers\\Admin_API_Notification.cs",
+              "RelativeToolTip": "API ADMIN\\Controllers\\Admin_API_Notification.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAwwBwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "BLL_Topic.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_Topic.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL_Topic.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_Topic.cs",
+              "RelativeToolTip": "BLL\\BLL_Topic.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAgwA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ITF_DAL_Topic.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_Topic.cs",
+              "RelativeDocumentMoniker": "DAL\\Interfaces\\ITF_DAL_Topic.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_Topic.cs",
+              "RelativeToolTip": "DAL\\Interfaces\\ITF_DAL_Topic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "User_API_Like.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Like.cs",
+              "RelativeDocumentMoniker": "USER_API\\Controllers\\User_API_Like.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Like.cs",
+              "RelativeToolTip": "USER_API\\Controllers\\User_API_Like.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ITF_DAL_File.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_File.cs",
+              "RelativeDocumentMoniker": "DAL\\Interfaces\\ITF_DAL_File.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_File.cs",
+              "RelativeToolTip": "DAL\\Interfaces\\ITF_DAL_File.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "User_API_Comment.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Comment.cs",
+              "RelativeDocumentMoniker": "USER_API\\Controllers\\User_API_Comment.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Comment.cs",
+              "RelativeToolTip": "USER_API\\Controllers\\User_API_Comment.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAABRwDsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "User_API_Notification.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Notification.cs",
+              "RelativeDocumentMoniker": "USER_API\\Controllers\\User_API_Notification.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Notification.cs",
+              "RelativeToolTip": "USER_API\\Controllers\\User_API_Notification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "ITF_DAL_ThongKe.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_ThongKe.cs",
+              "RelativeDocumentMoniker": "DAL\\Interfaces\\ITF_DAL_ThongKe.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_ThongKe.cs",
+              "RelativeToolTip": "DAL\\Interfaces\\ITF_DAL_ThongKe.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "DAL_ThongKe.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_ThongKe.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_ThongKe.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL_ThongKe.cs",
+              "RelativeToolTip": "DAL\\DAL_ThongKe.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAgwE8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ITF_DAL_Notification.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_Notification.cs",
+              "RelativeDocumentMoniker": "DAL\\Interfaces\\ITF_DAL_Notification.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_Notification.cs",
+              "RelativeToolTip": "DAL\\Interfaces\\ITF_DAL_Notification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "ITF_BLL_Comment.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_Comment.cs",
+              "RelativeDocumentMoniker": "BLL\\Interfaces\\ITF_BLL_Comment.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_Comment.cs",
+              "RelativeToolTip": "BLL\\Interfaces\\ITF_BLL_Comment.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwAwAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ITF_BLL_File.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_File.cs",
+              "RelativeDocumentMoniker": "BLL\\Interfaces\\ITF_BLL_File.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_File.cs",
+              "RelativeToolTip": "BLL\\Interfaces\\ITF_BLL_File.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "ITF_BLL_Post.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_Post.cs",
+              "RelativeDocumentMoniker": "BLL\\Interfaces\\ITF_BLL_Post.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_Post.cs",
+              "RelativeToolTip": "BLL\\Interfaces\\ITF_BLL_Post.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAEwAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ITF_BLL_Notification.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_Notification.cs",
+              "RelativeDocumentMoniker": "BLL\\Interfaces\\ITF_BLL_Notification.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_Notification.cs",
+              "RelativeToolTip": "BLL\\Interfaces\\ITF_BLL_Notification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "ITF_DAL_Post.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_Post.cs",
+              "RelativeDocumentMoniker": "DAL\\Interfaces\\ITF_DAL_Post.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_Post.cs",
+              "RelativeToolTip": "DAL\\Interfaces\\ITF_DAL_Post.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAmwAoAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "BLL_Like.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_Like.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL_Like.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\BLL_Like.cs",
+              "RelativeToolTip": "BLL\\BLL_Like.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\appsettings.json",
+              "RelativeDocumentMoniker": "GATEWAY\\appsettings.json",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\appsettings.json",
+              "RelativeToolTip": "GATEWAY\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T09:25:44.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "ITF_BLL_Like.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_Like.cs",
+              "RelativeDocumentMoniker": "BLL\\Interfaces\\ITF_BLL_Like.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\BLL\\Interfaces\\ITF_BLL_Like.cs",
+              "RelativeToolTip": "BLL\\Interfaces\\ITF_BLL_Like.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "ITF_DAL_Like.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_Like.cs",
+              "RelativeDocumentMoniker": "DAL\\Interfaces\\ITF_DAL_Like.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\Interfaces\\ITF_DAL_Like.cs",
+              "RelativeToolTip": "DAL\\Interfaces\\ITF_DAL_Like.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "GATEWAY.csproj",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\GATEWAY.csproj",
+              "RelativeDocumentMoniker": "GATEWAY\\GATEWAY.csproj",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\GATEWAY.csproj",
+              "RelativeToolTip": "GATEWAY\\GATEWAY.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-30T09:25:44.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "API USER.csproj",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\API USER.csproj",
+              "RelativeDocumentMoniker": "USER_API\\API USER.csproj",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\API USER.csproj",
+              "RelativeToolTip": "USER_API\\API USER.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-30T09:25:44.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "User_API_Users.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Users.cs",
+              "RelativeDocumentMoniker": "USER_API\\Controllers\\User_API_Users.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Users.cs",
+              "RelativeToolTip": "USER_API\\Controllers\\User_API_Users.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "API USER.csproj",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\API USER.csproj",
+              "RelativeDocumentMoniker": "USER_API\\API USER.csproj",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\API USER.csproj",
+              "RelativeToolTip": "USER_API\\API USER.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-30T09:25:44.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "User_API_Account.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Account.cs",
+              "RelativeDocumentMoniker": "USER_API\\Controllers\\User_API_Account.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Account.cs",
+              "RelativeToolTip": "USER_API\\Controllers\\User_API_Account.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:44.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "User_API_Comment.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Comment.cs",
+              "RelativeDocumentMoniker": "USER_API\\Controllers\\User_API_Comment.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Comment.cs",
+              "RelativeToolTip": "USER_API\\Controllers\\User_API_Comment.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAkwGoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Program.cs",
+              "RelativeDocumentMoniker": "USER_API\\Program.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Program.cs",
+              "RelativeToolTip": "USER_API\\Program.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAkwFYAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:45.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "User_API_Post.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Post.cs",
+              "RelativeDocumentMoniker": "USER_API\\Controllers\\User_API_Post.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Post.cs",
+              "RelativeToolTip": "USER_API\\Controllers\\User_API_Post.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAnwIEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:45.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "User_API_Topic.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Topic.cs",
+              "RelativeDocumentMoniker": "USER_API\\Controllers\\User_API_Topic.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Topic.cs",
+              "RelativeToolTip": "USER_API\\Controllers\\User_API_Topic.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAowBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:45.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "User_API_Like.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Like.cs",
+              "RelativeDocumentMoniker": "USER_API\\Controllers\\User_API_Like.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Like.cs",
+              "RelativeToolTip": "USER_API\\Controllers\\User_API_Like.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:45.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "User_API_Notification.cs",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Notification.cs",
+              "RelativeDocumentMoniker": "USER_API\\Controllers\\User_API_Notification.cs",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\Controllers\\User_API_Notification.cs",
+              "RelativeToolTip": "USER_API\\Controllers\\User_API_Notification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:25:45.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\appsettings.json",
+              "RelativeDocumentMoniker": "USER_API\\appsettings.json",
+              "ToolTip": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\USER_API\\appsettings.json",
+              "RelativeToolTip": "USER_API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T09:25:45.027Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

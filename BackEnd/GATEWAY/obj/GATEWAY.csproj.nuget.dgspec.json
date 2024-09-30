@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\GATEWAY\\GATEWAY.csproj": {}
+    "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\GATEWAY.csproj": {}
   },
   "projects": {
-    "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\DAL\\DAL.csproj": {
+    "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\DAL\\DAL.csproj",
+        "projectPath": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\duykh\\.nuget\\packages\\",
-        "outputPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\DAL\\obj\\",
+        "outputPath": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\duykh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\DTO\\DTO.csproj": {
-                "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\DTO\\DTO.csproj"
+              "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\DTO.csproj"
               }
             }
           }
@@ -38,6 +43,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -83,21 +93,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\DTO\\DTO.csproj": {
+    "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\DTO\\DTO.csproj",
+        "projectPath": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\DTO.csproj",
         "packagesPath": "C:\\Users\\duykh\\.nuget\\packages\\",
-        "outputPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\DTO\\obj\\",
+        "outputPath": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\duykh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,6 +119,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -117,6 +132,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -150,21 +170,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\GATEWAY\\GATEWAY.csproj": {
+    "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\GATEWAY.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\GATEWAY\\GATEWAY.csproj",
+        "projectUniqueName": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\GATEWAY.csproj",
         "projectName": "GATEWAY",
-        "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\GATEWAY\\GATEWAY.csproj",
+        "projectPath": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\GATEWAY.csproj",
         "packagesPath": "C:\\Users\\duykh\\.nuget\\packages\\",
-        "outputPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\GATEWAY\\obj\\",
+        "outputPath": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\GATEWAY\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\duykh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -172,17 +196,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\DAL\\DAL.csproj"
+              "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DAL\\DAL.csproj"
               },
-              "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\DTO\\DTO.csproj": {
-                "projectPath": "D:\\Tài liệu học\\API\\Bài tập lớn\\BackEnd\\DTO\\DTO.csproj"
+              "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\duykh\\OneDrive\\Desktop\\BTL_API\\BackEnd\\DTO\\DTO.csproj"
               }
             }
           }
@@ -191,6 +216,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -249,7 +279,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
